@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/styles/global.css">
+    <link rel="stylesheet" href="/assets/styles/booking.css">
+    
+    <title>Booking</title>
+</head>
+<body>
+    <!--<div class="header">
+        <a href="#aapning" class="aapningstider">Åpningstider</a>
+        <a href="#aapning" class="kontakt-oss">Kontakt oss</a>
+        <a href="index.html" class="hoved-side-link">
+            <img class="logo" src="/assets/images/logo.png" alt="Mario's Italian"></img>
+        </a>
+    </div>-->
+    
+    <div class="front-side">            
+
+        <div class ="hovedbilde"></div>
+        <a href="index.html">
+            <img class="liten-logo" src="/assets/images/logo.png" alt="Mario's Italian"></img>
+        </a>
+        <div class="forside-header">
+            <a href="booking.html" class="booking-hoved">BOOKING</a>
+            <a href="menu.html" class="meny-hoved">MENY</a>
+            <a href="topical.html" class="topical-hoved">TOPICAL</a>
+            <a href="accessibility.html" class="accessibility-hoved">ACCESSIBILITY</a>
+        </div>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" id= "book-bord" alt="Pent dekket bord med vinglass"> </img>
+   
+    <div class="book-bord">
+        <h3> Booke bord </h3>
+        <p>Vil du være helt sikker på at du får plass hos oss? Her kan du booke bord for 1-9 personer. <br> Vi tar ingen reservasjoner utendørs, bordene der er kun til drop-in. <br> For selskaper større enn 9 personer, se <a href="#book-lokale">book lokale</a> under. </p>
+    </div>
+
+    <form> <!-- Form og tabell hentet fra https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit -->
+       <form action="/action_page.php">
+        <label for="gjester">Antall gjester</label><br>
+        <select id="Gjester" name="Gjester"><br>
+            <option selected>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+        </select>
+        <br> 
+            <label for="dato">Ønsket dato</label><br>
+            <input type="date" id="dato" name="dato" value="eks: 14.02.2022"><br><br>
+        </form> 
+    
+
+    <div class="popup" onclick="myFunction()">Submit! <!-- Hentet fra w3schools for å gi en bekreftelse på at du har trykket submit https://www.w3schools.com/howto/howto_js_popup.asp -->
+        <span class="popuptext" id="myPopup">Booking mottatt! Du får bekreftelse på e-post</span>
+    </div>
+      
+      <script> // When the user clicks on div, open the popup
+      function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+      }
+      </script>
+      
+    </form>
+
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" id="book-lokale" alt="Tomt lokale med dekket bord"> </img>
+    <div class="book-lokale">
+        <h3> Booke større selskap eller hele lokale </h3>
+        <p> Vi har også egnede rom til større arrangementer inntil 50 personer.<br> De forskjellige rommene har ulike fasiliteter som gir hvert sted sine kvaliteter. 
+            <br> Vi tilbyr alt fra opplevelser som pizzakurs og vinsmakinger til full tilrettelegging for møter,<br> seminarer og bryllup.
+            <br> Vi kan også skreddersy en unik matopplevelse etter ønsket arrangement.
+            <br>
+            Send oss en e-post så kontakter vi deg for nærmere avtale. <br> Skriv gjerne litt om anledningen og hvor mange personer dere er.
+            <br>
+            <br>
+            <a href="mailto:reservation@marios.it?subject=Booke Selskapslokale"> Book selskapslokale her</a>
+    </div>
+
+
+    <a href="index.html" id="tilbake"> Tilbake til forsiden</a>
+    
+</body>
+</html>

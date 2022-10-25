@@ -1,0 +1,72 @@
+
+p {
+    color: silver;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(165, 102, 73);
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+i {
+    font-size: 15px;
+    color: rgb(87, 186, 85);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin: auto;
+}
+
+footer {
+    height: 100px;
+    margin-left: 26%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.meny {
+    width: 50%;
+    height: 1550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    display: block;
+    background-color: #2b2b29;
+    padding-top: 50px;
+    position: relative;
+}
+
+.matrett {
+    margin: 50px 0;
+}
+
+.left {                     /* .left og .pris brukes til å feste navn og pris til samme linje */
+    text-align: left;
+    margin-left: 10%;
+}
+
+.pris {
+    float: right;
+    margin-right: 10%;
+}
+
+.adresse {
+    float: right;
+    margin-right: 35%
+}
+
+.allergen {                 /* Allergen posisjon */
+    margin-left: 10%;
+    font-size: 15px;
+    color: rgb(177, 160, 137);
+}

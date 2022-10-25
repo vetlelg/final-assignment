@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@100&family=Yeseva+One&display=swap');
+
+
+/* CSS som skal brukes til flere av sidene */
+body {
+    background-color: #242422;
+    margin: 0;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 5%;
+    text-align: center;
+    color: rgb(165, 102, 73);
+}
+
+.header {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.aapningstider {
+    z-index: 1;
+    position: absolute;
+    margin-top: 11%;
+    margin-left: 43%;
+    margin-bottom: auto;
+    color: rgb(213, 213, 213);
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.kontakt-oss {
+    z-index: 1;
+    position: absolute;
+    margin-top: 11%;
+    margin-left: 51%;
+    margin-bottom: auto;
+    color: rgb(213, 213, 213);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bakgrunn-header {
+    width: 100%;
+    height: 300px;
+    opacity: 20%;
+    position: absolute;
+    object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.50);
+    z-index: -1;
+}
+
+.logo {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+}   
+
+.liten-logo {
+    position: absolute;
+    width: 300px;
+    top: -20px;
+    left: 150px;
+    opacity: 1;
+    z-index: 1;
+}
+
+.booking-hoved {
+    z-index: 1;
+    position: absolute;
+    margin-top: 3%;
+    margin-left: 63%;
+    margin-bottom: auto;
+    color: rgb(213, 213, 213);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+
+    text-decoration: none;
+}
+.booking-hoved:hover {
+    color: rgb(161, 161, 161);
+}
+
+.meny-hoved {
+    z-index: 1;
+    position: absolute;
+    margin-top: 3%;
+    margin-left: 70%;
+    margin-bottom: auto;
+    color: rgb(213, 213, 213);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+.meny-hoved:hover {
+    color: rgb(161, 161, 161);
+}
+
+.topical-hoved {
+    z-index: 1;
+    position: absolute;
+    margin-top: 3%;
+    margin-left: 85%;
+    margin-bottom: auto;
+    color: rgb(213, 213, 213);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+.topical-hoved:hover {
+    color: rgb(161, 161, 161);
+}
+.accessibility-hoved {
+    z-index: 1;
+    position: absolute;
+    margin-top: 3%;
+    margin-left: 75%;
+    margin-bottom: auto;
+    color: rgb(213, 213, 213);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+.accessibility-hoved:hover {
+    color: rgb(161, 161, 161);
+}
+
+.forside-header {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.tilbake-til-hovedmeny{
+    z-index: 1;
+}
