@@ -1,6 +1,6 @@
-
 p {
     color: silver;
+    font-size: 110%
 }
 
 h2 {
@@ -8,12 +8,14 @@ h2 {
     color: rgb(165, 102, 73);
     margin: 0;
     padding: 0;
+    font-size: 110%
 }
 
 h3 {
     color: white;
     margin: 0;
     padding: 0;
+    font-size: 110%
 }
 
 i {
@@ -26,24 +28,37 @@ a {
     color: white;
     margin: auto;
 }
-
+/*
 footer {
     height: 100px;
     margin-left: 26%;
-    margin-top: 50px;
     margin-bottom: 50px;
+}
+*/
+
+#meny-overskrift {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 100px;
+    left: 50%;
+    margin-top: -40px;
 }
 
 .meny {
     width: 50%;
-    height: 1550px;
+    height: 1600px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
+    margin-top: -30px;
     display: block;
     background-color: #2b2b29;
     padding-top: 50px;
     position: relative;
+}
+
+.hele-menyen {
+    margin-top: 20%;
 }
 
 .matrett {
@@ -69,4 +84,52 @@ footer {
     margin-left: 10%;
     font-size: 15px;
     color: rgb(177, 160, 137);
+}
+
+.bakgrunn-header {
+    height: 600px;
+    width: 100%;
+    rotate: (180deg);
+    object-position: 50% 0%;
+    opacity: 20%;
+    position: absolute;
+    object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.50);
+    z-index: -1;
+}
+
+footer {
+    margin-top: 200px;
+    height: 400px;
+    background-color: #2b2b29;
+}
+
+.footer-tekst {
+    font-family: 'Roboto', sans-serif;    
+    font-weight: lighter;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 1.2px;;
+}
+
+#kontakt {
+    width: 500px;
+    margin-left: 15%;
+    margin-top: 5%;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;    
+    font-weight: lighter;    
+}
+
+#aapningstider {
+    width: 500px;
+    margin-left: 67%;
+    margin-top: 5%;
+    position: absolute; 
+    font-family: 'Roboto', sans-serif;    
+    font-weight: lighter;   
+}
+
+.klokkeslett {
+    color: white;
 }

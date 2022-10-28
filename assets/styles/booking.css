@@ -1,23 +1,21 @@
-.hovedbilde {
-  position: absolute;
-  width: 100%;
-  height: 600px;
-  background-image: url("https://images.unsplash.com/photo-1579027989536-b7b1f875659b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
-  object-fit: cover;
-  background-position: 50% 60%;
+.hovedbilde { /* Bilde fra unsplash */
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background-image: url("https://images.unsplash.com/photo-1579027989536-b7b1f875659b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    object-fit: cover;
+    background-position: 50% 60%;
+    opacity: 0.3;
 }
 
-
-
-
 #book-bord {
-position: absolute;
-height: 300px;
-width: 500px;
-object-fit: cover;
-object-position: 25% 90%;
-margin-left: 100px;
-margin-top: 350px;
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    object-fit: cover;
+    object-position: 25% 90%;
+    margin-left: 100px;
+    margin-top: 350px;
 }
 
 .book-bord {
@@ -29,6 +27,8 @@ margin-top: 350px;
 form {
     margin-left: 650px;
     color: rgb(248, 225, 192);
+    font-family: 'Roboto', sans-serif;    
+    font-weight: lighter;
 }
 
 #book-lokale {
@@ -56,13 +56,8 @@ a:link {
     color: rgb(248,225,192);
 }
 
-
-
-
-
-
-
-.popup {    /* Popup og popuptext hentet fra w3schools for å gi en bekreftelse på at du har sendt søknaden */ 
+/* Popup og popup-tekst hentet fra w3schools (https://www.w3schools.com/howto/howto_js_popup.asp) for å gi en bekreftelse på at du har sendt søknaden */ 
+.popup {
     position: absolute;
     margin-left: 665px;
     display: inline-block;
@@ -72,10 +67,12 @@ a:link {
     -ms-user-select: none;
     user-select: none;
     color: rgb(248, 225, 192);
-  }
-  
-  /* The actual popup */
-  .popup .popuptext {
+    font-family: 'Roboto', sans-serif;    
+    font-weight: lighter;
+}
+
+/* The actual popup */
+.popup .popup-tekst {
     visibility: hidden;
     width: 160px;
     background-color: #555;
@@ -88,10 +85,10 @@ a:link {
     bottom: 125%;
     left: 50%;
     margin-left: -80px;
-  }
-  
-  /* Popup arrow */
-  .popup .popuptext::after {
+}
+
+/* Popup arrow */
+.popup .popup-tekst::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -100,29 +97,115 @@ a:link {
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
-  }
+}
   
-  /* Toggle this class - hide and show the popup */
-  .popup .show {
+/* Toggle this class - hide and show the popup */
+.popup .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
-  }
-  
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
     from {opacity: 0;} 
     to {opacity: 1;}
-  }
+}
   
-  @keyframes fadeIn {
+@keyframes fadeIn {
     from {opacity: 0;}
     to {opacity:1 ;}
-  }
+}
 
 
-  #tilbake {
+#tilbake {
     position: absolute;
     margin-left: 100px;
     margin-top: 200px;
-  }
+}
+
+/* Tekst på bilde */
+.stor-tekst {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 100px;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:  rgb(237, 208, 165);
+}
+
+p {
+    font-size: 120%;
+    font-family: 'Roboto', sans-serif;    
+    font-weight: lighter;
+}
+
+h3 {
+    font-size: 120%;
+    font-family: 'Roboto', sans-serif;    
+}
+
+.center-alt {
+    position: absolute;
+    margin-left: 12%;
+}
+
+.booklokaleboks {
+    width: 105%;
+    height: 34%;
+    background-color: #2b2b29;
+    position: absolute;
+    z-index: -1;
+    margin-top: 16%; 
+    margin-left: 5%;
+}
+
+.bookbordboks {
+    width: 68%;
+    height: 37%;
+    background-color: #2b2b29;
+    position: absolute;
+    z-index: -1;
+    margin-top: 19  %; 
+    margin-left: 16%;
+}
+
+footer {
+    height: 400px;
+    background-color: #2b2b29;
+    margin-top: 70%;
+    display: block;
+}
+
+.footer-tekst {
+    font-family: 'Roboto', sans-serif;    
+    font-weight: lighter;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 1.2px;;
+}
+
+#kontakt {
+    width: 500px;
+    margin-left: 15%;
+    margin-top: 5%;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;    
+    font-weight: lighter;    
+}
+
+#aapningstider {
+    width: 500px;
+    margin-left: 67%;
+    margin-top: 5%;
+    position: absolute; 
+    font-family: 'Roboto', sans-serif;    
+    font-weight: lighter;   
+}
+
+.klokkeslett {
+    color: white;
+}
