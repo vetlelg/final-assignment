@@ -5,6 +5,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2vmin;
 }
 
 html {
@@ -28,8 +29,9 @@ nav ul, footer ul {
 
 a {
     color: white;
-    font-size: 20px;
     text-decoration: none;
+    font-size: 1.25em;
+    text-shadow: 2px 2px 5px black;
 }
 
 a:hover {
@@ -47,7 +49,7 @@ header {
     justify-content:space-between;
     grid-area: header;
     color: white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("https://images.unsplash.com/photo-1526666923127-b2970f64b422?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1494522855154-9297ac14b55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
     background-size: cover;
     background-position: bottom;
 }
@@ -55,7 +57,6 @@ header {
 header h1 {
     display: flex;
     align-self: center;
-    font-size: 40px;
     text-shadow: 2px 2px 5px black;
     padding-bottom: 50vh;
 }
@@ -66,14 +67,14 @@ main {
 
 footer {
     grid-area: footer;
-    background-color: black;
+    background-color: rgb(22, 28, 44);
     display: flex;
     align-items: center;
 }
 
 .grid {
     display: grid;
-    grid-template-rows: 100vh 600vh 20vh;
+    grid-template-rows: 100vh 600vh 10vh;
     grid-template-areas:
     "header"
     "main"
@@ -100,7 +101,7 @@ footer {
     grid-area: to;
     color: white;
     text-shadow: 2px 2px 5px black;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1529763832866-6e9ad3963469?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80");
 }
 
 #tre {
@@ -111,7 +112,7 @@ footer {
     grid-area: fire;
     color: white;
     text-shadow: 2px 2px 5px black;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://plus.unsplash.com/premium_photo-1661284886645-1e21653e252a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1581093577421-f561a654a353?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
 }
 
 #fem {
@@ -122,18 +123,19 @@ footer {
     grid-area: seks;
     color: white;
     text-shadow: 2px 2px 5px black;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1579154392128-bf8c7ebee541?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
 }
 
 .boks {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background-position: center;
 }
 
 .tekstboks {
-    font-size: 200%;
     width: 40%;
+    font-size: 1.5em;
     height: max-content;
 }
 
