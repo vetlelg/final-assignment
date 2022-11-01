@@ -40,7 +40,7 @@ a:hover {
 
 img {
     width: 50%;
-    height: fit-content;
+    height: min-content;
 }
 
 header {
