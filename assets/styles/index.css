@@ -1,35 +1,68 @@
+body {
+    font-size: 2vmin;
+}
 .hovedbilde {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 1000px;
-    background-image: url("https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80");
-    /*background-image: url("https://images.unsplash.com/photo-1651978595432-905a420b879d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80");*/
+    /* Bilde hentet fra: "https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" */
+    background-image: url("../images/hoved-side-bakgrunn.avif");
     opacity: 0.2;
     z-index: -1;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+.pil {
+    border: solid white;
+    border-width: 0 7px 7px 0;
+    display: inline-block;
+    padding: 20px;
+    z-index: 10;
+    position: absolute;
+    margin-left: -130px;
+    margin-top: 200px;
+}
+  
+.ned {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
 .lys-del {
-    height: 400px;
+    height: 500px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    top: 320px;
-    display: block;
+    margin-top: 320px;
+    display: flex;
     background-color: #ffffff;
-    padding-top: 50px;
-    padding-bottom: 100px;
     position: relative;
-    z-index: -1;
+    z-index: 1;
+}
+.lys-del2 {
+    height: 55vmin;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
 }
 
 #lys-del-tekst {
     font-family: 'Roboto', sans-serif;
+    text-align: center;
     font-size: 30px;
+    font-size: 4vmin;
     font-weight: lighter;
+    top: 200px;
 }
+
+
 .lys-del-tekstboks {
     width: 60%;
     margin-left: auto;
@@ -37,14 +70,12 @@
 }
 
 .mork-del {
-    height: 300px;
+    height: 500px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    top: 320px;
-    display: block;
+    display: flex;
     background-color: #242422;
-    padding-top: 50px;
-    padding-bottom: 300px;
     position: relative;
     z-index: -1;
 }
@@ -52,36 +83,26 @@
 #mork-del-tekst {
     font-family: 'Roboto', sans-serif;    
     font-weight: lighter;
-    top: 100px;
     font-size: 30px;
+    font-size: 4vmin;
+    margin-top: 20%;
     color: white;
 }
 
 #tekst-boks-1 {
-    width: 700px;
-    height: 300px;
-    margin-left: 100px;
-    margin-top: 100px;
-    display: inline-block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#spaghetti-bilde {
-    width: 700px;
-    height: 490px;
-    display: inline-block;
-    position: absolute;
+#lokale-bilde {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    z-index: -2;
+    position: absolute;
+    opacity: 0.5;
 }
-/*
-.test2 {
-    height: 400px;
-    position: relative;
-    background-image: url("https://images.unsplash.com/photo-1506280754576-f6fa8a873550?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; 
-}*/
 
 #midt-tekst {
     color: white;
@@ -99,10 +120,10 @@
     opacity: 0.8
 }
 
-
 footer {
     margin-top: 200px;
-    height: 400px;
+    width: 100%;
+    height: 40%;
     background-color: #242422;
 }
 
@@ -113,21 +134,29 @@ footer {
     color: white;
     letter-spacing: 1.2px;;
 }
+.footer-innhold {
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+    margin-top: -100px;
 
+}
 #kontakt {
-    width: 500px;
-    margin-left: 15%;
-    margin-top: 5%;
-    position: absolute;
     font-family: 'Roboto', sans-serif;    
-    font-weight: lighter;    
+    font-weight: lighter;  
+    margin: 20px;
+    display: inline-block;
+    margin-right: 20%;
+    margin-top: -50px;
 }
 
 #aapningstider {
-    width: 500px;
-    margin-left: 67%;
-    margin-top: 5%;
-    position: absolute; 
     font-family: 'Roboto', sans-serif;    
-    font-weight: lighter;   
+    font-weight: lighter;  
+    margin: 20px;
+    margin-left: 0%;
+    display: inline-block;
+    margin-top: -50px;
+
+
 }
