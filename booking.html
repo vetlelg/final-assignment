@@ -11,9 +11,11 @@
 </head>
 
 <body>
-    <div class="front-side">            
+    <div class="front-side">
+        <!--Bilde hentet fra: https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80-->            
         <div class ="hovedbilde"></div>
         <a href="index.html">
+            <!--Logo laget av Harald Eskeland-->
             <img class="liten-logo" src="assets/images/logo.png" alt="Mario's Italian"></img>
         </a>
         <div class="forside-header">
@@ -29,7 +31,8 @@
     </div>
     <div class="bookbordboks"></div>
     <div class="center-alt">
-        <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" id= "book-bord" alt="Pent dekket bord med vinglass"> </img> <!-- Bilde fra unsplash */ -->
+        <!--Bilde hentet fra: "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" -->
+        <img src="assets/images/booking-side-bilde-en.avif" id= "book-bord" alt="Pent dekket bord med vinglass"> </img> <!-- Bilde fra unsplash */ -->
     
         <div class="book-bord">
             <h3> Booke bord </h3>
@@ -40,7 +43,8 @@
             </p>
         </div>
 
-        <form> <!-- Form og tabell hentet fra https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit -->
+        <!-- Form og tabell hentet fra https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit -->
+        <form>
             <form action="/action_page.php">
                 <label for="gjester">Antall gjester</label><br>
                 <select id="Gjester" name="Gjester"><br>
@@ -59,11 +63,12 @@
                 <input type="date" id="dato" name="dato" value="eks: 14.02.2022"><br><br>
             </form> 
     
-            <div class="popup" onclick="myFunction()">Submit! <!-- Hentet fra w3schools for å gi en bekreftelse på at du har trykket submit https://www.w3schools.com/howto/howto_js_popup.asp -->
+            <!-- Hentet fra w3schools for å gi en bekreftelse på at du har trykket submit https://www.w3schools.com/howto/howto_js_popup.asp -->
+            <div class="popup" onclick="myFunction()">Submit!
                 <span class="popup-tekst" id="myPopup">Booking mottatt! Du får bekreftelse på e-post</span>
             </div>
     
-            <script> // When the user clicks on div, open the popup
+            <script>
             function myFunction() {
                 var popup = document.getElementById("myPopup");
                 popup.classList.toggle("show");
@@ -71,9 +76,9 @@
             </script>
         </form>
 
-        <!-- Bilde fra Unsplash -->
         <div class="booklokaleboks"></div>
-        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" id="book-lokale" alt="Tomt lokale med dekket bord"> </img>
+        <!-- Bilde hentet fra Unsplash: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" -->
+        <img src="assets/images/booking-side-bilde-to.avif" id="book-lokale" alt="Tomt lokale med dekket bord"> </img>
         <div class="book-lokale">
             <h3> Booke større selskap eller hele lokale </h3>
             <p> Vi har også egnede rom til større arrangementer inntil 50 personer.<br> De forskjellige rommene har ulike fasiliteter som gir hvert sted sine kvaliteter. 

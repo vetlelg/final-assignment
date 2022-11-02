@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -71,6 +72,8 @@ footer {
     align-items: center;
 }
 
+/* Bruker grid til å strukturere header, main og footer. Deretter enda en grid
+   til å strukturere innholdet i main. Header og hver seksjon i main har høyde 100vh */
 .grid {
     display: grid;
     grid-template-rows: 100vh 600vh 10vh;
@@ -79,7 +82,6 @@ footer {
     "main"
     "footer";
 }
-
 .subgrid {
     display: grid;
     grid-template-rows: 100vh 100vh 100vh 100vh 100vh 100vh;
@@ -91,38 +93,32 @@ footer {
     "fem"
     "seks";
 }
-
 #en {
     grid-area: en;
 }
-
 #to {
     grid-area: to;
     color: white;
     text-shadow: 2px 2px 5px black;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1529763832866-6e9ad3963469?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("../images/topical-bilde-to.avif");
 }
-
 #tre {
     grid-area: tre;
 }
-
 #fire {
     grid-area: fire;
     color: white;
     text-shadow: 2px 2px 5px black;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1581093577421-f561a654a353?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/topical-bilde-fire.avif");
 }
-
 #fem {
     grid-area: fem;
 }
-
 #seks {
     grid-area: seks;
     color: white;
     text-shadow: 2px 2px 5px black;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1579154392128-bf8c7ebee541?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/topical-bilde-seks.avif");
 }
 
 .boks {

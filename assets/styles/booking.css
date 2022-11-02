@@ -2,7 +2,8 @@
     position: absolute;
     width: 100%;
     height: 600px;
-    background-image: url("https://images.unsplash.com/photo-1579027989536-b7b1f875659b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    /* Bilde hentet fra: https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80 */
+    background-image: url("../images/booking-side-bakgrunn.avif");
     object-fit: cover;
     background-position: 50% 60%;
     opacity: 0.3;
@@ -117,7 +118,6 @@ a:link {
     to {opacity:1 ;}
 }
 
-
 #tilbake {
     position: absolute;
     margin-left: 100px;
@@ -169,7 +169,7 @@ h3 {
     background-color: #2b2b29;
     position: absolute;
     z-index: -1;
-    margin-top: 19  %; 
+    margin-top: 19%; 
     margin-left: 16%;
 }
 
@@ -185,7 +185,7 @@ footer {
     font-weight: lighter;
     font-size: 20px;
     color: white;
-    letter-spacing: 1.2px;;
+    letter-spacing: 1.2px;
 }
 
 #kontakt {
