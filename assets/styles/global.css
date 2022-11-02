@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@700&family=Yeseva+One&display=swap');
 
 /* CSS som skal brukes til flere av sidene */
+html {
+    scroll-behavior: smooth;
+  }
 body {
     background-color: #242422;
     margin: 0;
