@@ -1,7 +1,7 @@
 .hovedbilde { /* Bilde fra unsplash */
     position: absolute;
     width: 100%;
-    height: 600px;
+    height: 58%;
     /* Bilde hentet fra: https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80 */
     background-image: url("../images/booking-side-bakgrunn.avif");
     object-fit: cover;
@@ -11,8 +11,8 @@
 
 #book-bord {
     position: absolute;
-    height: 300px;
-    width: 500px;
+    height: 28%;
+    width: 44%;
     object-fit: cover;
     object-position: 25% 90%;
     margin-left: 100px;
@@ -34,8 +34,8 @@ form {
 
 #book-lokale {
     position: absolute;
-    height: 300px;
-    width: 500px;
+    height: 28%;
+    width: 44%;
     object-fit: cover;
     object-position: 25% 95%;
     margin-left: 750px;
@@ -154,6 +154,8 @@ h3 {
 }
 
 .booklokaleboks {
+    max-width: 105%;
+    max-heigth: 100%;
     width: 105%;
     height: 34%;
     background-color: #2b2b29;
@@ -164,20 +166,23 @@ h3 {
 }
 
 .bookbordboks {
-    width: 68%;
+    max-width:100%;
+    max-heigth: 100%;
+    width: 65%;
     height: 37%;
     background-color: #2b2b29;
     position: absolute;
     z-index: -1;
-    margin-top: 19%; 
+    margin-top: 17%; 
     margin-left: 16%;
 }
 
+
 footer {
-    height: 400px;
-    background-color: #2b2b29;
-    margin-top: 70%;
-    display: block;
+    margin-top: 1200px;
+    width: 100%;
+    height: 100px;
+    background-color: #242422;
 }
 
 .footer-tekst {
@@ -185,11 +190,15 @@ footer {
     font-weight: lighter;
     font-size: 20px;
     color: white;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.2px;;
+}
+.footer-innhold {
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
 }
 
 #kontakt {
-    width: 500px;
     margin-left: 15%;
     margin-top: 5%;
     position: absolute;
@@ -198,7 +207,6 @@ footer {
 }
 
 #aapningstider {
-    width: 500px;
     margin-left: 67%;
     margin-top: 5%;
     position: absolute; 
@@ -208,4 +216,91 @@ footer {
 
 .klokkeslett {
     color: white;
+}
+
+
+@media(max-width: 768px) {
+  
+    .hovedbilde {
+        width: 100%
+    }
+   
+    
+    .bookbordboks {
+        margin-left: 5%;
+        margin-top: 35%;
+        height: 635px;
+        width: 345px;
+    }
+
+    #book-bord {
+        margin-top: -80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        height: 300px;
+        width: 300px;
+    }
+
+    .book-bord  {
+        margin-top: 120%;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 15px;
+    }
+
+    .booklokaleboks {
+        height: 660px;
+        width: 345px;
+        margin-top: 15%;
+    }
+
+    #book-lokale {
+        margin-top: 20%;
+        margin-left: 10%;
+        height: 300px;
+        width: 300px;
+    }
+
+    .book-lokale{
+        margin-top: 100%;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 15px;
+    }
+    
+
+    form {
+        margin-left: 20%;
+
+    }
+
+    
+    p {
+        font-size: 15px;
+    }
+
+    footer {
+        margin-top: 30%;
+        margin-left: -10%;
+    }
+    .footer-tekst {
+        font-size: 10px;
+        letter-spacing: normal;
+    }
+    #aapningstider, #kontakt {
+        margin-top: -80px;
+    
+    }
+
+    .center-alt {
+        margin-left: 0%;
+        margin-right: 0%;
+       position: unset;
+    }
+
+    .popup {
+        margin-left: 20%;
+
+    }
+
 }

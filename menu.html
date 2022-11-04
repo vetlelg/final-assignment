@@ -10,114 +10,140 @@
 
 </head>
 <body>
-    <div class="front-side">            
-        <!--Bilde hentet fra: "https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" -->
-        <img class="bakgrunn-header" src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" alt="Spaghetti bilde"> </img>
+    <div>
 
-        <a href="index.html">
-            <!--Logo laget av Harald Eskeland-->
-            <img class="liten-logo" src="assets/images/logo.png" alt="Mario's Italian"></img>
-        </a>
+        <!--<header>   
+            <div class="front-side">   -->         
+                <!--Bilde hentet fra: "https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" -->
+                <!--<img class="bakgrunn-header" src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" alt="Spaghetti bilde"> </img>
 
-        <div class="forside-header">
-            <a href="booking.html" class="booking-header">BOOKING</a>
-            <a href="menu.html" class="meny-header">MENY</a>
-            <a href="topical.html" class="topical-header">TOPICAL</a>
-            <a href="accessibility.html" class="accessibility-header">ACCESSIBILITY</a>
+                <a href="index.html">-->
+                    <!--Logo laget av Harald Eskeland-->
+                    <!--<img class="liten-logo" src="assets/images/logo.png" alt="Mario's Italian"></img>
+                </a>
+
+                <div class="forside-header">
+                    <a href="booking.html" class="booking-header">BOOKING</a>
+                    <a href="menu.html" class="meny-header">MENY</a>
+                    <a href="topical.html" class="topical-header">TOPICAL</a>
+                    <a href="accessibility.html" class="accessibility-header">ACCESSIBILITY</a>
+                </div>
+            </div>
+        </header>-->    
+
+        <div class ="hovedbilde">
+            <nav class="navbar">
+                <div class="container"> 
+                    <!--Logo laget av Harald Eskeland-->
+                    <a href="index.html">
+                        <img id="logo" src="assets/images/logo.png" alt="Mario's Italian"></img>
+                    </a>
+                    <ul class="nav">
+                        <li>
+                            <a href="booking.html">BOOKING</a>
+                        </li>
+                        <li>
+                            <a href="menu.html">MENY</a>
+                        </li>
+                        <li>
+                            <a href="topical.html">TOPICAL</a>
+                        </li>
+                        <li>
+                            <a href="accessibility.html">ACCESSIBILITY</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
 
-        <h1 id="meny-overskrift">MENY</h1>
+        <main>
+            <h1 id="meny-overskrift">MENY</h1>
+            <div class="meny">
+                <div id="meny-mobil">
+                    <h2 class="left">Forretter</h2>
+                    
+                    <div class="matrett">
+                        <h3 class="left"><b>Focaccia </b><i>vegetariano</i><b><span class="pris"> 79,- </span></b></h3>
+                        <p class="left">husets pesto rosso, pesto genovese og aioli</p>
+                        <p class="allergen">egg, hvete, melk, pinjekjerne, sennep, soya, svoveldioksid og sulfitt<p>
+                    </div>
+
+                    <div class="matrett">
+                        <h3 class="left"><b>Mozzarella di burrata </b><i>vegetariano</i><span class="pris"><b>104,- </b></span></h3>
+                        <p class="left">kremet mozzarellaspesialitet fra puglia, ferske og syltede tomater</p>
+                        <p class="allergen">melk<p>
+                    </div>
+
+                    <div class="matrett">
+                        <h3 class="left"><b>Carpaccio di manzo </b><span class="pris"><b>149,- </b></span></h3>
+                        <p class="left">tynne, rå skiver av okse indrefilet, parmigiano reggiano, sitron,<br> ruccola, pinjekjerner og extra virgin olivenolje</p>
+                        <p class="allergen">egg, melk, pinjekjerne, sennep, svoveldioksid og sulfitt<p>
+                    </div>
+                    
+                    <hr style: width="80%"><br>
+
+                    <h2 class="left">Hovedretter</h2>
+
+                    <div class="matrett">
+                        <h3 class="left"><b>Mama Mia</b><span class="pris"><b>175,-</b></span></h3>
+                        <p class="left">tomat, mozzarella, sjampingjong, italiensk skinke, oregano</p>
+                        <p class="allergen">hvete, melk, selleri<p>
+                    </div>
+
+                    <div class="matrett">
+                        <h3 class="left"><b>Pasta Italia</b><span class="pris"><b>175,-</b></span></h3>
+                        <p class="left">tomat, løk, linguine, ytrefilet av okse</p>
+                        <p class="allergen">hvete, melk<p>
+                    </div>
+
+                    <div class="matrett">
+                        <h3 class="left"><b>Pasta Carbonara</b><span class="pris"><b>210,-</b></span></h3>
+                        <p class="left">linguine, guanciale, eggeplommer, fløte, parmesan, nykvernet sort pepper</p>
+                        <p class="allergen">egg, hvete, melk<p>
+                    </div>
+
+                    <hr style: width="80%"><br>
+
+                    <h2 class="left">Dessert</h2>
+
+                    <div class="matrett">
+                        <h3 class="left"><b>Gelato e sorbetto</b><span class="pris"><b>59,-</b></span></h3>
+                        <p class="left">velg en kule vanilje, bringebærsorbet eller sjokoladeis</p>
+                        <p class="allergen">melk<p>
+                    </div>
+                    
+                    <div class="matrett">
+                        <h3 class="left"><b>Tiramisù</b><span class="pris"><b>114,-</b></span></h3>
+                        <p class="left">savoiardikjeks dyppet i espresso og rom med mascarponekrem og kakaodryss</p>
+                        <p class="allergen">egg, hvete, melk<p>
+                    </div>
+
+                    <div class="matrett">
+                        <h3 class="left"><b>Soufflè al cioccolato</b><span class="pris"><b>125,-</b></span></h3>
+                        <p class="left">sjokoladefondant med bringebærcoulis og vaniljeis</p>
+                        <p class="allergen">egg, hvete, melk<p> 
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-innhold">    
+                <div id="kontakt">
+                    <p class="footer-tekst"><b>KONTAKT OSS </b></p>
+                    <p class="footer-tekst"><b>Epost:</b> reservation@marios.it </p>
+                    <p class="footer-tekst"><b>Telefon:</b> +81549300 </p>
+                    <p class="footer-tekst"><b>Adresse:</b> Romagata 13, 1337 Oslo </p>
+                </div>
+
+                <div id="aapningstider">
+                    <p class="footer-tekst"><b>ÅPNINGSTIDER</b></p>
+                    <p class="footer-tekst">Søndag - Torsdag: <i class="klokkeslett">09 - 22</i> </p>
+                    <p class="footer-tekst">Fredag - Lørdag: <i class="klokkeslett">10 - 23</i> </p>
+                </div>
+            </div>
+        </footer>
+        <!--<a href="#"> Tilbake til toppen </a>-->
     </div>
-
-    <div class="hele-menyen"> 
-        <div class="meny">
-            <h2 class="left">Forretter</h2>
-            
-            <div class="matrett">
-                <h3 class="left"><b>Focaccia </b><i>vegetariano</i><b><span class="pris"> 79,- </span></b></h3>
-                <p class="left">husets pesto rosso, pesto genovese og aioli</p>
-                <p class="allergen">egg, hvete, melk, pinjekjerne, sennep, soya, svoveldioksid og sulfitt<p>
-            </div>
-
-            <div class="matrett">
-                <h3 class="left"><b>Mozzarella di burrata </b><i>vegetariano</i><span class="pris"><b>104,- </b></span></h3>
-                <p class="left">kremet mozzarellaspesialitet fra puglia, ferske og syltede tomater</p>
-                <p class="allergen">melk<p>
-            </div>
-
-            <div class="matrett">
-                <h3 class="left"><b>Carpaccio di manzo </b><span class="pris"><b>149,- </b></span></h3>
-                <p class="left">tynne, rå skiver av okse indrefilet, parmigiano reggiano, sitron,<br> ruccola, pinjekjerner og extra virgin olivenolje</p>
-                <p class="allergen">egg, melk, pinjekjerne, sennep, svoveldioksid og sulfitt<p>
-            </div>
-            
-            <hr style: width="80%"><br>
-
-            <h2 class="left">Hovedretter</h2>
-
-            <div class="matrett">
-                <h3 class="left"><b>Mama Mia</b><span class="pris"><b>175,-</b></span></h3>
-                <p class="left">tomat, mozzarella, sjampingjong, italiensk skinke, oregano</p>
-                <p class="allergen">hvete, melk, selleri<p>
-            </div>
-
-            <div class="matrett">
-                <h3 class="left"><b>Pasta Italia</b><span class="pris"><b>175,-</b></span></h3>
-                <p class="left">tomat, løk, linguine, ytrefilet av okse</p>
-                <p class="allergen">hvete, melk<p>
-            </div>
-
-            <div class="matrett">
-                <h3 class="left"><b>Pasta Carbonara</b><span class="pris"><b>210,-</b></span></h3>
-                <p class="left">linguine, guanciale, eggeplommer, fløte, parmesan, nykvernet sort pepper</p>
-                <p class="allergen">egg, hvete, melk<p>
-            </div>
-
-            <hr style: width="80%"><br>
-
-            <h2 class="left">Dessert</h2>
-
-            <div class="matrett">
-                <h3 class="left"><b>Gelato e sorbetto</b><span class="pris"><b>59,-</b></span></h3>
-                <p class="left">velg en kule vanilje, bringebærsorbet eller sjokoladeis</p>
-                <p class="allergen">melk<p>
-            </div>
-            
-            <div class="matrett">
-                <h3 class="left"><b>Tiramisù</b><span class="pris"><b>114,-</b></span></h3>
-                <p class="left">savoiardikjeks dyppet i espresso og rom med mascarponekrem og kakaodryss</p>
-                <p class="allergen">egg, hvete, melk<p>
-            </div>
-
-            <div class="matrett">
-                <h3 class="left"><b>Soufflè al cioccolato</b><span class="pris"><b>125,-</b></span></h3>
-                <p class="left">sjokoladefondant med bringebærcoulis og vaniljeis</p>
-                <p class="allergen">egg, hvete, melk<p> 
-            </div>
-        </div>
-    </div>
-    <!--
-    <footer>
-        <p><b>Kontakt oss <span class="adresse"> <b>Besøk oss</span></b> </p>
-        <p>Mario's Italian <span class="adresse"> Tirsdag - Søndag</span></p>
-        <p>Epost: reservation@marios.it <span class="adresse">14:00-23:00</span></p>
-        <p>Telefon: +81549300 <span class="adresse"> Romagata 13, 1337 Rome </span></p>
-    </footer>
--->
-    <footer>
-        <div id="kontakt">
-            <p class="footer-tekst"><b>KONTAKT OSS </p>
-            <p class="footer-tekst"><b>Epost:</b> reservation@marios.it </p>
-            <p class="footer-tekst"><b>Telefon:</b> +81549300 </p>
-            <p class="footer-tekst"><b>Adresse:</b> Romagata 13, 1337 Oslo </p>
-        </div>
-
-        <div id="aapningstider">
-            <p class="footer-tekst"><b>ÅPNINGSTIDER</p>
-            <p class="footer-tekst">Søndag - Torsdag: <i class="klokkeslett">09 - 22</i> </p>
-            <p class="footer-tekst">Fredag - Lørdag: <i class="klokkeslett">10 - 23</i> </p>
-        </div>
-    </footer>
-    <a href="#"> Tilbake til toppen </a>
 </body>
 </html>

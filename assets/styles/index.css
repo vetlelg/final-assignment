@@ -1,46 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-size: 2vmin;
-}
-.hovedbilde {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
-    height: 1000px;
+    height: 100%;
+}
+
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.navbar {
+   /* background: rgb(233, 233, 233); */
+    color: black;
+    height: 80px;
+}
+  
+#logo {
+    display: flex;
+    width: 200px;
+    z-index: 1;
+}
+
+.navbar a {
+    color: #FFF8EA;
+    text-decoration: none;
+    font-size: 16px;
+    padding-right: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar a:hover {
+    color: rgb(118, 118, 118);
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+ul {
+    display: flex;;
+    list-style-type: none;
+    flex-direction: row;
+}
+.navbar .ul {
+    display: flex;
+}
+
+.hovedbilde {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1250px;
     /* Bilde hentet fra: "https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" */
-    background-image: url("../images/hoved-side-bakgrunn.avif");
-    opacity: 0.2;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 100%),url("../images/hoved-side-bakgrunn.avif");
     z-index: -1;
     background-size: cover;
     background-repeat: no-repeat;
 }
+#midt-tekst {
+    color: #FFF8EA;
+    font-size: 60px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.6px;
+    margin-top: 25%;
+}
 
+#under-tekst {
+    color: #FFF8EA;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
 .pil {
-    border: solid white;
+    display: flex;
+    justify-content: center;
+    border: solid #FFF8EA;
+    ;
     border-width: 0 7px 7px 0;
     display: inline-block;
     padding: 20px;
     z-index: 10;
-    position: absolute;
-    margin-left: -130px;
-    margin-top: 200px;
+}
+#pil-ned-a {
+    display: flex;
+    justify-content: center;
+    margin-top: 400px;
+}
+.pil:hover {
+    border: solid darkgrey;
+    border-width: 0 7px 7px 0;
+    display: inline-block;
 }
   
 .ned {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+    z-index: 10;
 }
-
-.lys-del {
+.boks1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.lys-del-venstre {
+    display: flex;
+    align-items: center;
     height: 500px;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 320px;
-    display: flex;
-    background-color: #ffffff;
-    position: relative;
     z-index: 1;
+}
+.lys-del-høyre {
+    display: flex;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+   
+}
+.lys-del-høyre img {
+    display: flex;
+    width: 600px;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    margin-right: 30px;
+
 }
 .lys-del2 {
     height: 55vmin;
@@ -48,36 +143,59 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    background-color: #ffffff;
+    background-color: #FFF8EA;
     position: relative;
     z-index: 1;
 }
 
 #lys-del-tekst {
+    display: flex;
     font-family: 'Roboto', sans-serif;
-    text-align: center;
     font-size: 30px;
-    font-size: 4vmin;
     font-weight: lighter;
-    top: 200px;
+    text-align: left;
+    margin-left: 200px;
+    margin-right: 50px;
+    margin-top: 0;
 }
 
+.lys-del-tekstboks .overskrift {
+    display: flex;
+    text-align: left;
+    margin-left: 200px;
+    padding-bottom: 30px;
+}
 
-.lys-del-tekstboks {
-    width: 60%;
+.lys-del-tekstboks #strek {
+    margin-left: 200px;
+    margin-top: 40px;
+    width: 10%;
+}
+
+#strek {
+    display: flex;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    width: 30%;
+    background-color: rgb(165, 102, 73);
+    height: 3px;
+
 }
 
 .mork-del {
-    height: 500px;
+    height: 700px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    background-color: #242422;
+    justify-content: center;
+    background-color: #FFF8EA;
     position: relative;
     z-index: -1;
+}
+.mork-del .overskrift {
+    margin-top: 50px;
 }
 
 #mork-del-tekst {
@@ -86,7 +204,9 @@ body {
     font-size: 30px;
     font-size: 4vmin;
     margin-top: 20%;
-    color: white;
+    color: rgb(165, 102, 73);
+    padding-bottom: 50px;
+
 }
 
 #tekst-boks-1 {
@@ -104,26 +224,10 @@ body {
     opacity: 0.5;
 }
 
-#midt-tekst {
-    color: white;
-    font-size: 60px;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: 3px;
-    top: -100px;
-}
-
-#under-tekst {
-    color: rgb(181, 181, 181);
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    opacity: 0.8
-}
-
 footer {
     margin-top: 200px;
     width: 100%;
-    height: 40%;
+    height: 100px;
     background-color: #242422;
 }
 
@@ -147,7 +251,7 @@ footer {
     margin: 20px;
     display: inline-block;
     margin-right: 20%;
-    margin-top: -50px;
+    margin-top: -60px;
 }
 
 #aapningstider {
@@ -156,7 +260,116 @@ footer {
     margin: 20px;
     margin-left: 0%;
     display: inline-block;
-    margin-top: -50px;
-
-
+    margin-top: -60px;
 }
+
+@media(max-width: 768px){
+    .navbar .container {
+        flex-direction: column;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    #logo {
+        width: 250px;
+        padding-bottom: 30px;
+    }
+
+    .navbar a {
+        margin-left:20px;
+        margin-top: 50px;
+        font-size: 12px;
+    }
+
+    #midt-tekst {
+        font-size: 45px;
+        margin-top: 200px;
+    }
+
+    #under-tekst {
+        font-size: 15px;
+        padding-top: 15px;
+    }
+    footer {
+        height: 100px;
+    }
+    .footer-tekst {
+        font-size: 12px;
+    }
+    #aapningstider, #kontakt {
+        margin-top: -80px;
+    }
+    .hovedbilde {
+        height: 100%;
+    }
+    #pil-ned-a {
+        margin-top: 200px;
+    }
+    .pil {
+        display: flex;
+        justify-content: center;
+        border: solid white;
+        border-width: 0 5px 5px 0;
+        display: inline-block;
+        padding: 15px;
+        z-index: 10;
+        margin-bottom: 10%;
+    }
+    .pil:hover {
+        border-width: 0 5px 5px 0;
+    }
+    .boks1 {
+        flex-direction: column;
+        justify-content: center;
+        height: 530px;
+        padding: 0;
+    }
+    .overskrift {
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        margin-left: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+    }
+    .lys-del-tekstboks .overskrift {
+        margin-left: 0;
+    }
+    
+    #strek {
+        height: 1px;
+        margin-left: auto;
+    }
+    .lys-del-tekstboks #strek {
+        margin-left: auto;
+    }
+    #lys-del-tekst {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 16px;
+        margin-left: 0;
+        margin-top: 30px;
+        margin-right: 0;
+    }
+    
+    .lys-del-høyre img {
+        display: flex;
+        justify-content: center;        
+        width: 100%;
+        height: 250px;
+        margin-top: -150px;
+        align-self: end;
+        margin-right: 0;
+
+    }
+    .lys-del-høyre, .lys-del-venstre{
+        justify-content: center;
+    }
+    #mork-del-tekst {
+        padding-bottom: 25px;
+        font-size: 
+
+    }
+}
+

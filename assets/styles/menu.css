@@ -26,39 +26,30 @@ i {
 a {
     text-decoration: none;
     color: white;
-    margin: auto;
 }
 
 #meny-overskrift {
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
     color: white;
     font-size: 100px;
-    left: 50%;
-    margin-top: -40px;
 }
 
 .meny {
     width: 50%;
-    height: 1600px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -30px;
-    display: block;
+    margin-top: 5%;
     background-color: #2b2b29;
     padding-top: 50px;
-    position: relative;
-}
-
-.hele-menyen {
-    margin-top: 20%;
+    padding-bottom: 20px;
 }
 
 .matrett {
     margin: 50px 0;
 }
 
-.left {                     /* .left og .pris brukes til å feste navn og pris til samme linje */
+/* .left og .pris brukes til å feste navn og pris til samme linje */
+.left {
     text-align: left;
     margin-left: 10%;
 }
@@ -68,33 +59,47 @@ a {
     margin-right: 10%;
 }
 
-.adresse {
-    float: right;
-    margin-right: 35%
-}
-
-.allergen {                 /* Allergen posisjon */
+/* Allergen posisjon */
+.allergen {
     margin-left: 10%;
     font-size: 15px;
     color: rgb(177, 160, 137);
 }
 
-.bakgrunn-header {
-    height: 600px;
-    width: 100%;
-    rotate: (180deg);
-    object-position: 50% 0%;
-    opacity: 20%;
-    position: absolute;
-    object-fit: cover;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.50);
-    z-index: -1;
+/*
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-content: center;
+    margin-top: 200px;
+    background-color: #2b2b29;
+    grid-area: footer;
+    grid-row: 3/4;
 }
+
+.footer-tekst {
+    font-family: 'Roboto', sans-serif;    
+    font-weight: lighter;
+    font-size: 120%;
+    color: white;
+    letter-spacing: 1.2px;;
+}
+
+.klokkeslett {
+    color: white;
+}
+
+#front-side {
+    display: flex;
+}
+*/
 
 footer {
     margin-top: 200px;
-    height: 400px;
-    background-color: #2b2b29;
+    width: 100%;
+    height: 100px;
+    background-color: #242422;
 }
 
 .footer-tekst {
@@ -104,25 +109,133 @@ footer {
     color: white;
     letter-spacing: 1.2px;;
 }
+.footer-innhold {
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+    margin-top: -100px;
 
+}
 #kontakt {
-    width: 500px;
-    margin-left: 15%;
-    margin-top: 5%;
-    position: absolute;
     font-family: 'Roboto', sans-serif;    
-    font-weight: lighter;    
+    font-weight: lighter;  
+    margin: 20px;
+    display: inline-block;
+    margin-right: 20%;
+    margin-top: -60px;
 }
 
 #aapningstider {
-    width: 500px;
-    margin-left: 67%;
-    margin-top: 5%;
-    position: absolute; 
     font-family: 'Roboto', sans-serif;    
-    font-weight: lighter;   
+    font-weight: lighter;  
+    margin: 20px;
+    margin-left: 0%;
+    display: inline-block;
+    margin-top: -60px;
 }
 
-.klokkeslett {
-    color: white;
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.navbar {
+   /* background: rgb(233, 233, 233); */
+    color: black;
+    height: 80px;
+}
+  
+#logo {
+    display: flex;
+    width: 200px;
+    z-index: 1;
+}
+
+.navbar a {
+    color: #FFF8EA;
+    text-decoration: none;
+    font-size: 16px;
+    padding-right: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+.navbar a:hover {
+    color: rgb(118, 118, 118);
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+}
+.navbar .ul {
+    display: flex;
+}
+
+/*.bakgrunn-header {
+    height: 100%;
+    width: 100%;
+    rotate: (180deg);
+    object-position: 50% 0%;
+    opacity: 20%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.50);
+    z-index: -1;
+}*/
+
+.hovedbilde {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 800px;
+    /* Bilde hentet fra: "https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" */
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 100%),url("../images/hoved-side-bakgrunn.avif");
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media(max-width: 768px){
+    .navbar .container {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    ul{
+        padding-inline-start: 20px;
+    }
+
+    #logo {
+        width: 300px;
+        padding-bottom: 30px;
+    }
+
+    .navbar a {
+        margin-left:20px;
+        margin-top: 50px;
+        font-size: 12px;
+    }
+    
+    .footer-tekst {
+        font-size: 12px;
+    }
+    #aapningstider, #kontakt {
+        margin-top: -80px;
+    }
+    .hovedbilde {
+        height: 500px;
+    }
+
+    .meny{
+        width: 100%;
+    }
+
+    #meny-overskrift{
+        font-size: 50px;
+    }
 }
