@@ -1,53 +1,110 @@
-.hovedbilde { /* Bilde fra unsplash */
-    position: absolute;
+.hovedbilde {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 58%;
+    height: 600px;
     /* Bilde hentet fra: https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80 */
-    background-image: url("../images/booking-side-bakgrunn.avif");
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 100%),url("../images/booking-side-bakgrunn.avif");
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
     object-fit: cover;
     background-position: 50% 60%;
-    opacity: 0.3;
+    opacity: 0.8;
+}
+
+/* Tekst på bilde */
+#booking-overskrift {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-size: 600%;    
+    position: absolute;
+    text-align: center; 
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(248, 225, 192)
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.container2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.bookbordboks { /* Grå boks bak bildet og tekst */ 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+    height: 45vh;
+    background-color: #2b2b29;
+    z-index: -1;
+    margin-top: 5%; 
 }
 
 #book-bord {
-    position: absolute;
-    height: 28%;
-    width: 44%;
+    display: flex;
+    justify-content: center;
+    width: 450px;
+    height: 250px;  
     object-fit: cover;
-    object-position: 25% 90%;
-    margin-left: 100px;
-    margin-top: 350px;
+    object-position: 20% 90%;
+    margin-top: 10%;
+    margin-left: 10%;
 }
 
 .book-bord {
-    margin-left: 650px;
-    margin-top: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10%;
+    margin-top: -3%;
     color: rgb(248, 225, 192);
 }
 
 form {
-    margin-left: 650px;
+    margin-left: 10%;
     color: rgb(248, 225, 192);
     font-family: 'Roboto', sans-serif;    
     font-weight: lighter;
 }
 
+.booklokaleboks { /* Grå boks bak bilde og info */ 
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 70%;
+    height: 40vh;
+    background-color: #2b2b29;
+    z-index: -1;
+    margin-top: 5%; 
+ 
+}
+
 #book-lokale {
-    position: absolute;
-    height: 28%;
-    width: 44%;
+    display: flex;
+    justify-content: center;
+    width: 450px;
+    height: 250px;  
     object-fit: cover;
     object-position: 25% 95%;
-    margin-left: 750px;
-    margin-top: 250px; 
+    margin-left: -10%;
+    margin-top: 10%; 
     color: rgb(248, 225, 192)
 }
 
 .book-lokale {
-    margin-left: 100px;
-    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0%;
+    margin-right: 15%;
     color: rgb(248, 225, 192);
 }
+
 
 a:visited {
     color: rgb(248,225,192);
@@ -60,7 +117,8 @@ a:link {
 /* Popup og popup-tekst hentet fra w3schools (https://www.w3schools.com/howto/howto_js_popup.asp) for å gi en bekreftelse på at du har sendt søknaden */ 
 .popup {
     position: absolute;
-    margin-left: 665px;
+    margin-left: 3%;
+    margin-top: 21%;
     display: inline-block;
     cursor: pointer;
     -webkit-user-select: none;
@@ -82,7 +140,7 @@ a:link {
     border-radius: 6px;
     padding: 8px 0;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     bottom: 125%;
     left: 50%;
     margin-left: -80px;
@@ -118,123 +176,39 @@ a:link {
     to {opacity:1 ;}
 }
 
-#tilbake {
-    position: absolute;
-    margin-left: 100px;
-    margin-top: 200px;
-}
-
-/* Tekst på bilde */
-.stor-tekst {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 100px;
-    position: absolute;
-    text-align: center;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color:  rgb(237, 208, 165);
-}
-
-p {
-    font-size: 120%;
-    font-family: 'Roboto', sans-serif;    
-    font-weight: lighter;
-}
-
 h3 {
     font-size: 120%;
     font-family: 'Roboto', sans-serif;    
 }
 
-.center-alt {
-    position: absolute;
-    margin-left: 12%;
-}
-
-.booklokaleboks {
-    max-width: 105%;
-    max-heigth: 100%;
-    width: 105%;
-    height: 34%;
-    background-color: #2b2b29;
-    position: absolute;
-    z-index: -1;
-    margin-top: 16%; 
-    margin-left: 5%;
-}
-
-.bookbordboks {
-    max-width:100%;
-    max-heigth: 100%;
-    width: 65%;
-    height: 37%;
-    background-color: #2b2b29;
-    position: absolute;
-    z-index: -1;
-    margin-top: 17%; 
-    margin-left: 16%;
-}
-
-
-footer {
-    margin-top: 1200px;
-    width: 100%;
-    height: 100px;
-    background-color: #242422;
-}
-
-.footer-tekst {
-    font-family: 'Roboto', sans-serif;    
-    font-weight: lighter;
-    font-size: 20px;
-    color: white;
-    letter-spacing: 1.2px;;
-}
-.footer-innhold {
-    display: flex;
-    margin-left: auto;
-    justify-content: center;
-}
-
 #kontakt {
     margin-left: 15%;
-    margin-top: 5%;
     position: absolute;
-    font-family: 'Roboto', sans-serif;    
-    font-weight: lighter;    
 }
 
 #aapningstider {
     margin-left: 67%;
-    margin-top: 5%;
     position: absolute; 
-    font-family: 'Roboto', sans-serif;    
-    font-weight: lighter;   
 }
 
-.klokkeslett {
-    color: white;
-}
-
-
-@media(max-width: 768px) {
-  
+ @media(max-width: 1000px) {
     .hovedbilde {
         width: 100%
     }
-   
+    
+    #booking-overskrift {
+        font-size: 300%
+    }
     
     .bookbordboks {
         margin-left: 5%;
-        margin-top: 35%;
-        height: 635px;
-        width: 345px;
+        margin-top: 5%;
+        height: 400px;
+        width: 800px;
     }
 
     #book-bord {
-        margin-top: -80%;
+        margin-top: 10%;
         margin-left: 10%;
         margin-right: 10%;
         height: 300px;
@@ -242,60 +216,41 @@ footer {
     }
 
     .book-bord  {
-        margin-top: 120%;
+        margin-top: -10%;
         margin-left: 10%;
         margin-right: 10%;
         font-size: 15px;
     }
 
     .booklokaleboks {
-        height: 660px;
-        width: 345px;
-        margin-top: 15%;
+        margin-left: 5%;
+        margin-top: 5%;
+        height: 400px;
+        width: 800px;
     }
 
     #book-lokale {
-        margin-top: 20%;
-        margin-left: 10%;
+        margin-top: 10%;
+        margin-left: -15%;
         height: 300px;
         width: 300px;
     }
 
     .book-lokale{
-        margin-top: 100%;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-top: -10%;
+        margin-left: 5%;
         font-size: 15px;
     }
     
 
     form {
         margin-left: 20%;
-
     }
 
     
     p {
         font-size: 15px;
-    }
-
-    footer {
-        margin-top: 30%;
-        margin-left: -10%;
-    }
-    .footer-tekst {
-        font-size: 10px;
-        letter-spacing: normal;
-    }
-    #aapningstider, #kontakt {
-        margin-top: -80px;
-    
-    }
-
-    .center-alt {
-        margin-left: 0%;
-        margin-right: 0%;
-       position: unset;
+        font-family: 'Roboto', sans-serif;    
     }
 
     .popup {
@@ -304,3 +259,82 @@ footer {
     }
 
 }
+
+@media(max-width: 768px) {
+    .hovedbilde {
+        width: 100%
+    }
+    
+    #booking-overskrift {
+        font-size: 300%
+    }
+    
+    .bookbordboks {
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 5%;
+        margin-top: 5%;
+        height: 650px;
+        width: 41vh;
+    }
+
+    #book-bord {
+        margin-top: 10%;
+        margin-left: 10%;
+        margin-right: 10%;
+        height: 250px;
+        width: 250px;
+    }
+
+    .book-bord  {
+        margin-top: 0%;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 15px;
+    }
+
+    .booklokaleboks {
+        flex-direction: column;
+        margin-left: 5%;
+        margin-top: 5%;
+        height: 695px;
+        width: 41vh;
+    }
+
+    #book-lokale {
+        margin-top: 10%;
+        margin-left: 10%;
+        height: 250px;
+        width: 250px;
+    }
+
+    .book-lokale{
+        margin-top: 10%;
+        margin-left: 5%;
+        font-size: 15px;
+    }
+    
+
+    form {
+        margin-left: 20%;
+    }
+
+    
+    p {
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;    
+
+    }
+
+    .popup {
+        margin-left: 20%;
+        margin-top: 80%;
+
+    }
+
+    #kontakt{
+        margin-left: 5px;
+    }
+}
+
+ 
