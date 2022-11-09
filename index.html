@@ -13,60 +13,92 @@
 </head>
 <body>
     <main>
-        <div class="front-side">
-            <!--Bilde hentet fra: "https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"--> 
-            <div class ="hovedbilde"></div>
-            <!--Logo laget av Harald Eskeland-->
-            <img class="liten-logo" src="assets/images/logo.png" alt="Mario's Italian"></img>
+        <div class ="hovedbilde">
+            <nav class="navbar">
+                <div class="container"> 
+                    <!--Logo laget av Harald Eskeland-->
+                    <a href="index.html">
+                        <img id="logo" src="assets/images/logo.png" alt="Mario's Italian"></img>
+                    </a>
+                    <ul class="nav">
+                        <li>
+                            <a href="booking.html">BOOKING</a>
+                        </li>
+                        <li>
+                            <a href="menu.html">MENY</a>
+                        </li>
+                        <li>
+                            <a href="topical.html">TOPICAL</a>
+                        </li>
+                        <li>
+                            <a href="accessibility.html">ACCESSIBILITY</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+   
+            <h1 id="midt-tekst">Tradisjonelle   italienske <br> verdier </h1>
+            <p id="under-tekst">Midt i hjertet av Oslo</p>
 
-            <div class="forside-header">
-                <a href="booking.html" class="booking-header">BOOKING</a>
-                <a href="menu.html" class="meny-header">MENY</a>
-                <a href="topical.html" class="topical-header">TOPICAL</a>
-                <a href="accessibility.html" class="accessibility-header">ACCESSIBILITY</a>
-            </div>
-
-            <h1 id="midt-tekst">Tradisjonelle italienske <br> verdier </h1>
-            <p id="under-tekst">Midt i hjertet av Oslo
-                <a href="#seksjon1"><i class="pil ned"></i></a>
-            </p>
+            <a id="pil-ned-a" href="#seksjon1"><i class="pil ned"></i></a>
         </div>
+        <!--Bilde hentet fra: "https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"--> 
 
-        <div class="lys-del" id="seksjon1">
-            <div class="lys-del-tekstboks">
-                <h1 id="lys-del-tekst" id="tekst1"> Velkommen til en kulinarisk opplevelse etablert i 1952. <br> Et tredje generasjons familiedrevet lokale med fokus på kvalitet i alle ledd <br></h1>
-            </div>
-        </div>
+        <section class="hoved-deler" id="seksjon1">
+            <div class="container">
+                <div class="boks1">
+                    <div class="lys-del-venstre">
+                        <div class="lys-del-tekstboks">
+                            <h1 class="overskrift">Tradisjoner. </h1>
+                            <h1 class="lys-del-tekst"> Velkommen til en kulinarisk opplevelse etablert i 1952. <br> Et tredje generasjons familiedrevet lokale med fokus på kvalitet i alle ledd. <br></h1>
+                            <hr id="strek1">
 
-        <div class="mork-del">            
-            <!-- Bilde hentet fra: "https://images.unsplash.com/photo-1580929753530-ef52238116c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" -->
-            <img id="lokale-bilde" src="assets/images/hoved-side-bilde-to.avif" alt="Bilde av lokale, med lys, glass og vin i forgrunnen">
-            <div id="tekst-boks-1">
-                <h1 id="mork-del-tekst"> Book vårt flotte lokale til årets julebord, eller vår autentiske og hjemmekoselige restaurant for mindre arrangementer <br> </h1>
-            </div>
-        </div>
+                        </div>
+                    </div>
+                    <div class="lys-del-høyre"> 
+                        <img src="https://images.unsplash.com/photo-1583354608715-177553a4035e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="bilde fra resturanten">
+                    </div>
+                </div>
 
-        <div class="lys-del2">
-            <div class="lys-del-tekstboks">
-                <h1 id="lys-del-tekst"> 
-                    Restauranten er oppkalt etter vår toscanske farfar Mario, og kjøkkenet er inspirert av de mange og lange mattradisjoner fra Toscana. <br><br>
-                    På vår koselige italienske restaurant kan du nyte kjente og kjære italienske retter, som pizza, pasta og tiramisu tilberedt på klassisk vis
-                </h1>
+                <div class="boks2">
+                    <div class="mork-del">            
+                    <!-- Bilde hentet fra: "https://images.unsplash.com/photo-1580929753530-ef52238116c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" -->
+                        <div id="tekst-boks-1">
+                            <h1 class="overskrift">Arrangere noe? </h1>
+                            <h1 id="mork-del-tekst"> 
+                                <hr id="strek">
+                                <br>Book vårt flotte lokale til årets julebord, eller vår autentiske og hjemmekoselige restaurant for mindre arrangementer <br> </h1>
+                            <hr id="strek">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lys-del2">
+                    <div class="lys-del-tekstboks-2">
+                        <h1 class="lys-del-tekst-2"> 
+                            Restauranten er oppkalt etter vår toscanske farfar Mario, og kjøkkenet er inspirert av de mange og lange mattradisjoner fra Toscana. <br><br>
+                            På vår koselige italienske restaurant kan du nyte kjente og kjære italienske retter, som pizza, pasta og tiramisu tilberedt på klassisk vis
+                        </h1>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
         
     <footer>
         <div class="footer-innhold">
             <div id="kontakt">
-                <p class="footer-tekst"><b>KONTAKT OSS </p>
+                <p class="footer-tekst"><b>KONTAKT OSS</b></p>
+                <br>
                 <p class="footer-tekst"><b>Epost:</b> reservation@marios.it </p>
                 <p class="footer-tekst"><b>Telefon:</b> +81549300 </p>
                 <p class="footer-tekst"><b>Adresse:</b> Romagata 13, 1337 Oslo </p>        
             </div>
 
             <div id="aapningstider">
-                <p class="footer-tekst"><b>ÅPNINGSTIDER</p>
+                <p class="footer-tekst"><b>ÅPNINGSTIDER</b></p>
+                <br>
                 <p class="footer-tekst">Søndag - Torsdag: <i class="klokkeslett">09 - 22</i> </p>
                 <p class="footer-tekst">Fredag - Lørdag: <i class="klokkeslett">10 - 23</i> </p>            
             </div>

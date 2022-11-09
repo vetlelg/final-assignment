@@ -1,8 +1,3 @@
-p {
-    color: silver;
-    font-size: 110%
-}
-
 h2 {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(165, 102, 73);
@@ -18,49 +13,60 @@ h3 {
     font-size: 110%
 }
 
-i {
-    font-size: 15px;
-    color: rgb(87, 186, 85);
+p {
+    color: silver;
+    font-size: 110%
 }
 
 a {
     text-decoration: none;
     color: white;
-    margin: auto;
+}
+
+.hovedbilde {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    /* Bilde hentet fra: "https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" */
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,#242422 100%),url("../images/hoved-side-bakgrunn.avif");
+    z-index: -2;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#vegetar {
+    font-size: 15px;
+    color: rgb(87, 186, 85);    
 }
 
 #meny-overskrift {
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    color: white;
+    color: rgb(248, 225, 192);
     font-size: 100px;
-    left: 50%;
-    margin-top: -40px;
+    padding-top: 200px;
+    font-weight: lighter;
 }
 
 .meny {
     width: 50%;
-    height: 1600px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -30px;
-    display: block;
+    margin-top: 20vh;
     background-color: #2b2b29;
     padding-top: 50px;
-    position: relative;
-}
-
-.hele-menyen {
-    margin-top: 20%;
+    padding-bottom: 20px;
 }
 
 .matrett {
     margin: 50px 0;
 }
 
-.left {                     /* .left og .pris brukes til å feste navn og pris til samme linje */
+/* .left og .pris brukes til å feste navn og pris til samme linje */
+.left {
     text-align: left;
     margin-left: 10%;
+
 }
 
 .pris {
@@ -68,61 +74,25 @@ a {
     margin-right: 10%;
 }
 
-.adresse {
-    float: right;
-    margin-right: 35%
-}
-
-.allergen {                 /* Allergen posisjon */
+/* Allergen posisjon */
+.allergen {
     margin-left: 10%;
     font-size: 15px;
     color: rgb(177, 160, 137);
 }
 
-.bakgrunn-header {
-    height: 600px;
-    width: 100%;
-    rotate: (180deg);
-    object-position: 50% 0%;
-    opacity: 20%;
-    position: absolute;
-    object-fit: cover;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.50);
-    z-index: -1;
-}
+@media(max-width: 768px){
+    .hovedbilde {
+        height: 500px;
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,#2b2b29 100%),url("../images/hoved-side-bakgrunn.avif");
+    }
 
-footer {
-    margin-top: 200px;
-    height: 400px;
-    background-color: #2b2b29;
-}
+    .meny{
+        width: 100%;
+        margin-top: 0%;
+    }
 
-.footer-tekst {
-    font-family: 'Roboto', sans-serif;    
-    font-weight: lighter;
-    font-size: 20px;
-    color: white;
-    letter-spacing: 1.2px;;
-}
-
-#kontakt {
-    width: 500px;
-    margin-left: 15%;
-    margin-top: 5%;
-    position: absolute;
-    font-family: 'Roboto', sans-serif;    
-    font-weight: lighter;    
-}
-
-#aapningstider {
-    width: 500px;
-    margin-left: 67%;
-    margin-top: 5%;
-    position: absolute; 
-    font-family: 'Roboto', sans-serif;    
-    font-weight: lighter;   
-}
-
-.klokkeslett {
-    color: white;
+    #meny-overskrift{
+        font-size: 50px;
+    }
 }
