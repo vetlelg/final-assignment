@@ -25,15 +25,16 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1% 0 5%;
+    padding: 0 1% 0 10%;
     pointer-events: none;
 }
-nav:hover {
+nav:hover, nav:active {
     pointer-events: all;
 }
 
-a {
-    color: rgba(255, 255, 255, 0.9);
+/* Linker i navigasjonsbar og footer */
+nav a, footer a {
+    color: white;
     text-decoration: none;
     font-size: 1.5em;
     text-shadow: 2px 2px 5px black;
@@ -46,7 +47,7 @@ nav a {
     opacity: 0;
     transition: opacity 0.5s ease;
 }
-a:hover {
+nav a:hover {
     color: gray;
 }
 nav:hover a {
@@ -93,7 +94,7 @@ header {
     justify-content: space-between;
     grid-area: header;
     color: white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1494522855154-9297ac14b55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/alternativ-topical-header.jpg");
     background-size: cover;
     background-position: bottom;
 }
@@ -110,21 +111,23 @@ header h1 {
 /* Hovedinnhold */
 main {
     grid-area: main;
+    font-size: 1.5em;
+}
+img {
+    width: 50%;
+}
+main a {
+    text-decoration: underline;
 }
 
 
-/* Linker nederst på siden */
+/* Footeren nederst på siden */
 footer {
     grid-area: footer;
     background-color: rgb(22, 28, 44);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-}
-
-
-img {
-    width: 50%;
 }
 
 
@@ -154,32 +157,26 @@ img {
     "fem"
     "seks";
 }
-#en {
+.en {
     grid-area: en;
 }
-#to {
+.to {
     grid-area: to;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("../images/topical-bilde-to.avif");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("../images/alternativ-topical-bilde-to.jpg");
 }
-#tre {
+.tre {
     grid-area: tre;
 }
-#fire {
+.fire {
     grid-area: fire;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/topical-bilde-fire.avif");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/alternativ-topical-bilde-fire.jpg");
 }
-#fem {
+.fem {
     grid-area: fem;
 }
-#seks {
+.seks {
     grid-area: seks;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/topical-bilde-seks.avif");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/alternativ-topical-bilde-seks.jpg");
 }
 
 
@@ -196,14 +193,22 @@ img {
 
 
 /* Klasse for alle tekstboksene i main */
-.tekstboks {
-    font-size: 1.5em;
+.tekstboks-svart, .tekstboks-hvit {
     width: 40%;
     height: max-content;
 }
 
+.tekstboks-hvit, .tekstboks-hvit a {
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
 
-/* Egen css for mindre skjermer. For mobil, tablet osv. */
+.tekstboks-svart a {
+    color: black;
+}
+
+
+/* For mindre skjermer. For mobil, tablet osv. */
 @media only screen and (min-width: 600px) {
     .display-none-desktop {
         display: none;
@@ -211,11 +216,19 @@ img {
 }
 
 @media only screen and (max-width: 1000px) {
+    main {
+        font-size: 2.3em;
+    }
+
+    img {
+        width: 80%;
+    }
+
     header h1 {
         font-size: 3em;
     }
 
-    a {
+    nav a {
         font-size: 2em;
     }
 
@@ -224,27 +237,27 @@ img {
         justify-content: space-evenly;
     }
 
-    img {
+    .tekstboks-hvit, .tekstboks-svart {
         width: 80%;
-    }
-
-    .tekstboks {
-        width: 80%;
-        font-size: 2.3em;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .display-none-mobile {
-        display: none;
+
+    main {
+        font-size: 2em;
     }
 
     img {
         width: 100%;
     }
 
-    a {
+    nav a, footer a {
         font-size: 1.7em;
+    }
+
+    .display-none-mobile {
+        display: none;
     }
 
     .hamburger-strek {
@@ -253,8 +266,7 @@ img {
         margin: 7px;
     }
 
-    .tekstboks {
-        font-size: 2em;
+    .tekstboks-hvit, .tekstboks-svart {
         width: 90%;
     }
 }
