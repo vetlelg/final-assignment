@@ -1,0 +1,25 @@
+h1 {
+    color: rgb(248, 225, 192);
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-size: 45px;
+}
+
+p {
+    color: rgb(248, 225, 192);
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+#tekst {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
