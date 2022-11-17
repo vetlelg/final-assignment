@@ -4,30 +4,31 @@
     width: 100%;
     height: 100vh;
     /* Bilde hentet fra: "https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" */
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%),url("https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%),url("https://images.pexels.com/photos/776538/pexels-photo-776538.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-position: bottom left;
     z-index: -1;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #midt-tekst {
-    color: #FFF8EA;
-    font-size: 60px;
+    color: rgb(248, 225, 192);
+    font-size: 70px;
     /* font-family: 'Playfair Display', serif; */
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
-    font-weight: lighter;
+    font-weight: thick;
     letter-spacing: 0.6px;
-    margin-top: 20%;
+    margin-top: 15%;
+    padding: 0px 40px;
 }
 
 #under-tekst {
-    color: #FFF8EA;
+    color: rgb(248, 225, 192);
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     margin-top: 20px;
-    text-shadow: 4px 4px 7px rgba(0,0,0,0.6);
 }
 
 .pil {
@@ -39,13 +40,13 @@
     padding: 20px;
     z-index: 10;
     bottom: 50px;
-    margin-top: 180px;
 }
 
 #pil-ned-a {
     display: flex;
     justify-content: center;
     bottom: 50px;
+    margin-top: 100px;
 }
 
 .pil:hover {
@@ -60,16 +61,19 @@
     z-index: 10;
 }
 
-.boks1 {
+
+.del-1 {
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: rgb(255, 255, 255);
     padding-top: 100px;
     padding-bottom: 100px;
+    padding-right: 50px;
 }
 
-.lys-del-venstre {
+
+.del-1-venstre {
     display: flex;
     align-items: center;
     height: 500px;
@@ -77,7 +81,12 @@
     z-index: 1;
 }
 
-.lys-del-høyre {
+.overskrift {
+    color: rgb(165, 102, 73);
+    font-size: 40px;
+}
+
+.del-1-høyre {
     display: flex;
     align-items: center;
     height: 500px;
@@ -85,7 +94,7 @@
     padding-right: 100px;
 }
 
-.lys-del-høyre img {
+.del-1-høyre img {
     display: flex;
     width: 100%;
     height: 450px;
@@ -95,7 +104,7 @@
     margin-right: 30px;
 }
 
-.lys-del-tekst {
+.del-1-tekst {
     display: flex;
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
@@ -107,52 +116,16 @@
     margin-top: 0;
 }
 
-.lys-del2 {
-    height: 55vmin;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    background-color: #ffffff;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.lys-del-tekst-2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-    font-weight: lighter;
-    text-align: center;
-    padding: 40px;
-    margin-top: 0;
-    font-size: 4vmin;
-}
-
-.lys-del-tekstboks-2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.lys-del-tekstboks .overskrift {
+.del-1-tekstboks .overskrift {
     color: rgb(165, 102, 73);
     text-align: left;
     margin-left: 20%;
     padding-bottom: 30px;
 }
 
-.overskrift {
-    color: rgb(165, 102, 73);
-    font-size: 40px;
-}
 
-.lys-del-tekstboks #strek {
+
+.del-1-tekstboks #strek {
     margin-left: 20%;
     margin-top: 40px;
     width: 10%;
@@ -165,17 +138,16 @@
     background-color: rgb(165, 102, 73);
     height: 3px;
 }
-#strek1 {
+
+#strek-1 {
     width: 15%;
     background-color: rgb(165, 102, 73);
     height: 3px;
     margin-left: 20%;
     margin-top: 50px;
-
 }
 
-
-.mork-del {
+.del-2 {
     height: 500px;
     width: 100%;
     margin-left: auto;
@@ -188,11 +160,11 @@
     z-index: -1;
 }
 
-.mork-del .overskrift {
+.del-2 .overskrift {
     margin-top: 0;
 }
 
-#mork-del-tekst {
+#del-2-tekst {
     font-family: 'Roboto', sans-serif;    
     font-weight: lighter;
     font-size: 30px;
@@ -202,14 +174,80 @@
     padding-bottom: 50px;
 }
 
-#tekst-boks-1 {
+#del-2-tekstboks {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.lys-del-tekstboks-2 {
-    width: 100vh;
+.del-3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 50px;
+    flex-direction: row-reverse;
+}
+
+.del-3-høyre {
+    display: flex;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+    z-index: 1;
+    padding-left: 100px;
+}
+
+.del-3-høyre {
+    display: flex;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+    padding-right: 100px;
+}
+
+.del-3-høyre img {
+    display: flex;
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    margin-right: 30px;
+    padding-left: 100px;
+    padding-right: 50px;
+}
+
+.del-3-tekst {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-size: 4vmin;
+    font-weight: lighter;
+    text-align: left;
+    margin-right: 50px;
+    margin-top: 0;
+}
+
+.del-3-tekstboks .del-3-overskrift {
+    color: rgb(165, 102, 73);
+    padding-bottom: 30px;
+}
+
+.del-3-overskrift {
+    color: rgb(165, 102, 73);
+    font-size: 40px;
+    text-align: left;
+}
+
+#strek-3 {
+    width: 15%;
+    background-color: rgb(165, 102, 73);
+    height: 3px;
+    margin-top: 50px;
+    margin-left: 0px;
 }
 
 #lokale-bilde {
@@ -222,9 +260,14 @@
 }
 
 @media(max-width: 768px){
+    .hovedbilde {
+        height: 100vh;
+    }
+    
     #midt-tekst {
         font-size: 45px;
-        margin-top: 200px;
+        margin-top: 50%;
+        padding: 20px;
     }
 
     #under-tekst {
@@ -232,12 +275,7 @@
         padding-top: 15px;
     }
 
-    .hovedbilde {
-        height: 100vh;
-    }
-
     #pil-ned-a {
-        margin-top: 200px;
         z-index: 100;
     }
 
@@ -251,11 +289,24 @@
         border-width: 0 5px 5px 0;
     }
 
-    .boks1 {
+    .del-1 {
         flex-direction: column;
         justify-content: center;
-        height: 530px;
+        height: 730px;
         padding: 0;
+    }
+
+    .del-2 {
+        height: 300px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .del-3 {
+        justify-content: center;
+        height: 730px;
+        padding: 0;
+        flex-direction: column-reverse;
     }
 
     .overskrift {
@@ -265,40 +316,30 @@
         margin-left: 0;
         margin-top: 0;
         padding-bottom: 0;
-        
+        margin-top: 50px;
     }
 
-    .lys-del-tekstboks .overskrift {
+    .del-1-tekstboks .overskrift {
         margin-left: 0;
     }
 
-    .lys-del-tekstboks {
+    .del-1-tekstboks {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         height: 100%;
-    }
-
-    .overskrift {
-        margin-top: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
     
-    #strek1 {
-        display: none;
-        height: 1px;
-        margin-left: auto;
-    }
-    #strek {
-        height: 0.7px;
-    }
-
-    .lys-del-tekstboks #strek {
+    .del-1-tekstboks #strek {
         margin-left: auto;
         margin-top: -200px;
     }
 
-    #lys-del-tekst {
+    
+    #del-1-tekst {
         display: flex;
         justify-content: center;
         text-align: center;
@@ -309,30 +350,84 @@
         margin-right: 0;
     }
 
-    .lys-del-høyre img {
+    .del-1-høyre img {
         display: flex;
         justify-content: center;        
         width: 100%;
-        height: 250px;
         margin-top: -150px;
         align-self: end;
         margin-right: 0;
         padding-right: 0;
     }
 
-    .lys-del-høyre {
-        padding-right: 0;
+    #strek-1 {
+        display: none;
+        height: 1px;
+        margin-left: auto;
+    }
+    #strek {
+        height: 0.7px;
     }
 
-    .lys-del-høyre, .lys-del-venstre{
-        justify-content: center;
-    }
-
-    .mork-del {
-        height: 300px;
-    }
-    
-    #mork-del-tekst {
+    #del-2-tekst {
         padding-bottom: 25px;
     }
+
+    .del-3-høyre {
+        padding-left: 0;
+
+    }
+
+    .del-3-tekstboks #strek {
+        margin-left: auto;
+        margin-top: -200px;
+    }
+
+    #del-3-tekst {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 4vmin;
+        margin-left: 0;
+        margin-top: 30px;
+        padding: 30px;
+        margin-right: 0;
+    }
+
+    .del-3-høyre img {
+        display: flex;
+        justify-content: center;        
+        width: 100%;
+        align-self: end;
+        margin-right: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .del-3-høyre {
+        padding-right: 0;
+        overflow: hidden;
+        height: 500px;
+    }
+
+    .del-3-overskrift {
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        margin-left: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        margin-top: 50px;
+    }
+
+    .del-3-tekst {
+        text-align: center;
+        margin:0;
+        padding: 30px;
+    }
+
+    #strek-3 {
+        display: none;
+    }
+
 }
