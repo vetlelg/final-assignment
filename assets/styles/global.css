@@ -29,6 +29,7 @@ ul {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    z-index: 1;
 }
 
 .navbar {
@@ -48,14 +49,6 @@ ul {
 .navbar a:hover {
     color: rgb(118, 118, 118);
     border-bottom: 2px solid rgb(118, 118, 118);
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  z-index: 1;
 }
 
 .navbar .ul {
@@ -131,6 +124,7 @@ footer {
     ul{
         padding-inline-start: 20px;
     }
+    
 
     .footer-tekst {
         font-size: 12px;
