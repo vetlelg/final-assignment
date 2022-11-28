@@ -1,10 +1,27 @@
+h3 {
+    font-size: 120%;
+    font-family: 'Roboto', sans-serif;    
+}
+
+/* Farge på linken etter det har blitt trykket på */
+a:visited {  
+    color: rgb(248,225,192);
+}
+
+/* Farge på linken */ 
+a:link { 
+    color: rgb(248,225,192);
+}
+
+
+/* Bakgrunnsbilde */
 .hovedbilde {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 600px;
     /* Bilde hentet fra: https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80 */
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 100%),url("../images/alternativ-booking-side-bakgrunn.jpg");
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 100%),url("../images/booking-side-bakgrunn.jpg");
     z-index: -1;
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,34 +37,43 @@
     font-size: 600%;    
     position: absolute;
     text-align: center; 
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(248, 225, 192)
 }
-.container { /* Div for å få alt innhold i book bord sentrert */ 
+
+
+
+/* Div for å få alt innhold i book-bord sentrert */ 
+.container { 
     display: flex;
     justify-content: center;
 }
 
-.container2 { /* Div for å få alt innhold i book lokale sentrert */ 
+/* Div for å få alt innhold i book-lokale sentrert */ 
+.container2 { 
     display: flex;
     justify-content: center;
     flex-direction: row;
 }
 
-.book-bord-boks { /* Grå boks bak bildet og tekst */ 
+
+
+/* Grå boks bak bildet og tekst */ 
+.book-bord-boks { 
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 70%;
+    width: 60%;
     height: 45vh;
     background-color: #2b2b29;
     margin-top: 5%; 
     padding: 50px;
 }
 
-#book-bord { /* Bildet til book bord */ 
+/* Bildet til book bord */ 
+#book-bord-bilde { 
     display: flex;
     justify-content: center;
     width: 600px;
@@ -57,62 +83,28 @@
     align-items: center;
 }
 
-.book-bord { /* Teksten til book bord */ 
+/* Teksten til book bord */ 
+.book-bord-tekst { 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
     margin-left: 5%;
     margin-top: -10%;
     color: rgb(248, 225, 192);
 }
 
-form { /* Tabellen til dato */ 
+/* Tabellen til dato */ 
+form { 
     color: rgb(248, 225, 192);
     font-family: 'Roboto', sans-serif;    
     font-weight: lighter;
 }
 
-.book-lokale-boks { /* Grå boks bak bilde og info */ 
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    width: 70%;
-    height: 40vh;
-    background-color: #2b2b29;
-    margin-top: 5%; 
-    padding: 50px;
- 
-}
-
-#book-lokale {  /* Bilde til book lokale */ 
-    display: flex;
-    justify-content: center;
-    width: 600px;
-    height: 100%;  
-    object-fit: cover;
-    object-position: 25% 95%;
-    color: rgb(248, 225, 192);
-    margin-left: 10%;
-}
-
-.book-lokale { /* Teksten til book lokale */ 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: -10%;
-    color: rgb(248, 225, 192);
-}
 
 
-a:visited { /* Farge på linken etter det har blitt trykket på */ 
-    color: rgb(248,225,192);
-}
-
-a:link { /* Farge på linken */ 
-    color: rgb(248,225,192);
-}
-
-/* Popup og popup-tekst hentet fra w3schools (https://www.w3schools.com/howto/howto_js_popup.asp) for å gi en bekreftelse på at du har sendt søknaden */ 
+/* Popup og popup-tekst (inkl. engelske kommentarer) hentet fra w3schools (https://www.w3schools.com/howto/howto_js_popup.asp) for å gi en bekreftelse på at du har sendt søknaden */ 
 .popup {
     position: absolute;
     margin-top: 23%;
@@ -177,22 +169,48 @@ a:link { /* Farge på linken */
     to {opacity:1 ;}
 }
 
-h3 {
-    font-size: 120%;
-    font-family: 'Roboto', sans-serif;    
+
+
+/* Grå boks bak bilde og info */
+.book-lokale-boks {  
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 60%;
+    height: 40vh;
+    background-color: #2b2b29;
+    margin-top: 5%; 
+    padding: 50px;
+ 
 }
 
-#kontakt {
-    margin-left: 15%;
-    position: absolute;
+/* Bilde til book lokale */ 
+#book-lokale-bilde {  
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 100%;  
+    object-fit: cover;
+    object-position: 25% 95%;
+    color: rgb(248, 225, 192);
+    margin-left: 10%;
 }
 
-#aapningstider {
-    margin-left: 67%;
-    position: absolute; 
+/* Teksten til book lokale */ 
+.book-lokale-tekst { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    margin-left: -10%;
+    color: rgb(248, 225, 192);
 }
 
- @media(max-width: 1000px) { /* Skalert til ipad og tablets  */ 
+
+
+/* Skalert til ipad og tablets */ 
+@media(max-width: 1000px) { 
     .hovedbilde {
         width: 100%
     }
@@ -212,13 +230,13 @@ h3 {
         width: 800px;
     }
 
-    #book-bord {
+    #book-bord-bilde {
         margin-top: 10%;
         height: 300px;
         width: 300px;
     }
 
-    .book-bord  {
+    .book-bord-tekst  {
         margin-top: -10%;
         margin-left: 10%;
         margin-right: 10%;
@@ -232,14 +250,14 @@ h3 {
         width: 800px;
     }
 
-    #book-lokale {
+    #book-lokale-bilde {
         margin-top: 10%;
-        margin-left: 1  0%;
+        margin-left: 10%;
         height: 300px;
         width: 300px;
     }
 
-    .book-lokale{
+    .book-lokale-tekst {
         margin-top: -10%;
         margin-left: 0%;
         font-size: 15px;
@@ -251,13 +269,14 @@ h3 {
     }
 
     .popup {
-        margin-top: 45%;
+        margin-top: 55%;
 
     }
 
 }
 
-@media(max-width: 768px) { /* Skalert til mobil feks iphone 12 pro */
+/* Skalert til mobil feks iphone 12 pro */
+@media(max-width: 768px) { 
     .hovedbilde {
         width: 100%
     }
@@ -273,24 +292,25 @@ h3 {
     .book-bord-boks {
         flex-direction: column;
         justify-content: center;
-        margin-top: 30%;
         height: 650px;
         width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
     }
 
-    #book-bord {
+    #book-bord-bilde {
         margin-top: 10%;
-        margin-left: 10%;
-        margin-right: 10%;
         height: 250px;
-        width: 250px;
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
     }
 
-    .book-bord  {
+    .book-bord-tekst  {
         margin-top: 0%;
-        margin-left: 10%;
-        margin-right: 10%;
         font-size: 15px;
+        margin-left: 0%;
+        margin-right: 0%;
     }
 
     .book-lokale-boks {
@@ -300,17 +320,18 @@ h3 {
         width: 100%;
     }
 
-    #book-lokale {
-        margin-top: 10%;
-        margin-left: 10%;
+    #book-lokale-bilde {
         height: 250px;
-        width: 250px;
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
     }
 
-    .book-lokale{
+    .book-lokale-tekst {
         margin-top: 10%;
-        margin-left: 5%;
         font-size: 15px;
+        margin-left: 0%;
+        margin-right: 0%;
     }
  
     p {
@@ -329,5 +350,3 @@ h3 {
         margin-left: 15px;
     }
 }
-
- 
