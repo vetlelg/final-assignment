@@ -3,6 +3,7 @@ h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
     font-size: 45px;
+    font-weight: 600;
 }
 
 p {
@@ -13,13 +14,30 @@ p {
     line-height: 1.5;
 }
 
+
+
+/* En container til teksten */
 #container {
     display: flex;
     justify-content: center;
 }
 
+/* Videre formattering av tekst */
 #tekst {
     display: flex;
     width: 50%;
     flex-direction: column;
+}
+
+
+
+/* Nedskalering til mobilversjonen av nettsiden */
+@media(max-width: 768px){
+    #container {
+        padding-top: 15vh;
+    }
+
+    #tekst{
+        width: 75%;
+    }
 }

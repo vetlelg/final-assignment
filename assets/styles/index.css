@@ -1,3 +1,4 @@
+/* Forside */
 .hovedbilde {
     display: flex;
     flex-direction: column;
@@ -11,6 +12,7 @@
     background-repeat: no-repeat;
 }
 
+/* Tekst på miden av forsiden */
 #midt-tekst {
     color: rgb(248, 225, 192);
     font-size: 70px;
@@ -19,18 +21,23 @@
     text-transform: uppercase;
     font-weight: thick;
     letter-spacing: 0.6px;
-    margin-top: 15%;
+    margin-top: 30vh;
     padding: 0px 40px;
 }
 
-#under-tekst {
+/* Undertekst */
+#undertekst {
+    margin-left: auto;
+    margin-right: auto;
     color: rgb(248, 225, 192);
-    font-size: 20px;
+    font-size: 30px;
     font-family: 'Roboto', sans-serif;
+    font-style: italic;
     text-align: center;
     margin-top: 20px;
 }
 
+/*  Pil for å scrolle ned på siden. Generert ved hjelp av en rotert firkant som kun har border høyre og under for å danne en pil. */
 .pil {
     display: flex;
     justify-content: center;
@@ -40,8 +47,12 @@
     padding: 20px;
     z-index: 10;
     bottom: 50px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    z-index: 10;
 }
 
+/* Sentrerer pilen og plasserer den */ 
 #pil-ned-a {
     display: flex;
     justify-content: center;
@@ -52,33 +63,6 @@
 .pil:hover {
     border: solid darkgrey;
     border-width: 0 7px 7px 0;
-    display: inline-block;
-}
-  
-.ned {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    z-index: 10;
-}
-
-
-.del-1 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: rgb(255, 255, 255);
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-right: 50px;
-}
-
-
-.del-1-venstre {
-    display: flex;
-    align-items: center;
-    height: 500px;
-    width: 100%;
-    z-index: 1;
 }
 
 .overskrift {
@@ -86,14 +70,34 @@
     font-size: 40px;
 }
 
+/* Justerer skriftstørrelse utifra vindustørrelse*/
+.del-1-tekst, .del-2-tekst, .del-3-tekst {
+    font-size: 3vmin;
+    color: rgb(165, 102, 73);
+}
+/* Del 1 av siden*/
+.del-1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+.del-1-venstre {
+    display: flex;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+    z-index: 1;
+}
 .del-1-høyre {
     display: flex;
     align-items: center;
     height: 500px;
     width: 100%;
-    padding-right: 100px;
 }
-
 .del-1-høyre img {
     display: flex;
     width: 100%;
@@ -101,52 +105,39 @@
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
-    margin-right: 30px;
+    margin-right: 7vw;
 }
-
 .del-1-tekst {
     display: flex;
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-    font-size: 4vmin;
     font-weight: lighter;
     text-align: left;
     margin-left: 20%;
     margin-right: 50px;
     margin-top: 0;
 }
-
 .del-1-tekstboks .overskrift {
     color: rgb(165, 102, 73);
     text-align: left;
     margin-left: 20%;
-    padding-bottom: 30px;
 }
-
-
-
+/* Strek for å løfte designet */
 .del-1-tekstboks #strek {
     margin-left: 20%;
     margin-top: 40px;
     width: 10%;
 }
-
-#strek {
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-    background-color: rgb(165, 102, 73);
-    height: 3px;
-}
-
 #strek-1 {
     width: 15%;
     background-color: rgb(165, 102, 73);
-    height: 3px;
+    height: 2px;
     margin-left: 20%;
     margin-top: 50px;
 }
 
+
+
+/* Del 2 av siden*/
 .del-2 {
     height: 500px;
     width: 100%;
@@ -156,30 +147,61 @@
     justify-content: center;
     align-items: center;
     background-color: #FFF8EA;
-    position: relative;
-    z-index: -1;
-}
-
-.del-2 .overskrift {
-    margin-top: 0;
-}
-
-#del-2-tekst {
-    font-family: 'Roboto', sans-serif;    
-    font-weight: lighter;
-    font-size: 30px;
-    font-size: 4vmin;
-    margin-top: 5%;
-    color: rgb(165, 102, 73);
+    position: relative;    
+    padding-top: 50px;
     padding-bottom: 50px;
 }
-
-#del-2-tekstboks {
+.del-2-tekstboks {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.del-2-tekst {
+    font-family: 'Roboto', sans-serif;  
+    text-align: center;  
+    font-weight: lighter;
+    color: rgb(165, 102, 73);
+    padding-bottom: 50px;
+}
+#strek-2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    background-color: rgb(165, 102, 73);
+    height: 2px;
+}
+/* Knapp til booking */
+.til-booking-knapp {    
+    background-color: #FFF8EA;
+    color: black; 
+    border: 2px solid rgb(165, 102, 73);
+    border-radius: 5px;
+    color: rgb(165, 102, 73);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    z-index: 10099999000;
+}
+.til-booking-knapp:hover {
+    background-color: rgb(165, 102, 73); 
+    color: #FFF8EA; 
 }
 
+
+
+/* 
+    Del 3 av siden. 
+    Bruker flex for å plassere elementer i forhold til hverandre.
+*/
 .del-3 {
     width: 100%;
     display: flex;
@@ -187,55 +209,40 @@
     background-color: rgb(255, 255, 255);
     padding-top: 100px;
     padding-bottom: 100px;
-    padding-right: 50px;
     flex-direction: row-reverse;
 }
-
 .del-3-høyre {
     display: flex;
     align-items: center;
     height: 500px;
     width: 100%;
+    margin-left: 5vw;
+    padding-right: 7vw;
     z-index: 1;
-    padding-left: 100px;
 }
-
-.del-3-høyre {
+.del-3-venstre img {
     display: flex;
-    align-items: center;
-    height: 500px;
-    width: 100%;
-    padding-right: 100px;
-}
-
-.del-3-høyre img {
-    display: flex;
-    width: 100%;
-    height: 450px;
+    width: 40vw;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
     margin-right: 30px;
-    padding-left: 100px;
-    padding-right: 50px;
+    padding-left: 7vw;
+    padding-right: 2vw;
 }
-
 .del-3-tekst {
     display: flex;
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-    font-size: 4vmin;
     font-weight: lighter;
     text-align: left;
     margin-right: 50px;
     margin-top: 0;
 }
-
 .del-3-tekstboks .del-3-overskrift {
     color: rgb(165, 102, 73);
     padding-bottom: 30px;
 }
-
 .del-3-overskrift {
     color: rgb(165, 102, 73);
     font-size: 40px;
@@ -246,8 +253,9 @@
     width: 15%;
     background-color: rgb(165, 102, 73);
     height: 3px;
-    margin-top: 50px;
     margin-left: 0px;
+    margin-top: -25px;
+    margin-bottom: 25px;
 }
 
 #lokale-bilde {
@@ -259,36 +267,64 @@
     opacity: 0.5;
 }
 
+/* Knapp til menyen */
+.til-meny-knapp {    
+    background-color: #ffffff;
+    color: black; 
+    border: 2px solid rgb(165, 102, 73);
+    border-radius: 5px;
+    color: rgb(165, 102, 73);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    z-index: 10;
+}
+.til-meny-knapp:hover {
+    background-color: rgb(165, 102, 73); 
+    color: #FFF8EA; 
+}
+
+
+
+/* CSS for telefon */
 @media(max-width: 768px){
-    .hovedbilde {
-        height: 100vh;
-    }
-    
+
     #midt-tekst {
         font-size: 45px;
-        margin-top: 50%;
         padding: 20px;
     }
-
-    #under-tekst {
+    #undertekst {
         font-size: 15px;
         padding-top: 15px;
     }
 
+    /* Pil */ 
     #pil-ned-a {
         z-index: 100;
     }
-
     .pil {
         border: solid white;
         border-width: 0 5px 5px 0;
         margin-top: 40px;
     }
-
     .pil:hover {
         border-width: 0 5px 5px 0;
     }
 
+    .del-1-tekst, .del-2-tekst, .del-3-tekst {
+        text-align: center;
+        font-size: 4vmin;
+        padding: 30px;
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 0;
+    }
+   
+
+    /* Endrer retning på flex for å gjøre det mer mobilvennlig. */
     .del-1 {
         flex-direction: column;
         justify-content: center;
@@ -298,10 +334,9 @@
 
     .del-2 {
         height: 300px;
-        padding-top: 30px;
-        padding-bottom: 30px;
     }
     
+    /* Del 3 av nettsiden */
     .del-3 {
         justify-content: center;
         height: 730px;
@@ -333,28 +368,24 @@
         padding-bottom: 30px;
     }
     
-    .del-1-tekstboks #strek {
-        margin-left: auto;
-        margin-top: -200px;
-    }
-
-    
-    #del-1-tekst {
+    .del-1-tekst {
         display: flex;
         justify-content: center;
         text-align: center;
         font-size: 4vmin;
-        margin-left: 0;
-        margin-top: 30px;
+        margin: 25px 0 0 0;
         padding: 30px;
-        margin-right: 0;
+        padding-top: 0px;
     }
+    .del-1-høyre {
+        padding-right: 0px;
 
+    }
     .del-1-høyre img {
         display: flex;
-        justify-content: center;        
+        justify-content: center;   
+        height: 350px;     
         width: 100%;
-        margin-top: -150px;
         align-self: end;
         margin-right: 0;
         padding-right: 0;
@@ -367,15 +398,16 @@
     }
     #strek {
         height: 0.7px;
+        display: none;
     }
 
-    #del-2-tekst {
-        padding-bottom: 25px;
+    .del-2-tekst {
+        padding: 0;
+        padding-bottom: 50px;
     }
 
-    .del-3-høyre {
-        padding-left: 0;
-
+    .del-2-tekstboks {
+        width: 80%;
     }
 
     .del-3-tekstboks #strek {
@@ -394,9 +426,10 @@
         margin-right: 0;
     }
 
-    .del-3-høyre img {
+    .del-3-venstre img {
         display: flex;
-        justify-content: center;        
+        justify-content: center;   
+        height: 350px;     
         width: 100%;
         align-self: end;
         margin-right: 0;
@@ -404,10 +437,18 @@
         padding-left: 0;
     }
 
+    .del-3-tekstboks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .del-3-høyre {
         padding-right: 0;
         overflow: hidden;
         height: 500px;
+        padding-left: 0;
+        margin-left: 0;
     }
 
     .del-3-overskrift {
@@ -417,17 +458,27 @@
         margin-left: 0;
         margin-top: 0;
         padding-bottom: 0;
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
     .del-3-tekst {
         text-align: center;
         margin:0;
         padding: 30px;
+        padding-top: 0px;
     }
 
     #strek-3 {
         display: none;
     }
 
+    .til-booking-knapp, .til-meny-knapp {    
+        padding: 10px 25px;
+        font-size: 12px;
+        border-width: 1px;
+    }
+
+    .til-meny-knapp {
+        margin-bottom: 50px;
+    }
 }

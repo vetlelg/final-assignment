@@ -11,7 +11,9 @@
 
 <body>
     <header>
+        <!-- Bakgrunnsbilde -->
         <div class ="hovedbilde">
+            <!-- Navigasjonsbar -->
             <nav class="navbar">
                 <div class="container"> 
                     <!--Logo laget av Harald Eskeland-->
@@ -35,82 +37,87 @@
                     </ul>
                 </div>
 
-                <h1 id="meny-overskrift">MENY</h1>
+                <h1 id="overskrift">MENY</h1>
             </nav>
+            <!-- Pil for å la bruker "hoppe" ned til menyen uten behov for scrolling -->
+            <a id="pil-ned-a" href="#seksjon1"><i class="pil ned"></i></a>
         </div>
     </header>
 
     <main>
-        <div class="meny">
-            <div id="meny-mobil">
-                <h2 class="left">Forretter</h2>
-                
-                <div class="matrett">
-                    <h3 class="left"><b>Focaccia </b><i id="vegetar">vegetariano</i><b><span class="pris"> 79,- </span></b></h3>
-                    <p class="left">husets pesto rosso, pesto genovese og aioli</p>
-                    <p class="allergen">egg, hvete, melk, pinjekjerne, sennep, soya, svoveldioksid og sulfitt<p>
-                </div>
+        <!-- Selve menyen, bruk av tom id for å la bruker "hoppe" ned ved bruk av pil -->
+        <div class="meny" id="seksjon1">
+            <!-- h2 for å markere at dette er en bestemt type kategori -->  
+            <h2>Forretter </h2>
+            
+            <!-- diver for å skille mellom matretter innad i en bestemt kategori-->
+            <div class="matrett">
+                <h3 class="left"><b>Focaccia </b><i id="vegetar">vegetariano</i><b><span class="pris"> 79,- </span></b></h3>
+                <p class="left">husets pesto rosso, pesto genovese og aioli</p>
+                <p class="allergen">egg, hvete, melk, pinjekjerne, sennep, soya, svoveldioksid og sulfitt<p>
+            </div>
 
-                <div class="matrett">
-                    <h3 class="left"><b>Mozzarella di burrata </b><i id="vegetar">vegetariano</i><span class="pris"><b>104,- </b></span></h3>
-                    <p class="left">kremet mozzarellaspesialitet fra puglia, ferske og syltede tomater</p>
-                    <p class="allergen">melk<p>
-                </div>
+            <div class="matrett">
+                <h3 class="left"><b>Mozzarella di burrata </b><i id="vegetar">vegetariano</i><span class="pris"><b>104,- </b></span></h3>
+                <p class="left">kremet mozzarellaspesialitet fra puglia, ferske og syltede tomater</p>
+                <p class="allergen">melk<p>
+            </div>
 
-                <div class="matrett">
-                    <h3 class="left"><b>Carpaccio di manzo </b><span class="pris"><b>149,- </b></span></h3>
-                    <p class="left">tynne, rå skiver av okse indrefilet, parmigiano reggiano, sitron,<br> ruccola, pinjekjerner og extra virgin olivenolje</p>
-                    <p class="allergen">egg, melk, pinjekjerne, sennep, svoveldioksid og sulfitt<p>
-                </div>
-                
-                <hr style: width="80%"><br>
+            <div class="matrett">
+                <h3 class="left"><b>Carpaccio di manzo </b><span class="pris"><b>149,- </b></span></h3>
+                <p class="left">tynne, rå skiver av okse indrefilet, parmigiano reggiano, sitron,<br> ruccola, pinjekjerner og extra virgin olivenolje</p>
+                <p class="allergen">egg, melk, pinjekjerne, sennep, svoveldioksid og sulfitt<p>
+            </div>
+            
+            <!-- Bruk av horisontal strek for å skille mellom kategoriene -->
+            <hr style: width="80%"><br>
 
-                <h2 class="left">Hovedretter</h2>
+            <h2>Hovedretter</h2>
 
-                <div class="matrett">
-                    <h3 class="left"><b>Mama Mia</b><span class="pris"><b>175,-</b></span></h3>
-                    <p class="left">tomat, mozzarella, sjampingjong, italiensk skinke, oregano</p>
-                    <p class="allergen">hvete, melk, selleri<p>
-                </div>
+            <div class="matrett">
+                <h3 class="left"><b>Mama Mia</b><span class="pris"><b>175,-</b></span></h3>
+                <p class="left">tomat, mozzarella, sjampingjong, italiensk skinke, oregano</p>
+                <p class="allergen">hvete, melk, selleri<p>
+            </div>
 
-                <div class="matrett">
-                    <h3 class="left"><b>Pasta Italia</b><span class="pris"><b>175,-</b></span></h3>
-                    <p class="left">tomat, løk, linguine, ytrefilet av okse</p>
-                    <p class="allergen">hvete, melk<p>
-                </div>
+            <div class="matrett">
+                <h3 class="left"><b>Pasta Italia</b><span class="pris"><b>175,-</b></span></h3>
+                <p class="left">tomat, løk, linguine, ytrefilet av okse</p>
+                <p class="allergen">hvete, melk<p>
+            </div>
 
-                <div class="matrett">
-                    <h3 class="left"><b>Pasta Carbonara</b><span class="pris"><b>210,-</b></span></h3>
-                    <p class="left">linguine, guanciale, eggeplommer, fløte, parmesan, nykvernet sort pepper</p>
-                    <p class="allergen">egg, hvete, melk<p>
-                </div>
+            <div class="matrett">
+                <h3 class="left"><b>Pasta Carbonara</b><span class="pris"><b>210,-</b></span></h3>
+                <p class="left">linguine, guanciale, eggeplommer, fløte, parmesan, nykvernet sort pepper</p>
+                <p class="allergen">egg, hvete, melk<p>
+            </div>
 
-                <hr style: width="80%"><br>
+            <hr style: width="80%"><br>
 
-                <h2 class="left">Dessert</h2>
+            <h2>Dessert</h2>
 
-                <div class="matrett">
-                    <h3 class="left"><b>Gelato e sorbetto</b><span class="pris"><b>59,-</b></span></h3>
-                    <p class="left">velg en kule vanilje, bringebærsorbet eller sjokoladeis</p>
-                    <p class="allergen">melk<p>
-                </div>
-                
-                <div class="matrett">
-                    <h3 class="left"><b>Tiramisù</b><span class="pris"><b>114,-</b></span></h3>
-                    <p class="left">savoiardikjeks dyppet i espresso og rom med mascarponekrem og kakaodryss</p>
-                    <p class="allergen">egg, hvete, melk<p>
-                </div>
+            <div class="matrett">
+                <h3 class="left"><b>Gelato e sorbetto</b><span class="pris"><b>59,-</b></span></h3>
+                <p class="left">velg en kule vanilje, bringebærsorbet eller sjokoladeis</p>
+                <p class="allergen">melk<p>
+            </div>
+            
+            <div class="matrett">
+                <h3 class="left"><b>Tiramisù</b><span class="pris"><b>114,-</b></span></h3>
+                <p class="left">savoiardikjeks dyppet i espresso og rom med mascarponekrem og kakaodryss</p>
+                <p class="allergen">egg, hvete, melk<p>
+            </div>
 
-                <div class="matrett">
-                    <h3 class="left"><b>Soufflè al cioccolato</b><span class="pris"><b>125,-</b></span></h3>
-                    <p class="left">sjokoladefondant med bringebærcoulis og vaniljeis</p>
-                    <p class="allergen">egg, hvete, melk<p> 
-                </div>
+            <div class="matrett">
+                <h3 class="left"><b>Soufflè al cioccolato</b><span class="pris"><b>125,-</b></span></h3>
+                <p class="left">sjokoladefondant med bringebærcoulis og vaniljeis</p>
+                <p class="allergen">egg, hvete, melk<p> 
             </div>
         </div>
     </main>
 
     <footer>
+        <!-- Global footer -->
         <div class="footer-innhold">    
             <div id="kontakt">
                 <p class="footer-tekst"><b>KONTAKT OSS </b></p>

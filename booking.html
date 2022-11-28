@@ -12,7 +12,9 @@
 
 <body>
     <main>
+        <!-- Bakgrunnsbilde -->
         <div class ="hovedbilde">
+            <!-- Navigasjonsbar -->
             <nav class="navbar">
                 <div class="container"> 
                     <!--Logo laget av Harald Eskeland-->
@@ -36,18 +38,20 @@
                     </ul>
                 </div>
             </nav>
-            
+            <!-- Overskriften på bakgrunnsbildet -->
             <h1 id="booking-overskrift">BOOKING</h1>
         </div>
 
        <div class="container bakgrunnsfarge">
-            <div class="book-bord-boks">
+            <!-- Gråfarget boks bak book bord bilde og tekst -->
+            <div class="book-bord-boks"> 
                 <!--Bilde hentet fra: "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" -->
                 <div class="venstre-del">
-                    <img src="assets/images/alternativ-booking-side-bilde-en.jpg" id= "book-bord" alt="Pent dekket bord med vinglass"> </img> <!-- Bilde fra unsplash */ -->
+                    <img src="assets/images/booking-side-bilde-en.jpg" id= "book-bord-bilde" alt="Pent dekket bord med vinglass"> </img> <!-- Bilde fra unsplash */ -->
                 </div>
 
-                <div class="book-bord">
+                <!-- Teksten til book-bord -->
+                <div class="book-bord-tekst"> 
                     <h3> Booke bord </h3>
                 
                     <p>Vil du være helt sikker på at du får plass hos oss? 
@@ -79,7 +83,7 @@
                             <input type="date" id="dato" name="dato" value="eks: 14.02.2022"><br><br>
                         </form> 
                 
-                        <!-- Hentet fra w3schools for å gi en bekreftelse på at du har trykket submit https://www.w3schools.com/howto/howto_js_popup.asp -->
+                        <!-- Hentet fra w3schools for å gi en bekreftelse på at du har trykket submit, https://www.w3schools.com/howto/howto_js_popup.asp -->
                         <div class="popup" onclick="myFunction()">Submit!
                             <span class="popup-tekst" id="myPopup">Booking mottatt! Du får bekreftelse på e-post</span>
                         </div>
@@ -96,12 +100,14 @@
         </div>
         
         <div class="container2 bakgrunnsfarge">
-            <div class="book-lokale-boks">
-                <div class="høyre-del">
+            <!-- Grå bakgrunnsfarge bak book-lokale -->
+            <div class="book-lokale-boks"> 
+                <div class="høyre-del"> 
                 <!-- Bilde hentet fra Unsplash: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" -->
-                <img src="assets/images/alternativ-booking-side-bilde-to.jpg" id="book-lokale" alt="Tomt lokale med dekket bord"></img>
+                <img src="assets/images/booking-side-bilde-to.jpg" id="book-lokale-bilde" alt="Tomt lokale med dekket bord"></img>
                 </div> 
-                    <div class="book-lokale">
+                    <!-- Teksten til book-lokale -->
+                    <div class="book-lokale-tekst"> 
                         <h3> Booke større selskap eller hele lokale </h3>
                         
                         <p> Vi har også egnede rom til større arrangementer <br> inntil 50 personer.
@@ -116,19 +122,22 @@
             </div>
         </div>
     </main>
-
+    
     <footer>
-        <div id="kontakt">
-            <p class="footer-tekst"><b>KONTAKT OSS</b></p>
-            <p class="footer-tekst"><b>Epost:</b> reservation@marios.it </p>
-            <p class="footer-tekst"><b>Telefon:</b> +81549300 </p>
-            <p class="footer-tekst"><b>Adresse:</b> Romagata 13, 1337 Oslo </p>
-        </div>
+        <!-- Global footer -->
+        <div class="footer-innhold"> 
+            <div id="kontakt">
+                <p class="footer-tekst"><b>KONTAKT OSS</b></p>
+                <p class="footer-tekst"><b>Epost:</b> reservation@marios.it </p>
+                <p class="footer-tekst"><b>Telefon:</b> +81549300 </p>
+                <p class="footer-tekst"><b>Adresse:</b> Romagata 13, 1337 Oslo </p>
+            </div>
 
-        <div id="aapningstider">
-            <p class="footer-tekst"><b>ÅPNINGSTIDER</b></p>
-            <p class="footer-tekst">Søndag - Torsdag: <i class="klokkeslett">09 - 22</i> </p>
-            <p class="footer-tekst">Fredag - Lørdag: <i class="klokkeslett">10 - 23</i> </p>
+            <div id="aapningstider">
+                <p class="footer-tekst"><b>ÅPNINGSTIDER</b></p>
+                <p class="footer-tekst">Søndag - Torsdag: <i class="klokkeslett">09 - 22</i> </p>
+                <p class="footer-tekst">Fredag - Lørdag: <i class="klokkeslett">10 - 23</i> </p>
+            </div>
         </div>
     </footer>    
 </body>

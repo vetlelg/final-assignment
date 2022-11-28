@@ -1,9 +1,9 @@
-
 /* Fjerner padding og margin på alle elementer for å gjøre det enklere å strukturere elementene */
 * {
     margin: 0;
     padding: 0;
 }
+
 
 
 /* Bruker vmin som font-size slik at teksten skaleres ut ifra minste 
@@ -39,6 +39,7 @@ nav a, footer a {
     font-size: 1.5em;
     text-shadow: 2px 2px 5px black;
 }
+
 
 
 /* Setter transition på linkene i navigasjonsbaren. Når man hover over hamburger-knappen
@@ -82,7 +83,6 @@ nav:hover .link-3 {
     background-color: white;
     margin: 8px;
     box-shadow: 1px 1px 5px black;
-
 }
 
 
@@ -94,10 +94,11 @@ header {
     justify-content: space-between;
     grid-area: header;
     color: white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/alternativ-topical-header.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/topical-header.jpg");
     background-size: cover;
     background-position: bottom;
 }
+
 header h1 {
     font-size: 3em;
     text-align: center;
@@ -106,6 +107,7 @@ header h1 {
     text-shadow: 2px 2px 5px black;
     padding: 0 5vh 50vh 5vh;
 }
+
 
 
 /* Hovedinnhold */
@@ -119,6 +121,7 @@ img {
 main a {
     text-decoration: underline;
 }
+
 
 
 /* Footeren nederst på siden */
@@ -162,21 +165,21 @@ footer {
 }
 .to {
     grid-area: to;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("../images/alternativ-topical-bilde-to.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("../images/topical-bilde-to.jpg");
 }
 .tre {
     grid-area: tre;
 }
 .fire {
     grid-area: fire;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/alternativ-topical-bilde-fire.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/topical-bilde-fire.jpg");
 }
 .fem {
     grid-area: fem;
 }
 .seks {
     grid-area: seks;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/alternativ-topical-bilde-seks.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/topical-bilde-seks.jpg");
 }
 
 
@@ -206,6 +209,7 @@ footer {
 .tekstboks-svart a {
     color: black;
 }
+
 
 
 /* For mindre skjermer. For mobil, tablet osv. */
