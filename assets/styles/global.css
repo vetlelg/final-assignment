@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@700&family=Yeseva+One&display=swap');
 
 /* CSS som skal brukes til flere av sidene */
+
+/* Gjør at siden scroller når man hopper til et punkt på siden */
 html {
     scroll-behavior: smooth;
 }
@@ -21,12 +23,14 @@ ul {
     flex-direction: row;
 }
 
+
+
 /* Navigasjonsbar */
 .navbar {
     color: black;
     height: 80px;
 }
-
+/* Fjerner styling fra linkene, setter transition duration for animasjon ved hover */
 .navbar a {
     color: #FFF8EA;
     text-decoration: none;
@@ -36,12 +40,11 @@ ul {
     transition-duration: 0.4s;
     font-family: 'Roboto', sans-serif;
 }
-
+/* Fargeendring og understrek ved pekeren over */
 .navbar a:hover {
     color: white;
     border-bottom: 2px solid rgb(118, 118, 118);
 }
-
 /* Plassering av ikoner i navbar, og videre formattering */
 .navbar .container {
     max-width: 1200px;
@@ -54,16 +57,14 @@ ul {
     z-index: 1;
 }
 
-.navbar .ul {
-    display: flex;
-}
-
 /* Formattering av logo */ 
 #logo {
     display: flex;
     width: 200px;
     z-index: 1;
 }
+
+
 
 /* Global footer */
 footer {
@@ -73,6 +74,7 @@ footer {
     background-color: #242422;
 }
 
+/* Font design i footer */
 .footer-tekst {
     font-family: 'Roboto', sans-serif;    
     font-weight: lighter;
@@ -91,46 +93,40 @@ footer {
 
 /* Kontakt-oss delen av footer */
 #kontakt {
-    font-family: 'Roboto', sans-serif;    
-    font-weight: lighter;  
     margin: 20px;
-    display: inline-block;
     margin-right: 20%;
     margin-top: -60px;
 }
 
 /* Åpningstider-delen av footer */
 #aapningstider {
-    font-family: 'Roboto', sans-serif;    
-    font-weight: lighter;  
     margin: 20px;
     margin-left: 0%;
-    display: inline-block;
     margin-top: -60px;
 }
 
 /* Nedskalering til mobilversjon */
 @media(max-width: 768px){
-    .navbar .container {
-        flex-direction: column;
-        padding-top: 20px;
-        text-align: center;
+    /*Forhindrer at bredden blir for høy på mobil*/
+    ul{
+        padding-inline-start: 20px;
     }
-
+    
     .navbar a {
         margin-left: 20px;
         margin-top: 50px;
         font-size: 11px;
     }
 
+    .navbar .container {
+        flex-direction: column;
+        padding-top: 20px;
+        text-align: center;
+    }
+
     #logo {
         width: 250px;
         padding-bottom: 30px;
-    }
-    
-    /*Forhindrer at bredden blir for høy på mobil*/
-    ul{
-        padding-inline-start: 20px;
     }
     
     .footer-tekst {
