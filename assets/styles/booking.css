@@ -7,12 +7,10 @@ h3 {
 a:visited {  
     color: rgb(248,225,192);
 }
-
 /* Farge på linken */ 
 a:link { 
     color: rgb(248,225,192);
 }
-
 
 /* Bakgrunnsbilde */
 .hovedbilde {
@@ -20,7 +18,7 @@ a:link {
     flex-direction: column;
     width: 100%;
     height: 600px;
-    /* Bilde hentet fra: https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80 */
+    /* Bilde hentet fra: "https://unsplash.com/photos/g_V2rt6iG7A" Fotograf: Siyuan */
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 100%),url("../images/booking-side-bakgrunn.jpg");
     z-index: -1;
     background-size: cover;
@@ -28,6 +26,15 @@ a:link {
     object-fit: cover;
     background-position: 50% 60%;
     opacity: 0.8;
+}
+.hovedbilde-fotograf {
+    text-align: center;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    top: 60%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    color: rgb(248, 225, 192);
 }
 
 /* Tekst på bilde */
@@ -40,19 +47,19 @@ a:link {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(248, 225, 192)
+    color: rgb(248, 225, 192);
 }
 
 
 
 /* Div for å få alt innhold i book-bord sentrert */ 
-.container { 
+.container-book-bord { 
     display: flex;
     justify-content: center;
 }
 
 /* Div for å få alt innhold i book-lokale sentrert */ 
-.container2 { 
+.container-book-lokale { 
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -71,8 +78,7 @@ a:link {
     margin-top: 5%; 
     padding: 50px;
 }
-
-/* Bildet til book bord */ 
+/* Bildet til book-bord */ 
 #book-bord-bilde { 
     display: flex;
     justify-content: center;
@@ -81,9 +87,21 @@ a:link {
     object-fit: cover;
     object-position: 20% 90%;
     align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
-
-/* Teksten til book bord */ 
+.book-bord-fotograf {
+    text-align: center;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    top: 120%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    color: rgb(248, 225, 192);
+  }
+/* Teksten til book-bord */ 
 .book-bord-tekst { 
     display: flex;
     flex-direction: column;
@@ -122,7 +140,6 @@ form {
     border: 0.7px solid white;
     z-index: 10;
 }
-
 /* The actual popup */
 .popup .popup-tekst {
     visibility: hidden;
@@ -138,7 +155,6 @@ form {
     left: 50%;
     margin-left: -80px;
 }
-
 /* Popup arrow */
 .popup .popup-tekst::after {
     content: "";
@@ -150,7 +166,6 @@ form {
     border-style: solid;
     border-color: #555 transparent transparent transparent;
 }
-  
 /* For å vise/skjule meldingen etter du har trykket på submit knappen */
 .popup .show {
     visibility: visible;
@@ -163,7 +178,6 @@ form {
     from {opacity: 0;} 
     to {opacity: 1;}
 }
-  
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity:1 ;}
@@ -181,10 +195,8 @@ form {
     background-color: #2b2b29;
     margin-top: 5%; 
     padding: 50px;
- 
 }
-
-/* Bilde til book lokale */ 
+/* Bilde til book-lokale */ 
 #book-lokale-bilde {  
     display: flex;
     justify-content: center;
@@ -195,8 +207,16 @@ form {
     color: rgb(248, 225, 192);
     margin-left: 10%;
 }
-
-/* Teksten til book lokale */ 
+.book-lokale-fotograf {
+    text-align: center;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    top: 181%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    color: rgb(248, 225, 192);  
+}
+/* Teksten til book-lokale */ 
 .book-lokale-tekst { 
     display: flex;
     flex-direction: column;
@@ -207,14 +227,29 @@ form {
     color: rgb(248, 225, 192);
 }
 
+span {
+    font-size: 12px;
+}
 
 
 /* Skalert til ipad og tablets */ 
 @media(max-width: 1000px) { 
+    p {
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;    
+    }
+    span {
+        font-size: 10px;
+    }
+    
     .hovedbilde {
         width: 100%
     }
-    
+    .hovedbilde-fotograf {
+        margin-top: -15%;
+        margin-left: -5%;
+    }
+
     #booking-overskrift {
         font-size: 300%
     }
@@ -222,6 +257,8 @@ form {
     .bakgrunnsfarge{
         background-color: #2b2b29;
     }
+
+
 
     .book-bord-boks {
         margin-left: 5%;
@@ -229,13 +266,15 @@ form {
         height: 400px;
         width: 800px;
     }
-
     #book-bord-bilde {
         margin-top: 10%;
         height: 300px;
         width: 300px;
     }
-
+    .book-bord-fotograf {
+        margin-top: -50%;
+        margin-left: -12%;
+    }
     .book-bord-tekst  {
         margin-top: -10%;
         margin-left: 10%;
@@ -243,44 +282,56 @@ form {
         font-size: 15px;
     }
 
+
+
     .book-lokale-boks {
         margin-left: 0%;
         margin-top: 5%;
         height: 400px;
         width: 800px;
     }
-
     #book-lokale-bilde {
         margin-top: 10%;
         margin-left: 10%;
         height: 300px;
         width: 300px;
     }
-
     .book-lokale-tekst {
         margin-top: -10%;
         margin-left: 0%;
         font-size: 15px;
     }
-    
-    p {
-        font-size: 15px;
-        font-family: 'Roboto', sans-serif;    
+    .book-lokale-fotograf {
+        margin-top: -72%;
+        margin-left: 18%;
     }
+    
+
 
     .popup {
         margin-top: 55%;
-
     }
-
 }
 
 /* Skalert til mobil feks iphone 12 pro */
 @media(max-width: 768px) { 
+    p {
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;    
+    } 
+    span {
+        font-size: 10px;
+    }
+   
     .hovedbilde {
         width: 100%
     }
-    
+
+    .hovedbilde-fotograf{
+        margin-top: 18%;
+        margin-left: -10%;
+    }
+
     #booking-overskrift {
         font-size: 300%
     }
@@ -289,6 +340,8 @@ form {
         background-color: #2b2b29;
     }
     
+
+
     .book-bord-boks {
         flex-direction: column;
         justify-content: center;
@@ -297,7 +350,6 @@ form {
         margin-left: 0%;
         margin-right: 0%;
     }
-
     #book-bord-bilde {
         margin-top: 10%;
         height: 250px;
@@ -305,7 +357,10 @@ form {
         margin-left: 0%;
         margin-right: 0%;
     }
-
+    .book-bord-fotograf{
+        margin-top: -22%;
+        margin-left: 22%;
+    }
     .book-bord-tekst  {
         margin-top: 0%;
         font-size: 15px;
@@ -313,20 +368,24 @@ form {
         margin-right: 0%;
     }
 
+
+
     .book-lokale-boks {
         flex-direction: column;
         margin-top: 5%;
         height: 695px;
         width: 100%;
     }
-
     #book-lokale-bilde {
         height: 250px;
         width: 100%;
         margin-left: 0%;
         margin-right: 0%;
     }
-
+    .book-lokale-fotograf{
+        margin-top: 43%;
+        margin-left: -20%;
+    }
     .book-lokale-tekst {
         margin-top: 10%;
         font-size: 15px;
@@ -334,19 +393,10 @@ form {
         margin-right: 0%;
     }
  
-    p {
-        font-size: 15px;
-        font-family: 'Roboto', sans-serif;    
 
-    }
 
     .popup {
         margin-top: 100%;
         margin-left: 0%; 
-
-    }
-
-    #kontakt{
-        margin-left: 15px;
     }
 }

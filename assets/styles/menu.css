@@ -28,11 +28,9 @@ a {
 
 /* Bakgrunnsbildet i header */
 .hovedbilde {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     height: 100vh;
-    /* Bilde hentet fra: "https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" */
+    /* Bilde hentet fra: "https://unsplash.com/photos/t8hTmte4O_g", Fotograf: Bruna Branco */
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,#242422 100%),url("../images/meny-header-bakgrunn.jpg");
     z-index: -2;
     background-size: cover;
@@ -48,27 +46,34 @@ a {
     font-weight: lighter;
 }
 
+/* For å kunne sitere fotograf og kilde med tekst oppå bilder */
+.bilde-container{
+    position: relative;
+}
+.bilde-tekst{
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    color:rgb(248, 225, 192);
+    font-family: 'Roboto', sans-serif;
+}
 
 
 /* Lager en pil som roteres slik at den peker nedover */
 .pil {
-    display: flex;
-    justify-content: center;
     border: solid #FFF8EA;
     border-width: 0 7px 7px 0;
-    display: inline-block;
     padding: 20px;
     z-index: 10;
     bottom: 50px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+    z-index: 10;
 }
-
 .pil:hover {
     border: solid darkgrey;
     border-width: 0 7px 7px 0;
 }
-
 /* Plasserer pilen */
 #pil-ned-a {
     display: flex;
@@ -77,7 +82,9 @@ a {
     margin-top: 70vh;
 }
 
-/* Selve meny-delen, dvs. <main> */
+
+
+/* Selve meny-delen, dvs. containeren inni <main>*/
 .meny {
     width: 50%;
     margin-left: auto;
@@ -98,7 +105,6 @@ a {
     text-align: left; 
     margin-left: 10%;
 }
-
 .pris {
     float: right;
     margin-right: 10%;
@@ -126,21 +132,25 @@ a {
         background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,#2b2b29 100%),url("../images/meny-header-bakgrunn.jpg");
     }
 
+    #overskrift{
+        font-size: 50px;
+    }
+
+    .bilde-tekst{
+        font-size: 12px;
+    }
+
+    /* Fjerner pilen på mobilversjonen */
+    .pil {
+        z-index: -1;
+    }
+
     .meny{
         width: 100%;
         margin-top: 0%;
     }
 
-    #overskrift{
-        font-size: 50px;
-    }
-
     .matrett{
         margin-right: 10px;
-    }
-
-    /* Fjerner pilen på mobilversjonen */
-    .ned {
-        z-index: -1;
     }
 }
