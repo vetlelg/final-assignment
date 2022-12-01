@@ -1,53 +1,57 @@
-
 /*  Øverste del av nettsiden 
     Legger til bakgrunnsbilde som skal holde seg sentrert og riktig størrelse */
 .hovedbilde {
-    width: 100%;
-    height: 100vh;
     /* Bilde hentet fra: "https://www.pexels.com/photo/restaurant-interior-776538/", Fotograf: Lisa Fotios */
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%),url("../images/index-main-header.jpg");
     background-position: center;
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    /* width: 100vw; */
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
+
+  
 
 /*  Tekst på miden av forsiden. 
     Setter margin fra toppen til å justere seg basert på høyden til vinduet.*/
 #midt-tekst {
-    color: rgb(248, 225, 192);
-    font-size: 70px;
     /* font-family: 'Playfair Display', serif; */
+    color: rgb(248, 225, 192);
     font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
+    font-size: 70px;
     font-weight: thick;
     letter-spacing: 0.6px;
     margin-top: 30vh;
     padding: 0px 40px;
+    text-transform: uppercase;
 }
 /*  Undertekst (midt i hjertet av Oslo). Sentreres via global CSS */
 #undertekst {
     color: rgb(248, 225, 192);
-    font-size: 30px;
     font-family: 'Roboto', sans-serif;
+    font-size: 30px;
     font-style: italic;
-    text-align: center;
     margin-top: 20px;
+    text-align: center;
 }
 
 
 
 /*  Pil for å scrolle ned på siden. 
     Generert ved hjelp av en rotert firkant som kun har border høyre og under for å danne en pil. */
-.pil {
-    border: solid #FFF8EA;
-    border-width: 0 7px 7px 0;
-    padding: 20px;
-    z-index: 10;
-    bottom: 50px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    z-index: 10;
-}
+    .pil {
+        -webkit-transform: rotate(45deg);
+        border: solid #FFF8EA;
+        border-width: 0 7px 7px 0;
+        bottom: 50px;
+        padding: 20px;
+        transform: rotate(45deg);
+        z-index: 10;
+    }
+    
 /*  Fargeendring ved mus over pilen. */ 
 .pil:hover {
     border: solid darkgrey;
@@ -55,153 +59,160 @@
 }
 /*  Sentrerer pilen og plasserer den ut i fra andre elementer. */ 
 #pil-ned-a {
+    bottom: 50px;
     display: flex;
     justify-content: center;
-    bottom: 50px;
     margin-top: 100px;
 }
 
 
 
-/*  Gir alle overskrifter på siden en brun farge og endrer størrelse */
-.overskrift {
-    color: rgb(165, 102, 73);
-    font-size: 40px;
-}
-
 /*  Justerer skriftstørrelse utifra vindustørrelse dersom det blir mindre enn en viss grense */
-.del-1-tekst, .del-2-tekst, .del-3-tekst {
-    font-size: 3vmin;
+.del-1-tekst, 
+.del-2-tekst, 
+.del-3-tekst {
+    color: rgb(165, 102, 73);
+    font-size: 2.5vmin;
+}
+
+/*  Gir alle overskrifter på siden en brun farge og endrer størrelse */
+.del-1-overskrift,
+.del-2-overskrift,
+.del-3-overskrift {
+    font-size: 45px;
+    margin-left: 0;
+    margin-top: 30px;
     color: rgb(165, 102, 73);
 }
 
 
 
-/*  Del 1 av siden  */
-/*  Bruker flexbox til å plassere elementer i forhold til hverandre og dens div. */    
+/* Del 1 av siden  */
+/* Plasserer delen i en container for at ting ikke skal strekkes helt ut i sidene på widescreen. */
 .container-del-1 {
-width: 100vw;
 background-color: white;
+width: 100%;
 }
-
+/*  Bruker flexbox til å plassere elementer i forhold til hverandre og dens div. */    
 .del-1 {
-    width:100%;
-    max-width: 1800px;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
-    background-color: rgb(255, 255, 255);
-    padding-top: 100px;
-    padding-bottom: 100px;
-    overflow: hidden;
     margin: auto;
+    max-width: 1800px;
+    overflow: hidden;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    width:100%;
 }
 .del-1-venstre {
-    display: flex;
     align-items: center;
+    display: flex;
     height: 500px;
     width: 100%;
     z-index: 1;
 }
 .del-1-høyre {
-    display: flex;
     align-items: center;
+    display: flex;
     height: 500px;
+    position: relative;
     width: 100%;
 }
 /*  Plasserer og justerer bildet, margin høyre baseres på bredden til vinduet. */
 .del-1-høyre img {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
     background-repeat: no-repeat;
-    object-fit: cover;
+    background-size: cover;
+    border-radius: 0 3rem 0 3rem;
+    height: 100%;
     margin-right: 7vw;
+    object-fit: cover;
+    width: 100%;
 }
 .del-1-tekst {
     display: flex;
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
-    text-align: left;
     margin-left: 20%;
     margin-right: 50px;
     margin-top: 0;
-}
-.del-1-tekstboks .overskrift {
-    color: rgb(165, 102, 73);
     text-align: left;
+}
+.del-1-overskrift {
     margin-left: 20%;
+    text-align: left;
 }
 /*  Strek for å løfte designet, bredde 10% av boksen den er i. */
 #strek-1 {
-    width: 15%;
     background-color: rgb(165, 102, 73);
     height: 2px;
     margin-left: 20%;
     margin-top: 50px;
-}
-.bilde-tekst-right {
-    color: white;
+    width: 15%;
 }
 
 
 
-/*  Del 2 av siden*/
-/*  Bruker flex til å sentrere innholdet i forhold til hverandre. */
+
+/* Del 2 av siden*/
+/* Plasserer delen i en container for at ting ikke skal strekkes helt ut i sidene på widescreen. */
 .container-del-2 {
-    width: 100vw;
     background-color: #FFF8EA;
-    }
-.del-2 {
-    height: 500px;
     width: 100%;
-    max-width: 1800px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
+}
+/*  Bruker flex til å sentrere innholdet i forhold til hverandre.
+    Bruker max-width for å unngå at det strekkes ut på widescreen. */
+.del-2 {
     align-items: center;
     background-color: #FFF8EA;
-    padding-top: 50px;
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1800px;
     padding-bottom: 50px;
+    padding-top: 50px;
+    width: 100%;
 }
 /*  Gjør at elementene er oppå hverandre spredt jevnt inni boksen ved bruk av flex column */
 .del-2-tekstboks {
-    width: 60%;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
     flex-direction: column;
-    margin-top: 5%;
+    justify-content: center;
     margin-bottom: 5%;
+    margin-top: 5%;
+    width: 60%;
 }
 .del-2-tekst {
-    font-family: 'Roboto', sans-serif;  
-    text-align: center;  
-    font-weight: lighter;
     color: rgb(165, 102, 73);
+    font-family: 'Roboto', sans-serif;  
+    font-weight: lighter;
     padding-bottom: 50px;
+    text-align: center;  
 }
 
 #strek-2 {
-    width: 30%;
     background-color: rgb(165, 102, 73);
     height: 2px;
+    width: 30%;
 }
 
 /*  Knapp til booking, gjør den penere å se på med padding og farger. 
     Transition duration gjør at den gradvis blir farger nåt man holder over. */
 .til-booking-knapp {    
     background-color: #FFF8EA;
-    color: black; 
-    border: 2px solid rgb(165, 102, 73);
     border-radius: 5px;
+    border: 2px solid rgb(165, 102, 73);
+    color: black; 
     color: rgb(165, 102, 73);
+    cursor: pointer;
+    font-size: 18px;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
-    font-size: 18px;
     transition-duration: 0.4s;
-    cursor: pointer;
     z-index: 10;
 }
 /* Fargeendring ved mus over. */
@@ -216,41 +227,45 @@ background-color: white;
     Bruker flex for å plassere elementer i forhold til hverandre.
     Row-reverse gjør at det blir speilvendt fra del 1.*/
 .container-del-3 {
-    width: 100vw;
     background-color: white;
+    width: 100%;
 }
 .del-3 {
-    width: 100%;
-    max-width: 1800px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: row-reverse;
     background-color: rgb(255, 255, 255);
-    padding-top: 100px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin: auto;
+    max-width: 1800px;
     padding-bottom: 100px;
+    padding-top: 100px;
+    width: 100%;
 }
 /*  Padding og margin endres basert på vindubredde */
 .del-3-høyre {
     align-items: center;
+    display: flex;
     height: 500px;
-    width: 100%;
-    margin-right: 7vw;
     margin-left: 15vw;
+    margin-right: 7vw;
+    width: 100%;
     z-index: 1;
 }
 .del-3-venstre {
-    display: flex;
     align-items: center;
+    display: flex;
     width: 100%;
+    position: relative;
 }
 /* Bildets egenskaper justeres basert på vindustørrelse. */
 .del-3-venstre img {
-    width: 100%;
     height: 550px;
-    object-fit: cover;
     margin-left: 7vw;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0 3rem 0 3rem;
+
 }
 .del-3-tekst {
     font-family: 'Roboto', sans-serif;
@@ -259,35 +274,30 @@ background-color: white;
 }
 .del-3-overskrift {
     padding-bottom: 30px;
-}
-
-.del-3-overskrift {
-    color: rgb(165, 102, 73);
-    font-size: 40px;
     text-align: left;
 }
 
 #strek-3 {
-    width: 15%;
     background-color: rgb(165, 102, 73);
     height: 3px;
     margin-left: 0px;
     margin-top: -25px;
+    width: 15%;
 }
 
 /* Knapp til menyen. Endrer utseendet, tiden det tar å endre farge og z-index sikrer at den kommer forran andre elementer.*/
 .til-meny-knapp {    
     background-color: #ffffff;
-    color: black; 
-    border: 2px solid rgb(165, 102, 73);
     border-radius: 5px;
+    border: 2px solid rgb(165, 102, 73);
+    color: black; 
     color: rgb(165, 102, 73);
+    cursor: pointer;
+    font-size: 18px;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
-    font-size: 18px;
     transition-duration: 0.4s;
-    cursor: pointer;
     z-index: 10;
 }
 /* Farge-endring ved mus over */
@@ -296,7 +306,19 @@ background-color: white;
     color: #FFF8EA; 
 }
 
+/* Endrer margin på bilde-kreditering på bilde to og tre */
 
+.en {
+    border-radius: 10px 0 0 0;
+    top: auto;
+    bottom: 0;
+}
+.to {
+    margin-right: 7vw;
+}
+.tre {
+    margin-right: -7vw;
+}
 
 /* CSS for telefon */
 @media(max-width: 768px){
@@ -319,60 +341,62 @@ background-color: white;
     }
 
 /*  Sentrerer tekst og skalerer størrelsen. */
-    .del-1-tekst, .del-2-tekst, .del-3-tekst {
-        text-align: center;
+    .del-1-tekst, 
+    .del-2-tekst, 
+    .del-3-tekst {
         font-size: 4vmin;
         padding: 30px;
+        text-align: center;
     }
-   
+
+    .del-1-overskrift,
+    .del-2-overskrift,
+    .del-3-overskrift {
+        font-size: 30px;
+    }
 
 
 /*  Endrer retning på flex for å gjøre det mer mobilvennlig. */
     .del-1 {
         flex-direction: column;
-        justify-content: center;
         height: 730px;
+        justify-content: center;
         padding: 0;
     }
-    .overskrift {
-        font-size: 25px;
-        margin-left: 0;
-        margin-top: 0;
-        padding-bottom: 0;
-        margin-top: 50px;
-    }
-/*  Resetter margin-left  */
-    .del-1-tekstboks .overskrift {
-        margin-left: 0;
-    }
+    
 /*  Bruker flex til å plassere elementer sentrert og over hverandre. */
     .del-1-tekstboks {
-        display: flex;
-        justify-content: center;
         align-items: center;
+        display: flex;
         flex-direction: column;
-        padding-top: 30px;
+        justify-content: center;
         padding-bottom: 30px;
+        padding-top: 30px;
     }
     .del-1-tekst {
         margin: 25px 0 0 0;
-        padding: 30px;
         padding-top: 0px;
+        padding: 30px;
         width: 65%;
+    }
+    .del-1-overskrift {
+        margin: 0;
     }
 /*  Tilbakestillermargin og padding */
     .del-1-høyre img { 
         height: 380px;     
-        width: 100%;
         margin-right: 0;
-        padding-right: 0;
         margin: 0;
+        padding-right: 0;
         padding: 0;
+        width: 100%;
+        border-radius: 0;
     }
     .del-1-høyre {
         margin: 0;
         padding: 0;
     }
+    /* Skjuler strek */
     #strek-1 {
         display: none;
     }
@@ -386,10 +410,12 @@ background-color: white;
     }
     .del-2-tekst {
         padding: 0;
-        padding-bottom: 50px;
+        margin: 0;
+        padding-bottom: 5%;
     }
     .del-2-tekstboks {
         width: 80%;
+        margin: 0;
     }
 
 
@@ -397,53 +423,48 @@ background-color: white;
 /*  Del 3 av nettsiden 
     Bruker flex til å plassere det over hverandre og motsatt vei med column-reverse.  */
      .del-3 {
-        justify-content: center;
         align-items: center;
-        height: 730px;
-        padding: 0;
         flex-direction: column-reverse;
+        height: 730px;
+        justify-content: center;
+        padding: 0;
     }
     #del-3-tekst {
         margin-left: 0;
+        margin-right: 0;
         margin-top: 30px;
         padding: 30px;
-        margin-right: 0;
     }
     .del-3-venstre img {
         height: 350px;     
-        width: 100%;
         margin: 0;
         padding: 0;
+        width: 100%;
+        border-radius: 0;
     }
 /*  Plasserer elementene sentrert med flex */
     .del-3-tekstboks {
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
     }
 /*  Sentrerer alt i boksen vertikalt. */
     .del-3-høyre {
-        display: flex;
         align-items: center;
-        padding-right: 0;
+        display: flex;
         height: 500px;
-        padding-left: 0;
         margin-left: 0;
         margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
-    .del-3-overskrift {
-        font-size: 25px;
-        margin-left: 0;
-        margin-top: 0;
-        padding-bottom: 0;
-        margin-top: 30px;
-    }
+  
 /*  Padding alle sider utenom oppe. */
     .del-3-tekst {
-        text-align: center;
         margin:0;
         padding: 0 30px 30px 30px;
+        text-align: center;
     }
 /*  Skjuler streken fra web. */
     #strek-3 {
@@ -453,12 +474,24 @@ background-color: white;
 
 
 /*  Gjør knapper proporsjonelle i forhold til mobil. */
-    .til-booking-knapp, .til-meny-knapp {    
-        padding: 10px 25px;
-        font-size: 12px;
+    .til-booking-knapp, 
+    .til-meny-knapp {    
         border-width: 1px;
+        font-size: 12px;
+        padding: 10px 25px;
     }
     .til-meny-knapp {
         margin-bottom: 50px;
+    }
+
+
+ 
+    /* Tilbakestiller margin på bildekreditering */
+   
+    .to {
+        margin: 0;
+    }
+    .tre {
+        margin: 0;
     }
 }
