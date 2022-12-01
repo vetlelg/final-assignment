@@ -27,7 +27,6 @@ ul {
 
 /* Navigasjonsbar */
 .navbar {
-    color: black;
     height: 80px;
 }
 /* Fjerner styling fra linkene, setter transition duration for animasjon ved hover */
@@ -40,9 +39,14 @@ ul {
     transition-duration: 0.4s;
     font-family: 'Roboto', sans-serif;
 }
+
 /* Fargeendring og understrek ved pekeren over */
+.navbar a.active {
+    border-bottom: 2px solid rgb(118, 118, 118);
+
+}
 .navbar a:hover {
-    color: white;
+    color: rgb(174, 174, 174);
     border-bottom: 2px solid rgb(118, 118, 118);
 }
 /* Plassering av ikoner i navbar, og videre formattering */
@@ -63,6 +67,17 @@ ul {
     width: 200px;
     z-index: 1;
 }
+/* Plasserer en bakgrunn nederst til høyre i en div. Brukes som bakgrunn for bildetekst, og formaterer derfor også teksten inni */
+.bilde-tekst{
+    background-color: rgba(0, 0, 0, 0.456);
+    border-radius: 15px 0px 0px 15px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
 
 
 
@@ -74,7 +89,7 @@ footer {
     background-color: #242422;
 }
 
-/* Font design i footer */
+/* Font-design i footer */
 .footer-tekst {
     font-family: 'Roboto', sans-serif;    
     font-weight: lighter;
@@ -128,7 +143,11 @@ footer {
         width: 250px;
         padding-bottom: 30px;
     }
-    
+
+    .bilde-tekst{
+        font-size: 12px;
+    }
+
     .footer-tekst {
         font-size: 12px;
     }
@@ -136,4 +155,6 @@ footer {
     #aapningstider, #kontakt {
         margin-top: -80px;
     }
+    
+
 }

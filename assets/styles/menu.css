@@ -1,17 +1,18 @@
 h2 {
-    font-family: Arial, Helvetica, sans-serif;
     color: rgb(248, 225, 192);
+    font-family: 'roboto', sans-serif;
+    font-size: 250%;
+    font-weight: lighter;
     margin: 0;
     padding: 0;
-    font-size: 250%;
     text-align: center;
 }
 
 h3 {
     color: white;
+    font-size: 110%;
     margin: 0;
     padding: 0;
-    font-size: 110%
 }
 
 p {
@@ -20,54 +21,47 @@ p {
 }
 
 a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
 }
 
 
 
 /* Bakgrunnsbildet i header */
 .hovedbilde {
-    width: 100%;
-    height: 100vh;
     /* Bilde hentet fra: "https://unsplash.com/photos/t8hTmte4O_g", Fotograf: Bruna Branco */
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,#242422 100%),url("../images/meny-header-bakgrunn.jpg");
-    z-index: -2;
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    z-index: -2;
 }
 
 /* Størrelses-, farge- og fontendringer for overskriften */
 #overskrift {
-    font-family: 'Roboto', sans-serif;
     color: rgb(248, 225, 192);
+    font-family: 'Roboto', sans-serif;
     font-size: 100px;
-    padding-top: 200px;
     font-weight: lighter;
+    padding-top: 200px;
 }
 
 /* For å kunne sitere fotograf og kilde med tekst oppå bilder */
 .bilde-container{
     position: relative;
 }
-.bilde-tekst{
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-    color:rgb(248, 225, 192);
-    font-family: 'Roboto', sans-serif;
-}
+
 
 
 /* Lager en pil som roteres slik at den peker nedover */
 .pil {
+    -webkit-transform: rotate(45deg);
     border: solid #FFF8EA;
     border-width: 0 7px 7px 0;
-    padding: 20px;
-    z-index: 10;
     bottom: 50px;
+    padding: 20px;
     transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
     z-index: 10;
 }
 .pil:hover {
@@ -76,9 +70,9 @@ a {
 }
 /* Plasserer pilen */
 #pil-ned-a {
+    bottom: 50px;
     display: flex;
     justify-content: center;
-    bottom: 50px;
     margin-top: 70vh;
 }
 
@@ -86,13 +80,13 @@ a {
 
 /* Selve meny-delen, dvs. containeren inni <main>*/
 .meny {
-    width: 50%;
+    background-color: #2b2b29;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20vh;
-    background-color: #2b2b29;
-    padding-top: 50px;
     padding-bottom: 20px;
+    padding-top: 50px;
+    width: 50%;
 }
 
 /* Lager tomrom mellom matrettene */
@@ -102,8 +96,8 @@ a {
 
 /* .left og .pris brukes til å feste navn og pris til samme linje */
 .left {
-    text-align: left; 
     margin-left: 10%;
+    text-align: left; 
 }
 .pris {
     float: right;
@@ -112,15 +106,15 @@ a {
 
 /* Allergen posisjon og farge */
 .allergen {
-    margin-left: 10%;
-    font-size: 15px;
     color: rgb(177, 160, 137);
+    font-size: 15px;
+    margin-left: 10%;
 }
 
 /* Egen farge for vegetar-retter */
 #vegetar {
-    font-size: 15px;
     color: rgb(87, 186, 85);    
+    font-size: 15px;
 }
 
 
@@ -128,8 +122,8 @@ a {
 /* Nedskalering til mobil */
 @media(max-width: 768px){
     .hovedbilde {
-        height: 500px;
         background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,#2b2b29 100%),url("../images/meny-header-bakgrunn.jpg");
+        height: 500px;
     }
 
     #overskrift{
@@ -146,8 +140,8 @@ a {
     }
 
     .meny{
-        width: 100%;
         margin-top: 0%;
+        width: 100%;
     }
 
     .matrett{

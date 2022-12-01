@@ -21,9 +21,9 @@ html {
 
 /* Navigasjonsbar */
 nav {
-    height: 10%;
-    display: flex;
     align-items: center;
+    display: flex;
+    height: 10%;
     justify-content: space-between;
     padding: 0 1% 0 10%;
     pointer-events: none;
@@ -35,8 +35,8 @@ nav:hover, nav:active {
 /* Linker i navigasjonsbar og footer */
 nav a, footer a {
     color: white;
-    text-decoration: none;
     font-size: 1.5em;
+    text-decoration: none;
     text-shadow: 2px 2px 5px black;
 }
 
@@ -78,34 +78,41 @@ nav:hover .link-3 {
     pointer-events: all;
 }
 .hamburger-strek {
-    width: 45px;
-    height: 6px;
     background-color: white;
-    margin: 8px;
     box-shadow: 1px 1px 5px black;
+    height: 6px;
+    margin: 8px;
+    width: 45px;
 }
 
 
 
 /* Forside */
 header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/topical-header.jpg");
+    background-position: bottom;
+    background-size: cover;
+    color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     grid-area: header;
-    color: white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/topical-header.jpg");
-    background-size: cover;
-    background-position: bottom;
+    justify-content: space-between;
 }
 
-header h1 {
-    font-size: 3em;
-    text-align: center;
-    display: flex;
+.header-overskrift {
     align-self: center;
+    display: flex;
+    text-align: center;
     text-shadow: 2px 2px 5px black;
-    padding: 0 5vh 50vh 5vh;
+}
+
+.header-overskrift h1 {
+    font-size: 2.5em;
+}
+
+.header-overskrift h2 {
+    width: 40%;
+    font-size: 1.5em;
 }
 
 
@@ -113,10 +120,10 @@ header h1 {
 /* Hovedinnhold */
 main {
     grid-area: main;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 img {
-    width: 50%;
+    width: 30%;
 }
 main a {
     text-decoration: underline;
@@ -126,10 +133,10 @@ main a {
 
 /* Footeren nederst på siden */
 footer {
-    grid-area: footer;
+    align-items: center;
     background-color: rgb(22, 28, 44);
     display: flex;
-    align-items: center;
+    grid-area: footer;
     justify-content: space-evenly;
 }
 
@@ -164,41 +171,42 @@ footer {
     grid-area: en;
 }
 .to {
-    grid-area: to;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("../images/topical-bilde-to.jpg");
+    grid-area: to;
 }
 .tre {
     grid-area: tre;
 }
 .fire {
-    grid-area: fire;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/topical-bilde-fire.jpg");
+    grid-area: fire;
 }
 .fem {
     grid-area: fem;
 }
 .seks {
-    grid-area: seks;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/topical-bilde-seks.jpg");
+    grid-area: seks;
 }
 
 
 
 /* Klasse for alle delene i main subgridden */
 .boks {
-    display: flex;
     align-items: center;
-    justify-content: space-around;
     background-position: center;
+    background-size: cover;
+    display: flex;
     padding: 2% 0 2% 0;
+    justify-content: space-around;
 }
 
 
 
 /* Klasse for alle tekstboksene i main */
 .tekstboks-svart, .tekstboks-hvit {
-    width: 40%;
     height: max-content;
+    width: 40%;
 }
 
 .tekstboks-hvit, .tekstboks-hvit a {
@@ -214,14 +222,29 @@ footer {
 
 /* For mindre skjermer. For mobil, tablet osv. */
 @media only screen and (min-width: 600px) {
+    /* Klasse som skjuler elementer når  */
     .display-none-desktop {
         display: none;
     }
 }
 
+@media only screen and (min-width: 2000px) {
+    main {
+        font-size: 1em;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav a {
+        font-size: 1em;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     main {
-        font-size: 2.3em;
+        font-size: 2em;
     }
 
     img {
@@ -229,7 +252,7 @@ footer {
     }
 
     header h1 {
-        font-size: 3em;
+        font-size: 2.5em;
     }
 
     nav a {
@@ -265,9 +288,9 @@ footer {
     }
 
     .hamburger-strek {
-        width: 35px;
         height: 5px;
         margin: 7px;
+        width: 35px;
     }
 
     .tekstboks-hvit, .tekstboks-svart {
