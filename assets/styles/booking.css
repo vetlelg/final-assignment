@@ -41,7 +41,7 @@ a:link {
 }
 
 /* Tekst på bilde */
-#booking-overskrift {
+.booking-overskrift {
     color: rgb(248, 225, 192);
     font-family: 'Roboto', sans-serif;
     font-size: 600%;    
@@ -51,6 +51,7 @@ a:link {
     text-align: center; 
     top: 50%;
     transform: translate(-50%, -50%);
+    text-shadow: 0px 2px 30px rgba(0,0,0,1);
 }
 
 
@@ -83,7 +84,7 @@ a:link {
     position: relative;
 }
 /* Bildet til book-bord */ 
-#book-bord-bilde { 
+.book-bord-bilde { 
     align-items: center;
     background-position: center;
     background-repeat: no-repeat;
@@ -201,12 +202,13 @@ form {
     position: relative;
 }
 /* Bilde til book-lokale */ 
-#book-lokale-bilde {  
+.book-lokale-bilde {  
     border-radius: 0 3rem 0 3rem;
     color: rgb(248, 225, 192);
     display: flex;
     height: 100%;  
     justify-content: center;
+    object-fit: cover;
     margin-left: 10%;
     width: 30vw;
 
@@ -239,7 +241,7 @@ form {
         font-size: 10px;
     }
     
-    #booking-overskrift {
+    .booking-overskrift {
         font-size: 300%
     }
 
@@ -255,7 +257,7 @@ form {
         margin-top: 5%;
         width: 800px;
     }
-    #book-bord-bilde {
+    .book-bord-bilde {
         height: 300px;
         margin-top: 10%;
         width: 300px;
@@ -285,7 +287,7 @@ form {
         margin-top: 5%;
         width: 800px;
     }
-    #book-lokale-bilde {
+    .book-lokale-bilde {
         height: 300px;
         margin-left: 10%;
         margin-top: 10%;
@@ -315,7 +317,7 @@ form {
         font-size: 10px;
     }
    
-    #booking-overskrift {
+    .booking-overskrift {
         font-size: 300%
     }
 
@@ -332,7 +334,7 @@ form {
         margin-right: 0%;
         width: 100%;
     }
-    #book-bord-bilde {
+    .book-bord-bilde {
         height: 250px;
         margin-left: 0%;
         margin-right: 0%;
@@ -356,7 +358,7 @@ form {
         margin-top: 5%;
         width: 100%;
     }
-    #book-lokale-bilde {
+    .book-lokale-bilde {
         height: 250px;
         margin-left: 0%;
         margin-right: 0%;

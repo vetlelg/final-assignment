@@ -39,12 +39,13 @@ a {
 }
 
 /* Størrelses-, farge- og fontendringer for overskriften */
-#overskrift {
+.overskrift {
     color: rgb(248, 225, 192);
     font-family: 'Roboto', sans-serif;
     font-size: 100px;
     font-weight: lighter;
     padding-top: 200px;
+    text-shadow: 0px 2px 30px rgba(0,0,0,1);
 }
 
 /* For å kunne sitere fotograf og kilde med tekst oppå bilder */
@@ -69,7 +70,7 @@ a {
     border-width: 0 7px 7px 0;
 }
 /* Plasserer pilen */
-#pil-ned-a {
+.pil-ned-a {
     bottom: 50px;
     display: flex;
     justify-content: center;
@@ -112,10 +113,11 @@ a {
 }
 
 /* Egen farge for vegetar-retter */
-#vegetar {
+.vegetar {
     color: rgb(87, 186, 85);    
     font-size: 15px;
 }
+
 
 
 
@@ -126,7 +128,7 @@ a {
         height: 500px;
     }
 
-    #overskrift{
+    .overskrift{
         font-size: 50px;
     }
 
@@ -136,7 +138,7 @@ a {
 
     /* Fjerner pilen på mobilversjonen */
     .pil {
-        z-index: -1;
+        display: none;
     }
 
     .meny{
