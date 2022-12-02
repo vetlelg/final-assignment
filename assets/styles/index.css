@@ -309,7 +309,6 @@ width: 100%;
 }
 
 /* Endrer margin på bilde-kreditering på bilde to og tre */
-
 .en {
     border-radius: 10px 0 0 0;
     top: auto;
@@ -325,10 +324,14 @@ width: 100%;
 
 footer {
     margin-top: 0;
-    height: 350px;
 }
 .footer-overskrift {
     margin: 0;
+}
+
+/* Endrer farge på linken (telefonnummeret blir om til en link på mobil.) */
+a:link { 
+    color: rgb(248,225,192);
 }
 
 /* CSS for telefon */
