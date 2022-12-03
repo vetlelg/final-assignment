@@ -19,9 +19,9 @@
             <!-- Navigasjonsbar -->
             <nav class="navbar">
                 <div class="container"> 
-                    <!--Logo laget av Harald Eskeland-->
+                    <!--Logo er selvlaget-->
                     <a href="index.html">
-                        <img id="logo" src="assets/images/logo.png" alt="Mario's Italian"></img>
+                        <img class="logo" src="assets/images/logo.png" alt="Mario's Italian"></img>
                     </a>
                     <!-- Linker til de ulike sidene. -->
                     <ul class="nav">
@@ -44,16 +44,16 @@
             </nav>
             
             <!-- Tekst forside -->
-            <h1 id="midt-tekst">Tradisjonelle italienske <br> verdier </h1>
-            <p id="undertekst">- Midt i hjertet av Oslo -</p>
+            <h1 class="midt-tekst">Tradisjonelle italienske <br> verdier </h1>
+            <p class="undertekst">- Midt i hjertet av Oslo -</p>
 
             <!-- Pil man kan trykke på for å bli tatt lenger ned på siden. -->
-            <a id="pil-ned-a" href="#seksjon1"><i class="pil ned"></i></a>
+            <a class="pil-ned-a" href="#seksjon1"><i class="pil ned"></i></a>
         </div>
     </header>
 
     <main>
-        <!-- Seksjon med hoved-delene til siden. Har tilegnet den en #id som pilen kan scrolle ned til.-->
+        <!-- Seksjon med hoved-delene til siden. Har tilegnet den en .id som pilen kan scrolle ned til.-->
         <section class="hoved-deler" id="seksjon1">
                 <!-- Div med innholdet til del 1 av 3.-->
             <div class="container-del-1">
@@ -65,7 +65,7 @@
                             <h1 class="del-1-overskrift">En opplevelse. </h1>
                             <h2 class="del-1-tekst"> Velkommen til en kulinarisk opplevelse etablert i 1952. <br> Et tredje generasjons familiedrevet lokale med fokus på kvalitet i alle ledd. <br></h2>
                             <!-- Strek for å pakke inn innholdet stilmessig. -->
-                            <hr id="strek-1">
+                            <hr class="strek-1">
                         </div>
                     </div>
                     <!-- Høyre del av del-1. -->
@@ -85,7 +85,7 @@
                         <div class="del-2-tekstboks">
                             <h1 class="del-2-overskrift">Arrangere noe? </h1>
                             <h2 class="del-2-tekst"> 
-                                <hr id="strek-2">
+                                <hr class="strek-2">
                                 <br>Book vårt flotte lokale til årets julebord, eller vår autentiske og hjemmekoselige restaurant for mindre arrangementer <br> </h2>
                                 <div class="knapp"><a href="booking.html"><button class="til-booking-knapp">Book nå </button></a></div>
                             </div>
@@ -98,7 +98,7 @@
                     <div class="del-3-høyre">
                         <div class="del-3-tekstboks">
                             <h1 class="del-3-overskrift">Tradisjoner. </h1>
-                            <hr id="strek-3">
+                            <hr class="strek-3">
                             <h2 class="del-3-tekst"> I resturanten får du servert mat fra vår tradisjonelle italienske meny som er basert på originale oppskrifter fra  Mario´s bestemor Mariossa. <br></h2>
                             <div class="knapp"><a href="menu.html"><button class="til-meny-knapp">Til menyen </button></a></div>
                         </div>
@@ -121,8 +121,8 @@
         <!-- Div som pakker inn innholdet og deler det inn i to seksjoner med flex. -->
         <div class="footer-innhold">
             <!-- Footer seksjon 1 -->
-            <div id="kontakt">
-                <p class="footer-tekst"><b>KONTAKT OSS</b></p>
+            <div class="kontakt">
+                <h2 class="footer-overskrift"><b>KONTAKT OSS</b></h2>
                 <br>
                 <p class="footer-tekst"><b>Epost:</b> reservation@marios.it </p>
                 <p class="footer-tekst"><b>Telefon:</b> +81549300 </p>
@@ -130,8 +130,8 @@
             </div>
 
             <!-- Footer seksjon 2 -->
-            <div id="aapningstider">
-                <p class="footer-tekst"><b>ÅPNINGSTIDER</b></p>
+            <div class="aapningstider">
+                <h2 class="footer-overskrift"><b>ÅPNINGSTIDER</b></h2>
                 <br>
                 <p class="footer-tekst">Søndag - Torsdag: <i class="klokkeslett">09 - 22</i> </p>
                 <p class="footer-tekst">Fredag - Lørdag: <i class="klokkeslett">10 - 23</i> </p>            

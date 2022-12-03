@@ -1,5 +1,6 @@
 /*  Øverste del av nettsiden 
-    Legger til bakgrunnsbilde som skal holde seg sentrert og riktig størrelse */
+    Legger til bakgrunnsbilde som skal holde seg sentrert og riktig størrelse.
+    Bruker rgba til å gjøre bildet mørkere slik at teksten skal være mer synlig. */
 .hovedbilde {
     /* Bilde hentet fra: "https://www.pexels.com/photo/restaurant-interior-776538/", Fotograf: Lisa Fotios */
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%),url("../images/index-main-header.jpg");
@@ -7,7 +8,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    /* width: 100vw; */
     margin: 0;
     padding: 0;
     position: relative;
@@ -17,7 +17,7 @@
 
 /*  Tekst på miden av forsiden. 
     Setter margin fra toppen til å justere seg basert på høyden til vinduet.*/
-#midt-tekst {
+.midt-tekst {
     /* font-family: 'Playfair Display', serif; */
     color: rgb(248, 225, 192);
     font-family: 'Roboto', sans-serif;
@@ -27,15 +27,17 @@
     margin-top: 30vh;
     padding: 0px 40px;
     text-transform: uppercase;
+    text-shadow: 0px 2px 30px rgba(0,0,0,1);
 }
 /*  Undertekst (midt i hjertet av Oslo). Sentreres via global CSS */
-#undertekst {
+.undertekst {
     color: rgb(248, 225, 192);
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
     font-style: italic;
     margin-top: 20px;
     text-align: center;
+    text-shadow: 0px 2px 20px rgba(0,0,0,1);
 }
 
 
@@ -58,7 +60,7 @@
     border-width: 0 7px 7px 0;
 }
 /*  Sentrerer pilen og plasserer den ut i fra andre elementer. */ 
-#pil-ned-a {
+.pil-ned-a {
     bottom: 50px;
     display: flex;
     justify-content: center;
@@ -143,7 +145,7 @@ width: 100%;
     text-align: left;
 }
 /*  Strek for å løfte designet, bredde 10% av boksen den er i. */
-#strek-1 {
+.strek-1 {
     background-color: rgb(165, 102, 73);
     height: 2px;
     margin-left: 20%;
@@ -193,7 +195,7 @@ width: 100%;
     text-align: center;  
 }
 
-#strek-2 {
+.strek-2 {
     background-color: rgb(165, 102, 73);
     height: 2px;
     width: 30%;
@@ -277,7 +279,7 @@ width: 100%;
     text-align: left;
 }
 
-#strek-3 {
+.strek-3 {
     background-color: rgb(165, 102, 73);
     height: 3px;
     margin-left: 0px;
@@ -307,7 +309,6 @@ width: 100%;
 }
 
 /* Endrer margin på bilde-kreditering på bilde to og tre */
-
 .en {
     border-radius: 10px 0 0 0;
     top: auto;
@@ -320,24 +321,39 @@ width: 100%;
     margin-right: -7vw;
 }
 
+
+footer {
+    margin-top: 0;
+}
+.footer-overskrift {
+    margin: 0;
+}
+
+/* Endrer farge på linken (telefonnummeret blir om til en link på mobil.) */
+a:link { 
+    color: rgb(248,225,192);
+}
+
 /* CSS for telefon */
 @media(max-width: 768px){
 
 /*  Endrer skriftstørrelse og plassering tilegnet mobil */
-    #midt-tekst {
-        font-size: 45px;
+    .midt-tekst {
+        font-size: 10vmin;
         padding: 20px;
     }
-    #undertekst {
+    .undertekst {
         font-size: 15px;
         padding-top: 15px;
     }
 
+    .hovedbilde {
+        overflow: hidden;
+    }
+
 /*  Gjør pilen mer proporsjonell i forhold til mobile enheter. */
     .pil {
-        border: solid white;
-        border-width: 0 4px 4px 0;
-        margin-top: 40px;
+        display: none;
     }
 
 /*  Sentrerer tekst og skalerer størrelsen. */
@@ -397,7 +413,7 @@ width: 100%;
         padding: 0;
     }
     /* Skjuler strek */
-    #strek-1 {
+    .strek-1 {
         display: none;
     }
 
@@ -429,7 +445,7 @@ width: 100%;
         justify-content: center;
         padding: 0;
     }
-    #del-3-tekst {
+    .del-3-tekst {
         margin-left: 0;
         margin-right: 0;
         margin-top: 30px;
@@ -467,7 +483,7 @@ width: 100%;
         text-align: center;
     }
 /*  Skjuler streken fra web. */
-    #strek-3 {
+    .strek-3 {
         display: none;
     }
 

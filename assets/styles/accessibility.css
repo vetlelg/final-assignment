@@ -17,13 +17,13 @@ p {
 
 
 /* En container til teksten */
-#container {
+.container {
     display: flex;
     justify-content: center;
 }
 
 /* Videre formattering av tekst */
-#tekst {
+.tekst {
     display: flex;
     width: 50%;
     flex-direction: column;
@@ -33,11 +33,11 @@ p {
 
 /* Nedskalering til mobilversjonen av nettsiden */
 @media(max-width: 768px){
-    #container {
-        padding-top: 15vh;
+    .container {
+        padding-top: 25vh;
     }
 
-    #tekst{
+    .tekst{
         width: 75%;
     }
 }
