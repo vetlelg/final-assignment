@@ -487,10 +487,10 @@ footer {
         margin: 0;
         padding: 0;
     }
-    /*  Padding alle sider utenom oppe. Nullstiller margin. Sentrerer teksten.*/
+    /*  Padding alle sider. Nullstiller margin. Sentrerer teksten.*/
     .del-3-tekst {
         margin:0;
-        padding: 0 30px 30px 30px;
+        padding:30px 30px 30px 30px;
         text-align: center;
     }
 
