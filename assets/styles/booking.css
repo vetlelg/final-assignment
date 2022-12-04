@@ -126,6 +126,7 @@ form {
 }
 
 
+
 /* Popup og popup-tekst (inkl. engelske kommentarer) hentet fra w3schools (https://www.w3schools.com/howto/howto_js_popup.asp) for å gi en bekreftelse på at du har sendt søknaden */ 
 .popup {
     -moz-user-select: none;
@@ -271,6 +272,13 @@ form {
 
 
 
+    .popup {
+        margin-top: 55%;
+        bottom: 0;
+    }
+
+
+
     .book-lokale-boks {
         height: 400px;
         margin-left: 0%;
@@ -293,13 +301,6 @@ form {
         margin: 0;
         margin-top: 10%;
         margin-right: -10%;
-    }
-
-
-
-    .popup {
-        margin-top: 55%;
-        bottom: 0;
     }
 }
 
@@ -346,6 +347,14 @@ form {
     }
 
 
+    
+    .popup {
+        margin-top: 105%;
+        margin-left: 0%; 
+        bottom: 0;
+    }
+
+
 
     .book-lokale-boks {
         flex-direction: column;
@@ -369,13 +378,5 @@ form {
      .book-lokale-fotograf {
         margin: 0;
         margin-top: 10%;
-    }
-
-
-    
-    .popup {
-        margin-top: 105%;
-        margin-left: 0%; 
-        bottom: 0;
     }
 }

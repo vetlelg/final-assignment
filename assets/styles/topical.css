@@ -1,13 +1,12 @@
-/* Fjerner padding og margin på alle elementer for å gjøre det enklere å strukturere elementene */
+/* Fjerner padding og margin på alle elementer for å gjøre det enklere å strukturere elementene
+   og setter box-sizing: border-box for å gjøre det enklere å jobbe med box model */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-
-/* Bruker vmin som font-size slik at teksten skaleres ut ifra minste 
+/* Bruker vmax som font-size slik at teksten skaleres ut ifra største 
    størrelse av viewwidth og viewheight på siden */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,18 +15,30 @@ body {
 }
 
 html {
+    /* Gjør at link til seksjoner på siden er smooth */
     scroll-behavior: smooth;
 }
 
-nav {
-    width: 100%;
-    padding: 2%;
-    position: relative;
-    display: block;
-    float: right;
-    z-index: 1;
+/* Bruker grid til å strukturere header, main og footer. Main består også av enda en grid med seks deler.
+   Forsiden og hver del i main har høyde 100vh som tilsvarer høyden på det du ser i browseren. */
+.grid {
+    display: grid;
+    grid-template-rows: 100vh 600vh 10vh;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
 }
 
+/* Hamburger-meny / Navigasjonsbar. 
+   Hentet inspirasjon fra dette eksempelet: https://codepen.io/erikterwan/pen/EVzeRP */
+nav {
+    padding: 2%;
+}
+
+/* Bruker en input/checkbox som knapp til dropdown-menyen.
+   Setter z-index: 2 og position: absolute for å plassere checkboxen rett over hamburger-ikonet.
+   Og setter opacity: 0 for å gjøre den usynlig. */
 nav input {
     width: 53px;
     height: 53px;
@@ -38,6 +49,9 @@ nav input {
     opacity: 0;
 }
 
+/* Setter position relative og z-index: 1 for å plassere hamburger-ikonet under checkboxen, men over dropdown-menyen.
+   Bruker en div for hver strek og setter farge, høyde, bredde, radius og margin på strekene.
+   calc(100% - 48px) setter margin-left til 100% minus bredden på hamburger-ikonet for å plassere den på høyre i nav */
 .hamburger-strek {
     position: relative;
     background-color: white;
@@ -48,6 +62,9 @@ nav input {
     z-index: 1;
 }
 
+/* Dropdown-menyen er en div som plasseres oppe til høyre med position absolute. Bruker flexbox for å plassere linkene i diven.
+   z-index 0 plasserer menyen bak hamburger-ikonet og checkboxen. linear-gradient forandrer bakgrunnsfargen gradvis fra topp til bunn.
+   transform plasserer menyen ovenfor, utenfor nettsiden. Transition brukes slik at den gradvis glir inn på siden. */
 .dropdown-meny {
     border-radius: 0 0 0 50%;
     padding: 3% 0 3% 1%;
@@ -56,53 +73,31 @@ nav input {
     width: 40vh;
     right: 0;
     top: 0;
-    background: rgb(235, 235, 235);
+    background-image: linear-gradient(rgba(255,255,255,0.6),rgba(255, 255, 255, 0.9));
+    opacity: 0.5;
     z-index: 0;
-    transform-origin: 0% 0%;
     transform: translate(0, -100%);
     display: flex;
     align-items: center;
-    opacity: 0.5;
     transition: 0.5s ease-in;
 }
 
+/* Når checkboxen trykkes settes transform: none slik at dropdown-menyen glir inn på siden
+   opacity går også fra 0.5 til 1 når dette skjer. */
 nav input:checked ~ .dropdown-meny {
     transform: none;
     opacity: 1;
 }
 
+/* Forandrer farge på hamburgeren når checkboxen trykkes på */
 nav input:checked ~ .hamburger-strek {
     background-color: rgba(40, 40, 40);
-    transform: none;
 }
-
-/* Linker i navigasjonsbar og footer */
-nav a, footer a {
-    color: white;
-    font-size: 1.2em;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-main a:hover, nav a:hover, footer a:hover {
-    color: rgb(230, 120, 70)
-    
-}
-
-nav a {
-    color: rgb(40, 40, 40);
-    margin: 7vh;
-    font-weight: bold;
-}
-
-footer a {
-    color: rgb(230, 230, 230);
-}
-
 
 
 /* Forside */
 header {
+    /* Setter bakgrunnsbilde med svart overlay */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/topical-header.jpg");
     background-position: bottom;
     background-size: cover;
@@ -113,7 +108,6 @@ header {
     justify-content: space-between;
     position: relative;
 }
-
 .header-overskrift {
     align-items: center;
     flex-direction: column;
@@ -122,13 +116,11 @@ header {
     text-shadow: 2px 2px 5px black;
     height: 60%;
 }
-
 .header-overskrift h1 {
     width: 60%;
     padding-bottom: 2%;
     font-size: 2.5em;
 }
-
 .header-overskrift h2 {
     width: 60%;
     font-size: 1.5em;
@@ -137,59 +129,11 @@ header {
 
 
 /* Hovedinnhold */
+/* Deler main opp i enda en grid med seks deler */
 main {
     grid-area: main;
     font-size: 1.2em;
 }
-img {
-    display: block;
-    width: 100%;
-}
-.bilde {
-    position: relative;
-    width: 45%;
-}
-main a {
-    text-decoration: underline;
-}
-.bilde-tekst {
-    font-size: 12px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px 0 0 0;
-    padding: 4px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-
-
-/* Footeren nederst på siden */
-footer {
-    align-items: center;
-    background-color: rgba(40, 40, 40);
-    display: flex;
-    grid-area: footer;
-    justify-content: space-evenly;
-}
-
-
-
-/* Bruker grid til å strukturere header, main og footer. Deretter enda en grid
-   til å strukturere innholdet i main. Header og hver del i main har høyde 100vh */
-.grid {
-    display: grid;
-    grid-template-rows: 100vh 600vh 10vh;
-    grid-template-areas:
-    "header"
-    "main"
-    "footer";
-}
-
-
-
-/* Deler main opp i en grid med seks deler */
 .subgrid {
     display: grid;
     grid-template-rows: 100vh 100vh 100vh 100vh 100vh 100vh;
@@ -205,7 +149,8 @@ footer {
     grid-area: en;
 }
 .to {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("../images/topical-bilde-to.jpg");
+    /* Bakgrunnsbilde med svart overlay i noen av delene i main */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/topical-bilde-to.jpg");
     grid-area: to;
 }
 .tre {
@@ -223,8 +168,6 @@ footer {
     grid-area: seks;
 }
 
-
-
 /* Klasse for alle delene i main subgridden */
 .boks {
     position: relative;
@@ -236,36 +179,84 @@ footer {
     justify-content: space-around;
 }
 
+img {
+    display: block;
+    width: 100%;
+}
+
+.bilde {
+    position: relative;
+    width: 45%;
+}
+
+/* En tekstboks til alle bildene som plasseres nederst til høyre på hvert bilde */
+.bilde-tekst {
+    font-size: 12px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px 0 0 0;
+    padding: 4px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 
 
-/* Tekstboksene i main */
+/* Styling av tekstboksene i main og linker i nav, main og footer */
 .tekstboks-svart, .tekstboks-hvit {
     width: 40%;
 }
-
 .tekstboks-svart h4, .tekstboks-hvit h4 {
     margin: 1% 0 3% 0;
 }
-
 .tekstboks-hvit, .tekstboks-hvit a {
     color: white;
     text-shadow: 2px 2px 5px black;
 }
-
 .tekstboks-svart a {
     color: black;
+}
+nav a, footer a {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+main a:hover, nav a:hover, footer a:hover {
+    color: rgb(230, 120, 70)
+    
+}
+nav a {
+    color: rgb(40, 40, 40);
+    margin: 7vh;
+    font-weight: bold;
+}
+footer a {
+    color: rgb(230, 230, 230);
+}
+
+/* Footer nederst på siden */
+footer {
+    align-items: center;
+    background-color: rgba(40, 40, 40);
+    display: flex;
+    grid-area: footer;
+    justify-content: space-evenly;
 }
 
 
 
 /* Responsive design. Endrer størrelse på tekst, bilder, layout o.l. ved ulike oppløsninger */
+
+/* For desktop og mobil sidelengs */
 @media only screen and (min-width: 600px) {
-    /* Klasse som skjuler elementer når  */
+    /* Klasse som skjuler elementer når bredden er større enn 600px */
     .display-none-desktop {
         display: none;
     }
 }
 
+/* For veldig høye oppløsninger */
 @media only screen and (min-width: 2000px) {
     main, nav a, footer a, .header-overskrift h2 {
         font-size: 1em;
@@ -280,12 +271,14 @@ footer {
     }
 }
 
+/* For litt lavere oppløsninger på desktop */
 @media only screen and (max-width: 1500px) {
     main, nav a, footer a {
         font-size: 1.6em;
     }
 }
 
+/* For tablet */
 @media only screen and (max-width: 1000px) and (min-height: 700px) {
     main, nav a, footer a {
         font-size: 1.8em;
@@ -310,6 +303,7 @@ footer {
     }
 }
 
+/* For mobil */
 @media only screen and (max-width: 600px) {
 
     main, nav a, footer a {
@@ -329,6 +323,7 @@ footer {
         width: 100%;
     }
 
+    /* Skjuler elementer når bredden er mindre enn 600px */
     .display-none-mobile {
         display: none;
     }
@@ -353,7 +348,7 @@ footer {
     }
 }
 
-
+/* For mobil sidelengs */
 @media only screen and (max-height: 700px) and (min-width: 600px) {
     .dropdown-meny {
         width: 40vw;

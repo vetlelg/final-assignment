@@ -25,7 +25,6 @@ a:link {
     Setter margin fra toppen til å justere seg basert på høyden til vinduet.
     Legger skygge bak for mer kontrast til bakgrunnen.*/
 .midt-tekst {
-    /* font-family: 'Playfair Display', serif; */
     color: rgb(248, 225, 192);
     font-family: 'Roboto', sans-serif;
     font-size: 5vmin;
@@ -97,8 +96,8 @@ a:link {
 
 
 
-/* Del 1 av siden  */
-/* Plasserer delen i en container for at ting ikke skal strekkes helt ut i sidene på widescreen. */
+/*  Del 1 av siden
+    Plasserer delen i en container for at ting ikke skal strekkes helt ut i sidene på widescreen. */
 .container-del-1 {
     background-color: white;
     width: 100%;
@@ -162,9 +161,8 @@ a:link {
 
 
 
-
-/* Del 2 av siden*/
-/* Plasserer delen i en container for at ting ikke skal strekkes helt ut i sidene på widescreen. */
+/*  Del 2 av siden
+    Plasserer delen i en container for at ting ikke skal strekkes helt ut i sidene på widescreen. */
 .container-del-2 {
     background-color: #FFF8EA;
     width: 100%;
@@ -183,8 +181,8 @@ a:link {
     padding-top: 50px;
     width: 100%;
 }
-/*  Gjør at elementene er oppå hverandre spredt jevnt inni boksen ved bruk av flex column */
-/*  Margin 5% på top og bunn, 0 på sidene. */
+/*  Gjør at elementene er oppå hverandre spredt jevnt inni boksen ved bruk av flex column 
+    Margin 5% på top og bunn, 0 på sidene. */
 .del-2-tekstboks {
     align-items: center;
     display: flex;
@@ -224,7 +222,7 @@ a:link {
     transition-duration: 0.4s;
     z-index: 10;
 }
-/* Fargeendring ved mus over. */
+/* Fargeendring ved mus-over. */
 .til-booking-knapp:hover {
     background-color: rgb(165, 102, 73); 
     color: #FFF8EA; 
@@ -365,6 +363,7 @@ footer {
     }
 
 
+
     /*  Del 1 av nettsiden på mobil. */
     /*  Sentrerer tekst og skalerer størrelsen til mobil. */
     .del-1-tekst, 
@@ -414,11 +413,6 @@ footer {
         width: 100%;
         border-radius: 0;
     }
-    /* Fjerner margin og padding fra desktop for å tilpasse for mobil. 
-    .del-1-høyre {
-        margin: 0;
-        padding: 0;
-    }
     /* Skjuler strek 1 */
     .strek-1 {
         display: none;
@@ -431,38 +425,24 @@ footer {
     .del-2 {
         height: 300px;
     }
+    .del-2-tekstboks {
+        width: 80%;
+    }
     .del-2-tekst {
         padding: 0;
         margin: 0;
         padding-bottom: 5%;
     }
-    .del-2-tekstboks {
-        width: 80%;
-    }
-
 
 
     /*  Del 3 av nettsiden på mobil
     Bruker flex til å plassere det over hverandre og motsatt vei med column-reverse. Nullstiller padding fra desktop. */
-        .del-3 {
+    .del-3 {
         align-items: center;
         flex-direction: column-reverse;
         height: 730px;
         justify-content: center;
         padding: 0;
-    }
-    /* Margin 30px på toppen, 0 på resten. 30px padding på alle sider.  */
-    .del-3-tekst {
-        margin: 30px 0 0 0;
-        padding: 30px;
-    }
-    /* Fjerner avrundede kanter på bildet. Nullstiller margin og padding. */
-    .del-3-venstre img {
-        height: 100%;     
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        border-radius: 0;
     }
     /*  Plasserer elementene sentrert med flex. Nullstiller margin og padding. */
     .del-3-tekstboks {
@@ -472,8 +452,22 @@ footer {
         justify-content: center;
         margin: 0;
         padding: 0;
-
     }
+    /* Margin 30px på toppen, 0 på resten. 30px padding på alle sider.  */
+    .del-3-tekst {
+        margin: 30px 0 0 0;
+        padding: 30px;
+    }
+    
+    /* Fjerner avrundede kanter på bildet. Nullstiller margin og padding. */
+    .del-3-venstre img {
+        height: 100%;     
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
     /*  Sentrerer alt i boksen vertikalt. Nullstiller margin og padding. */
     .del-3-høyre {
         align-items: center;
@@ -489,6 +483,7 @@ footer {
         padding: 0 30px 30px 30px;
         text-align: center;
     }
+
     /*  Skjuler streken fra web. */
     .strek-3 {
         display: none;
