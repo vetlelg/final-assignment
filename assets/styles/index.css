@@ -469,6 +469,10 @@ footer {
         margin: 0;
         padding: 0;
     }
+    .del-3-overskrift {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
 
     /* Fjerner avrundede kanter på bildet. Nullstiller margin og padding. */
     .del-3-venstre img {
@@ -476,22 +480,25 @@ footer {
         margin: 0;
         padding: 0;
         width: 100%;
+        height: 100%;
         border-radius: 0;
+    }
+    .del-3-venstre { 
+        height: 100%;
     }
 
     /*  Sentrerer alt i boksen vertikalt. Nullstiller margin og padding. */
     .del-3-høyre {
         align-items: center;
         display: flex;
-        height: 500px;
+        height: 100%;
         margin: 0;
         padding: 0;
     }
-    /*  Padding alle sider utenom oppe. Nullstiller margin. Sentrerer teksten.*/
+    /*  Padding på alle sider bortsett fra den øvre siden. Nullstiller margin. Sentrerer teksten.*/
     .del-3-tekst {
         margin:0;
-        padding: 0 30px 30px 30px;
-        text-align: center;
+        padding:0 30px 30px 30px;
     }
 
     /*  Skjuler streken fra web. */
@@ -508,11 +515,7 @@ footer {
         font-size: 12px;
         padding: 10px 25px;
     }
-    /* Skyver knappen oppover */
-    .til-meny-knapp {
-        margin-bottom: 50px;
-    }
-
+  
 
 
     /* Tilbakestiller margin på bildekreditering to og tre */
