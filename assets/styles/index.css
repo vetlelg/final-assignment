@@ -469,6 +469,10 @@ footer {
         margin: 0;
         padding: 0;
     }
+    .del-3-overskrift {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
 
     /* Fjerner avrundede kanter på bildet. Nullstiller margin og padding. */
     .del-3-venstre img {
@@ -491,7 +495,6 @@ footer {
     .del-3-tekst {
         margin:0;
         padding:0 30px 30px 30px;
-        text-align: center;
     }
 
     /*  Skjuler streken fra web. */
@@ -508,11 +511,7 @@ footer {
         font-size: 12px;
         padding: 10px 25px;
     }
-    /* Skyver knappen oppover */
-    .til-meny-knapp {
-        margin-bottom: 50px;
-    }
-
+  
 
 
     /* Tilbakestiller margin på bildekreditering to og tre */
