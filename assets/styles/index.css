@@ -2,7 +2,8 @@
     Legger til bakgrunnsbilde som skal holde seg sentrert og riktig størrelse.
     Bruker rgba til å gjøre bildet mørkere slik at teksten skal være mer synlig. */
 .hovedbilde {
-    /* Bilde hentet fra: "https://www.pexels.com/photo/restaurant-interior-776538/", Fotograf: Lisa Fotios */
+    /* Bilde hentet fra: "https://www.pexels.com/photo/restaurant-interior-776538/", Fotograf: Lisa Fotios 
+    Setter høyden til å være 100% av høyden på vinduet. Fjerner all padding og margin. */
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%),url("../images/index-main-header.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -17,13 +18,15 @@
 a:link { 
     color: rgb(248,225,192);
 }
+/* Endrer farge på skriften i navigasjonsbaren for å overstyre link-fargen over. */
 .navbar a {
     color: #FFF8EA;
 }
 
-/*  Tekst på miden av forsiden. 
+/*  Tekst på miden av forsiden ("Tradisjonelle Italienske verdier"). 
     Setter margin fra toppen til å justere seg basert på høyden til vinduet.
-    Legger skygge bak for mer kontrast til bakgrunnen.*/
+    Legger skygge bak for mer kontrast til bakgrunnen.
+    Tekststørrelsen justerer seg gradvis nedover når vinduet blir mindre. */
 .midt-tekst {
     color: rgb(248, 225, 192);
     font-family: 'Roboto', sans-serif;
@@ -35,7 +38,7 @@ a:link {
     text-transform: uppercase;
     text-shadow: 0px 2px 30px rgba(0,0,0,1);
 }
-/*  Undertekst (midt i hjertet av Oslo). Sentreres via global CSS. 
+/*  Undertekst (midt i hjertet av Oslo). 
     Legger skygge bak for mer kontrast til bakgrunnen. */
 .undertekst {
     color: rgb(248, 225, 192);
@@ -50,7 +53,8 @@ a:link {
 
 
 /*  Pil for å scrolle ned på siden. 
-    Generert ved hjelp av en rotert firkant som kun har border høyre og under for å danne en pil. */
+    Generert ved hjelp av en rotert firkant (45 grader) som kun har border høyre og under for å danne en pil. 
+    z-index forsikrer at den plasseres foran andre elementer. */
 .pil {
     -webkit-transform: rotate(45deg);
     border: solid #FFF8EA;
@@ -60,7 +64,6 @@ a:link {
     transform: rotate(45deg);
     z-index: 10;
 }
-    
 /*  Fargeendring ved mus over pilen. */ 
 .pil:hover {
     border: solid darkgrey;
@@ -102,7 +105,8 @@ a:link {
     background-color: white;
     width: 100%;
 }
-/*  Bruker flexbox til å plassere elementer i forhold til hverandre og dens div. */    
+/*  Bruker flexbox til å plassere elementer i forhold til hverandre og dens div.
+    Max-width gjør at når det når den bredden dras ikke ting lenger ut i sidene, og gjør det mer lesbart og samlet på widescreen. */    
 .del-1 {
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -113,6 +117,7 @@ a:link {
     padding: 100px 0 100px 0;
     width:100%;
 }
+/* Midstiller elementene vertikalt. */
 .del-1-venstre {
     align-items: center;
     display: flex;
@@ -120,6 +125,7 @@ a:link {
     width: 100%;
     z-index: 1;
 }
+/* Position relative for å sikre at bildrekrediteringen havner riktig sted. */
 .del-1-høyre {
     align-items: center;
     display: flex;
@@ -127,7 +133,8 @@ a:link {
     position: relative;
     width: 100%;
 }
-/*  Plasserer og justerer bildet, margin høyre baseres på bredden til vinduet. */
+/*  Plasserer og justerer bildet, margin høyre baseres på bredden til vinduet.
+    Avrunder to av hjørnene med border-radius. Object-fit: cover hindrer at bildet blir strukket. */
 .del-1-høyre img {
     background-repeat: no-repeat;
     background-size: cover;
@@ -137,26 +144,29 @@ a:link {
     object-fit: cover;
     width: 100%;
 }
+/* Endrer tekstens egenskaper og plasserer den. */
 .del-1-tekst {
-    display: flex;
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
-    margin-left: 20%;
     margin-top: 0;
     padding-right: 50px;
     text-align: left;
 }
 .del-1-overskrift {
-    margin-left: 20%;
     text-align: left;
 }
 /*  Strek for å løfte designet, bredde 10% av boksen den er i. */
 .strek-1 {
     background-color: rgb(165, 102, 73);
     height: 2px;
-    margin-left: 20%;
     margin-top: 50px;
     width: 15%;
+}
+/* Skyver innholdet i tekstboks 1 20% ut fra venstre. */
+.del-1-tekst,
+.del-1-overskrift,
+.strek-1 {
+    margin-left: 20%;
 }
 
 
@@ -167,7 +177,7 @@ a:link {
     background-color: #FFF8EA;
     width: 100%;
 }
-/*  Bruker flex til å sentrere innholdet i forhold til hverandre.
+/*  Bruker flex til å sentrere innholdet i forhold til hverandre og utifra boksen det er i.
     Bruker max-width for å unngå at det strekkes ut på widescreen. */
 .del-2 {
     align-items: center;
@@ -191,6 +201,7 @@ a:link {
     margin: 5% 0;
     width: 60%;
 }
+/* Pynter teksten og skyver knappen litt ned med padding. */
 .del-2-tekst {
     color: rgb(165, 102, 73);
     font-family: 'Roboto', sans-serif;  
@@ -198,7 +209,7 @@ a:link {
     padding-bottom: 50px;
     text-align: center;  
 }
-
+/* Endrer farge, tykkelse og bredde på strek 2. */
 .strek-2 {
     background-color: rgb(165, 102, 73);
     height: 2px;
@@ -207,7 +218,8 @@ a:link {
 
 /*  Knapp til booking, gjør den penere å se på med padding og farger. 
     Transition duration gjør at den gradvis blir farger nåt man holder over. 
-    Padding 16px topp og bunn, 32px på sidene. */
+    Padding 16px topp og bunn, 32px på sidene. 
+    Endrer museknappen til en peker når man holder over for at man skal skjønne at man kan trykke på den.*/
 .til-booking-knapp {    
     background-color: #FFF8EA;
     border-radius: 5px;
@@ -222,7 +234,7 @@ a:link {
     transition-duration: 0.4s;
     z-index: 10;
 }
-/* Fargeendring ved mus-over. */
+/* Fargeendring ved mus-over. Reverserer fargene. */
 .til-booking-knapp:hover {
     background-color: rgb(165, 102, 73); 
     color: #FFF8EA; 
@@ -230,16 +242,17 @@ a:link {
 
 
 
-/*  Del 3 av siden. 
-    Bruker flex for å plassere elementer i forhold til hverandre.
-    Row-reverse gjør at det blir speilvendt fra del 1.*/
+/*  Del 3 av siden. */
 .container-del-3 {
     background-color: white;
     width: 100%;
 }
 /*  Padding topp og bunn 100px, 0px på sidene 
     Max-width gjør at den ikke dras ut over en viss bredde på widescreen. 
-    Margin auto midstiller. */
+    Margin auto midstiller.
+    Bruker flex for å plassere elementer i forhold til hverandre.
+    Row-reverse gjør at det blir speilvendt fra del 1. 
+    Skjuler ting dersom noe skulle flyte utover boksen og skape mulighet for horisontal scroll. */
 .del-3 {
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -259,7 +272,7 @@ a:link {
     width: 100%;
 }
 
-/*  Plasserer med flexbox. Relative for å få inn bildekreditering*/
+/*  Plasserer med flexbox. Relative for å få inn bildekreditering på riktig sted. */
 .del-3-venstre {
     justify-content: flex-end;
     position: relative;
@@ -273,9 +286,14 @@ a:link {
     height: 100%;
     object-fit: cover;
     width: 80%;
-
 }
-/*  Design av tekst og utforming. */
+/*  Design av tekst og utforming. 
+    Padding 0 topp og bunn, 100px høyre, 20px venstre */
+.del-3-tekstboks {
+    margin-left: 20%;
+    padding: 0 100px 0 20px;
+}
+/* Styler tekst. */
 .del-3-tekst {
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
@@ -285,6 +303,7 @@ a:link {
     padding-bottom: 30px;
     text-align: left;
 }
+/* Justerer streken til å passe designet. */
 .strek-3 {
     background-color: rgb(165, 102, 73);
     height: 3px;
@@ -292,11 +311,7 @@ a:link {
     margin-top: -25px;
     width: 15%;
 }
-/* Padding 0 topp og bunn, 100px høyre, 20px venstre */
-.del-3-tekstboks {
-    margin-left: 20%;
-    padding: 0 100px 0 20px;
-}
+
 
 /*  Knapp til menyen. Endrer utseendet, tiden det tar å endre farge og z-index sikrer at den kommer forran andre elementer.
     Transition-duration gjør at den endrer farge gradvis. 
@@ -320,7 +335,8 @@ a:link {
     color: #FFF8EA; 
 }
 
-/* Endrer runde kanter på ene hjørnet på bilde-kreditering på øverste bildet. */
+
+/* Endrer runde kanter på ene hjørnet på bilde-krediteringsboksen på øverste bildet. */
 .en {
     border-radius: 10px 0 0 0;
 }
@@ -453,12 +469,7 @@ footer {
         margin: 0;
         padding: 0;
     }
-    /* Margin 30px på toppen, 0 på resten. 30px padding på alle sider.  */
-    .del-3-tekst {
-        margin: 30px 0 0 0;
-        padding: 30px;
-    }
-    
+
     /* Fjerner avrundede kanter på bildet. Nullstiller margin og padding. */
     .del-3-venstre img {
         height: 100%;     
@@ -476,7 +487,6 @@ footer {
         margin: 0;
         padding: 0;
     }
-
     /*  Padding alle sider utenom oppe. Nullstiller margin. Sentrerer teksten.*/
     .del-3-tekst {
         margin:0;
@@ -505,7 +515,7 @@ footer {
 
 
 
-    /* Tilbakestiller margin på bildekreditering */
+    /* Tilbakestiller margin på bildekreditering to og tre */
     .to {
         margin: 0;
     }
