@@ -480,14 +480,18 @@ footer {
         margin: 0;
         padding: 0;
         width: 100%;
+        height: 100%;
         border-radius: 0;
+    }
+    .del-3-venstre { 
+        height: 100%;
     }
 
     /*  Sentrerer alt i boksen vertikalt. Nullstiller margin og padding. */
     .del-3-høyre {
         align-items: center;
         display: flex;
-        height: 500px;
+        height: 100%;
         margin: 0;
         padding: 0;
     }
