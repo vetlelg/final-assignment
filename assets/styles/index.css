@@ -489,8 +489,8 @@ footer {
     }
     /*  Padding alle sider. Nullstiller margin. Sentrerer teksten.*/
     .del-3-tekst {
-        margin:0;
-        padding:30px 30px 30px 30px;
+        margin:30px 0 0 0;
+        padding:0 30px 30px 30px;
         text-align: center;
     }
 
