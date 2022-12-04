@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles/global.css">
     <link rel="stylesheet" href="assets/styles/booking.css">
-    
     <title>Booking</title>
 </head>
-
 <body>
     <main>
-        <!-- Bakgrunnsbilde -->
+        <!-- Bakgrunnsbilde, hentet fra: "https://unsplash.com/photos/g_V2rt6iG7A" Fotograf: Siyuan -->
         <div class ="hovedbilde">
             <!-- Navigasjonsbar -->
             <nav class="navbar">
                 <div class="container"> 
-                    <!--Logo er selvlaget-->
                     <a href="index.html">
+                        <!--Logo er selvlaget-->
                         <img class="logo" src="assets/images/logo.png" alt="Mario's Italian"></img>
                     </a>
                     
@@ -30,17 +28,17 @@
                             <a href="menu.html">MENY</a>
                         </li>
                         <li>
-                            <a href="topical.html">TOPICAL</a>
-                        </li>
-                        <li>
                             <a href="accessibility.html">ACCESSIBILITY</a>
                         </li>
+                        <li>
+                            <a href="topical.html">TOPICAL</a>
+                        </li>
                     </ul>
-                    
                 </div>
             </nav>
             <!-- Overskriften på bakgrunnsbildet -->
             <h1 class="booking-overskrift">BOOKING</h1>
+            
             <div class="bilde-tekst hovedfotograf">
                 Bilde: Siyuan/Unsplash
             </div>
@@ -49,15 +47,14 @@
        <div class="container-book-bord bakgrunnsfarge">
             <!-- Gråfarget boks bak book bord bilde og tekst -->
             <div class="book-bord-boks"> 
-                <!--Bilde hentet fra: "https://unsplash.com/photos/ZgREXhl8ER0", Fotograf: Adrien Olichon -->   
                 <div class="venstre-del">
-                    <img src="assets/images/booking-side-bilde-en.jpg" class= "book-bord-bilde" alt="Pent dekket bord med vinglass"> </img> <!-- Bilde fra unsplash */ -->
-                        <div class="bilde-tekst bord-fotograf">
-                            Bilde: Adrien Olichon/Unsplash
-                        </div>
-                </div>
+                    <!--Bilde hentet fra: "https://unsplash.com/photos/ZgREXhl8ER0", Fotograf: Adrien Olichon -->   
+                    <img src="assets/images/booking-side-bilde-en.jpg" class= "book-bord-bilde" alt="Pent dekket bord med vinglass"> </img>
 
-            
+                    <div class="bilde-tekst">
+                        Bilde: Adrien Olichon/Unsplash
+                    </div>
+                </div>
 
                 <!-- Teksten til book-bord -->
                 <div class="book-bord-tekst"> 
@@ -67,7 +64,7 @@
                         <br> Her kan du booke bord for 1-9 personer. 
                         <br> Vi tar ingen reservasjoner utendørs, <br> bordene der er kun til drop-in. 
                         <br>
-                        <br> For selskaper større enn 9 personer, se <a href=".book-lokale-bilde">book lokale</a> under. 
+                        <br> For selskaper større enn 9 personer, se <a href="#book-lokale-seksjon">book lokale</a> under. 
                     </p>
 
                     <!-- Form og tabell hentet fra https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit -->
@@ -94,7 +91,7 @@
                 
                         <!-- Hentet fra w3schools for å gi en bekreftelse på at du har trykket submit, https://www.w3schools.com/howto/howto_js_popup.asp -->
                         <div class="popup" onclick="myFunction()">Submit!
-                            <span class="popup-tekst" class="myPopup">Booking mottatt! Du får bekreftelse på e-post</span>
+                            <span class="popup-tekst" id="myPopup">Booking mottatt! Du får bekreftelse på e-post</span>
                         </div>
                 
                         <script>
@@ -113,8 +110,9 @@
             <div class="book-lokale-boks"> 
                 <div class="høyre-del"> 
                     <!-- Bilde hentet fra Unsplash: "https://unsplash.com/photos/poI7DelFiVA", Fotografert av: "Jason Leung" -->
-                    <img src="assets/images/booking-side-bilde-to.jpg" class="book-lokale-bilde" alt="Tomt lokale med dekket bord"></img>
-                    <div class="bilde-tekst lokale-fotograf">
+                    <img src="assets/images/booking-side-bilde-to.jpg" class="book-lokale-bilde" id="book-lokale-seksjon" alt="Tomt lokale med dekket bord"></img>
+
+                    <div class="bilde-tekst book-lokale-fotograf">
                         Bilde: Jason Leung/Unsplash
                     </div>
                 </div> 
@@ -134,23 +132,28 @@
             </div>
         </div>
     </main>
-    
+
+    <!-- Global footer -->
     <footer>
-        <!-- Global footer -->
-        <div class="footer-innhold"> 
+        <!-- Div som pakker inn innholdet og deler det inn i to seksjoner med flex. -->
+        <div class="footer-innhold">
+            <!-- Footer seksjon 1 -->
             <div class="kontakt">
-                <h2 class="footer-overskrift"><b>KONTAKT OSS</b></>
+                <h2 class="footer-overskrift"><b>KONTAKT OSS</b></h2>
+                <br>
                 <p class="footer-tekst"><b>Epost:</b> reservation@marios.it </p>
-                <p class="footer-tekst"><b>Telefon:</b> +81549300 </p>
-                <p class="footer-tekst"><b>Adresse:</b> Romagata 13, 1337 Oslo </p>
+                <p class="footer-tekst"><b>Telefon:</b> 81549300 </p>
+                <p class="footer-tekst"><b>Adresse:</b> Romagata 13, 1337 Oslo </p>        
             </div>
 
+            <!-- Footer seksjon 2 -->
             <div class="aapningstider">
                 <h2 class="footer-overskrift"><b>ÅPNINGSTIDER</b></h2>
+                <br>
                 <p class="footer-tekst">Søndag - Torsdag: <i class="klokkeslett">09 - 22</i> </p>
-                <p class="footer-tekst">Fredag - Lørdag: <i class="klokkeslett">10 - 23</i> </p>
+                <p class="footer-tekst">Fredag - Lørdag: <i class="klokkeslett">10 - 23</i> </p>            
             </div>
         </div>
-    </footer>    
+    </footer>  
 </body>
 </html>

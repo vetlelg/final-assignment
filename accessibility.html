@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,8 +13,8 @@
         <!-- Navigasjonsbar -->
         <nav class="navbar">
             <div class="container"> 
-                <!--Logo er selvlaget-->
                 <a href="index.html">
+                    <!--Logo er selvlaget-->
                     <img class="logo" src="assets/images/logo.png" alt="Mario's Italian"></img>
                 </a>
 
@@ -26,10 +26,10 @@
                         <a href="menu.html">MENY</a>
                     </li>
                     <li>
-                        <a href="topical.html">TOPICAL</a>
+                        <a href="accessibility.html">ACCESSIBILITY</a>
                     </li>
                     <li>
-                        <a href="accessibility.html" class="active">ACCESSIBILITY</a>
+                        <a href="topical.html">TOPICAL</a>
                     </li>
                 </ul>
             </div>
@@ -44,9 +44,9 @@
 
                 <p>I startfasen til prosjektet ble hver av nettsidene designet rundt desktop, uten omtanke på hvordan en eventuell mobilversjon ville se ut. Dette forårsaket at mobilversjonen ble både rotete og ubrukelig for mobilbruk. For å løse disse design-problemene ble det tatt i bruk flexbox i index.html, booking.html og menu.html. Videre ble det tatt i bruk både grid og flexbox i topical for å strukturere den mer unike delen av nettsiden.
                 </p>
-                <p>For å kunne differensiere mellom desktop og mobil brukes det også @media i hver av sidenes tilsvarende stylesheet. Dette bidrar til at en kan endre på mobilversjonens utseende uten at det forårsaker endringer på andre oppløsninger. På samme tid ble det tatt i bruk en felles stylesheet for å sikre at restaurant- og bookingdelen av nettsiden samsvarer. Dette innebærer at fargene stemmer overens, og nettsidens tema er likt mellom restaurant- og bookingdelen. Topical er derimot en unik del av nettsiden som skal differensieres fra nettsidens hovedtema. 
+                <p>For å kunne differensiere mellom desktop og mobil brukes det også @media i hver av sidenes tilsvarende stylesheet. Dette bidrar til at en kan endre på mobilversjonens utseende uten at det forårsaker endringer på andre oppløsninger. På samme tid ble det tatt i bruk en felles stylesheet for å sikre at restaurant- og bookingdelen av nettsiden samsvarer. Dette innebærer at fargene stemmer overens, og nettsidens tema er likt mellom restaurant- og bookingdelen. Topical er derimot en unik del av nettsiden som skal differensieres fra nettsidens hovedtema. På Topical er det brukt primært svart og hvit som farger for å ha god kontrast på siden slik at teksten er enkel å lese. Det er brukt vmin og em som enhet for tekststørrelse slik at teksten skaleres, og samtidig media queries til å endre tekst- og bildestørrelsene til ulike oppløsninger. Til slutt er det brukt skygge på teksten og overlay på bildene for å gjøre teksten enkel å lese.
                 </p>
-                <p>Slik at andre skal kunne lese, og eventuelt videreutvikle nettsiden, er det tatt i bruk grundige kommentarer som forklarer kodens funksjon. Videre er det brukt semantisk html, slik at hovedelementer defineres ved bruk av &lt;header&gt;, &lt;main&gt;, &lt;section&gt; og &lt;footer&gt;. I tillegg er også relevant css gruppert sammen i nettsidens relevante stylesheet, med markante mellomrom for å skille mellom grupper. Til slutt har gruppen fokusert på å strukturere CSSen i alfabetisk rekkefølge, og klassene i kronologisk rekkefølge. Til tross for at noen klasser er brukt kun én gang er id'er ikke tatt i bruk. Dette er på grunn av at id forhindrer videreutvikling, gjenbruk av id-elementer, og på samme tid overstyrer det eventuelle klasser. For å forsikre fleksibilitet for nye potensielle utviklere, og forhindre videre problemer er derfor denne selector-løsningen valgt. 
+                <p>Slik at andre skal kunne lese, og eventuelt videreutvikle nettsiden, er det tatt i bruk grundige kommentarer som forklarer kodens funksjon. Videre er det brukt semantisk html, slik at hovedelementer defineres ved bruk av &lt;header&gt;, &lt;main&gt;, &lt;section&gt; og &lt;footer&gt;. I tillegg er også relevant css gruppert sammen i nettsidens relevante stylesheet, med markante mellomrom for å skille mellom grupper. Til slutt har gruppen fokusert på å strukturere CSSen i alfabetisk rekkefølge, og klassene i kronologisk rekkefølge. Samtidig er klasser hovedsakelig brukt som selektorer på grunn av at id forhindrer videreutvikling og gjenbruk av elementer. På samme tid overstyrer også id andre selektorer, og vil forårsake mangel på fleksibilitet i det lange løp, spesielt for nye utviklere. Id som selektor er derimot brukt i visse tilfeller ved bruk av piler eller href attributten for å kunne "hoppe" til de designerte områdene.
                 </p>
                 <p>Andre endringer gjort med fokus på "accessibility" er valg av bildetyper. Bildene var originalt i det moderne formatet .avif. Til tross for formatets bedre komprimering, med lavere størrelser, og mindre tap av data, ble bildene endret til .jpg slik at de støttes av alle nettlesere. Dette fordi .avif bare støttes av Firefox, Chrome, Opera og Safari, og f.eks. ikke Microsoft Edge eller Internet Explorer. 
                 </p>

@@ -126,6 +126,7 @@ form {
 }
 
 
+
 /* Popup og popup-tekst (inkl. engelske kommentarer) hentet fra w3schools (https://www.w3schools.com/howto/howto_js_popup.asp) for å gi en bekreftelse på at du har sendt søknaden */ 
 .popup {
     -moz-user-select: none;
@@ -213,7 +214,7 @@ form {
     width: 30vw;
 
 }
-.lokale-fotograf {
+.book-lokale-fotograf {
     margin-right: -10%;
 }
 
@@ -262,7 +263,6 @@ form {
         margin-top: 10%;
         width: 300px;
     }
- 
     .book-bord-tekst  {
         font-size: 15px;
         margin-left: 10%;
@@ -270,16 +270,14 @@ form {
         margin-top: -10%;
     }
 
-    .bord-fotograf {
-        margin: 0;
-        margin-top: 10%;
+
+
+    .popup {
+        margin-top: 55%;
+        bottom: 0;
     }
 
-    .lokale-fotograf {
-        margin: 0;
-        margin-top: 10%;
-        margin-right: -10%;
-    }
+
 
     .book-lokale-boks {
         height: 400px;
@@ -299,11 +297,10 @@ form {
         margin-top: -10%;
         padding:0;
     }
-
-
-    .popup {
-        margin-top: 55%;
-        bottom: 0;
+    .book-lokale-fotograf {
+        margin: 0;
+        margin-top: 10%;
+        margin-right: -10%;
     }
 }
 
@@ -326,6 +323,7 @@ form {
     }
     
 
+
     .book-bord-boks {
         flex-direction: column;
         height: 650px;
@@ -341,16 +339,22 @@ form {
         margin-top: 10%;
         width: 100%;
     }
-    .bord-fotograf {
-        margin: 0;
-        margin-top: 10%;
-    }
     .book-bord-tekst  {
         font-size: 15px;
         margin-left: 0%;
         margin-right: 0%;
         margin-top: 0%;
     }
+
+
+    
+    .popup {
+        margin-top: 105%;
+        margin-left: 0%; 
+        bottom: 0;
+    }
+
+
 
     .book-lokale-boks {
         flex-direction: column;
@@ -365,22 +369,14 @@ form {
         width: 100%;
         
     }
-    .lokale-fotograf {
-        margin: 0;
-        margin-top: 10%;
-    }
     .book-lokale-tekst {
         font-size: 15px;
         margin-left: 0%;
         margin-right: 0%;
         margin-top: 10%;
     }
- 
-
-
-    .popup {
-        margin-top: 105%;
-        margin-left: 0%; 
-        bottom: 0;
+     .book-lokale-fotograf {
+        margin: 0;
+        margin-top: 10%;
     }
 }
