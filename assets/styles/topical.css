@@ -49,21 +49,26 @@ nav input {
 }
 
 .dropdown-meny {
-    display: flex;
+    border-radius: 0 0 0 50%;
+    padding: 3% 0 3% 1%;
     flex-direction: column;
-    align-items: center;
     position: absolute;
-    width: 100%;
-    left: 0;
+    width: 40vh;
+    right: 0;
     top: 0;
     background: rgb(235, 235, 235);
     z-index: 0;
+    transform-origin: 0% 0%;
     transform: translate(0, -100%);
-    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    opacity: 0.5;
+    transition: 0.5s ease-in;
 }
 
 nav input:checked ~ .dropdown-meny {
     transform: none;
+    opacity: 1;
 }
 
 nav input:checked ~ .hamburger-strek {
@@ -79,14 +84,14 @@ nav a, footer a {
     transition: color 0.2s ease;
 }
 
-nav a:hover, footer a:hover {
-    color: rgb(200, 100, 70)
+main a:hover, nav a:hover, footer a:hover {
+    color: rgb(230, 120, 70)
     
 }
 
 nav a {
     color: rgb(40, 40, 40);
-    margin: 2%;
+    margin: 7vh;
     font-weight: bold;
 }
 
@@ -106,6 +111,7 @@ header {
     flex-direction: column;
     grid-area: header;
     justify-content: space-between;
+    position: relative;
 }
 
 .header-overskrift {
@@ -118,12 +124,13 @@ header {
 }
 
 .header-overskrift h1 {
+    width: 60%;
     padding-bottom: 2%;
     font-size: 2.5em;
 }
 
 .header-overskrift h2 {
-    width: 50%;
+    width: 60%;
     font-size: 1.5em;
 }
 
@@ -273,19 +280,19 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1500px) {
     main, nav a, footer a {
-        font-size: 1.5em;
+        font-size: 1.6em;
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) and (min-height: 700px) {
     main, nav a, footer a {
-        font-size: 1.7em;
+        font-size: 1.8em;
     }
 
     .bilde, .tekstboks-hvit, .tekstboks-svart {
-        width: 80%;
+        width: 70%;
     }
 
     .header-overskrift h1 {
@@ -304,7 +311,17 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-    .header-overskrift h2 {
+
+    main, nav a, footer a {
+        font-size: 2em;
+    }
+
+    .dropdown-meny {
+        width: 100%;
+        border-radius: 0 0 40% 40%;
+    }
+
+    .header-overskrift h2, .header-overskrift h1 {
         width: 80%;
     }
 
@@ -330,4 +347,20 @@ footer {
         width: 48px;
         height: 46px;
     }
+    .boks {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 }
+
+
+@media only screen and (max-height: 700px) and (min-width: 600px) {
+    .dropdown-meny {
+        width: 40vw;
+    }
+
+    nav a {
+        margin: 10vh;
+    }
+}
+

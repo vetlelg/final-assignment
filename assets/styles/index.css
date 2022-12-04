@@ -13,15 +13,22 @@
     position: relative;
 }
 
-  
+/* Endrer farge på linken (telefonnummeret blir om til en link på mobil.) */
+a:link { 
+    color: rgb(248,225,192);
+}
+.navbar a {
+    color: #FFF8EA;
+}
 
 /*  Tekst på miden av forsiden. 
-    Setter margin fra toppen til å justere seg basert på høyden til vinduet.*/
+    Setter margin fra toppen til å justere seg basert på høyden til vinduet.
+    Legger skygge bak for mer kontrast til bakgrunnen.*/
 .midt-tekst {
     /* font-family: 'Playfair Display', serif; */
     color: rgb(248, 225, 192);
     font-family: 'Roboto', sans-serif;
-    font-size: 70px;
+    font-size: 5vmin;
     font-weight: thick;
     letter-spacing: 0.6px;
     margin-top: 30vh;
@@ -29,11 +36,12 @@
     text-transform: uppercase;
     text-shadow: 0px 2px 30px rgba(0,0,0,1);
 }
-/*  Undertekst (midt i hjertet av Oslo). Sentreres via global CSS */
+/*  Undertekst (midt i hjertet av Oslo). Sentreres via global CSS. 
+    Legger skygge bak for mer kontrast til bakgrunnen. */
 .undertekst {
     color: rgb(248, 225, 192);
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    font-size: 2vmin;
     font-style: italic;
     margin-top: 20px;
     text-align: center;
@@ -44,15 +52,15 @@
 
 /*  Pil for å scrolle ned på siden. 
     Generert ved hjelp av en rotert firkant som kun har border høyre og under for å danne en pil. */
-    .pil {
-        -webkit-transform: rotate(45deg);
-        border: solid #FFF8EA;
-        border-width: 0 7px 7px 0;
-        bottom: 50px;
-        padding: 20px;
-        transform: rotate(45deg);
-        z-index: 10;
-    }
+.pil {
+    -webkit-transform: rotate(45deg);
+    border: solid #FFF8EA;
+    border-width: 0 7px 7px 0;
+    bottom: 50px;
+    padding: 20px;
+    transform: rotate(45deg);
+    z-index: 10;
+}
     
 /*  Fargeendring ved mus over pilen. */ 
 .pil:hover {
@@ -92,8 +100,8 @@
 /* Del 1 av siden  */
 /* Plasserer delen i en container for at ting ikke skal strekkes helt ut i sidene på widescreen. */
 .container-del-1 {
-background-color: white;
-width: 100%;
+    background-color: white;
+    width: 100%;
 }
 /*  Bruker flexbox til å plassere elementer i forhold til hverandre og dens div. */    
 .del-1 {
@@ -103,8 +111,7 @@ width: 100%;
     margin: auto;
     max-width: 1800px;
     overflow: hidden;
-    padding-bottom: 100px;
-    padding-top: 100px;
+    padding: 100px 0 100px 0;
     width:100%;
 }
 .del-1-venstre {
@@ -136,8 +143,8 @@ width: 100%;
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
     margin-left: 20%;
-    margin-right: 50px;
     margin-top: 0;
+    padding-right: 50px;
     text-align: left;
 }
 .del-1-overskrift {
@@ -170,21 +177,20 @@ width: 100%;
     display: flex;
     height: 500px;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     max-width: 1800px;
     padding-bottom: 50px;
     padding-top: 50px;
     width: 100%;
 }
 /*  Gjør at elementene er oppå hverandre spredt jevnt inni boksen ved bruk av flex column */
+/*  Margin 5% på top og bunn, 0 på sidene. */
 .del-2-tekstboks {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 5%;
-    margin-top: 5%;
+    margin: 5% 0;
     width: 60%;
 }
 .del-2-tekst {
@@ -202,7 +208,8 @@ width: 100%;
 }
 
 /*  Knapp til booking, gjør den penere å se på med padding og farger. 
-    Transition duration gjør at den gradvis blir farger nåt man holder over. */
+    Transition duration gjør at den gradvis blir farger nåt man holder over. 
+    Padding 16px topp og bunn, 32px på sidene. */
 .til-booking-knapp {    
     background-color: #FFF8EA;
     border-radius: 5px;
@@ -232,43 +239,45 @@ width: 100%;
     background-color: white;
     width: 100%;
 }
+/*  Padding topp og bunn 100px, 0px på sidene 
+    Max-width gjør at den ikke dras ut over en viss bredde på widescreen. 
+    Margin auto midstiller. */
 .del-3 {
-    align-items: center;
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
     margin: auto;
     max-width: 1800px;
-    padding-bottom: 100px;
-    padding-top: 100px;
-    width: 100%;
+    overflow: hidden;
+    padding: 100px 0;
+    width:100%;
 }
-/*  Padding og margin endres basert på vindubredde */
-.del-3-høyre {
-    align-items: center;
-    display: flex;
-    height: 500px;
-    margin-left: 15vw;
-    margin-right: 7vw;
-    width: 100%;
-    z-index: 1;
-}
+/*  Sentrer innhold og setter størrelsen. Bruker 100% av boksen det er i. */
+.del-3-høyre,
 .del-3-venstre {
     align-items: center;
     display: flex;
+    height: 500px;
     width: 100%;
+}
+
+/*  Plasserer med flexbox. Relative for å få inn bildekreditering*/
+.del-3-venstre {
+    justify-content: flex-end;
     position: relative;
 }
-/* Bildets egenskaper justeres basert på vindustørrelse. */
+/* Gjør bildets størrelse responsivt */
 .del-3-venstre img {
-    height: 550px;
-    margin-left: 7vw;
-    object-fit: cover;
-    width: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    background-size: cover;
     border-radius: 0 3rem 0 3rem;
+    height: 100%;
+    object-fit: cover;
+    width: 80%;
 
 }
+/*  Design av tekst og utforming. */
 .del-3-tekst {
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
@@ -278,7 +287,6 @@ width: 100%;
     padding-bottom: 30px;
     text-align: left;
 }
-
 .strek-3 {
     background-color: rgb(165, 102, 73);
     height: 3px;
@@ -286,13 +294,19 @@ width: 100%;
     margin-top: -25px;
     width: 15%;
 }
+/* Padding 0 topp og bunn, 100px høyre, 20px venstre */
+.del-3-tekstboks {
+    margin-left: 20%;
+    padding: 0 100px 0 20px;
+}
 
-/* Knapp til menyen. Endrer utseendet, tiden det tar å endre farge og z-index sikrer at den kommer forran andre elementer.*/
+/*  Knapp til menyen. Endrer utseendet, tiden det tar å endre farge og z-index sikrer at den kommer forran andre elementer.
+    Transition-duration gjør at den endrer farge gradvis. 
+    Padding topp og bunn: 32px, padding sider: 32px */
 .til-meny-knapp {    
     background-color: #ffffff;
     border-radius: 5px;
     border: 2px solid rgb(165, 102, 73);
-    color: black; 
     color: rgb(165, 102, 73);
     cursor: pointer;
     font-size: 18px;
@@ -308,18 +322,15 @@ width: 100%;
     color: #FFF8EA; 
 }
 
-/* Endrer margin på bilde-kreditering på bilde to og tre */
+/* Endrer runde kanter på ene hjørnet på bilde-kreditering på øverste bildet. */
 .en {
     border-radius: 10px 0 0 0;
-    top: auto;
-    bottom: 0;
 }
+/*  Setter samme margin som bildet får at de skal være plassert likt.  */
 .to {
     margin-right: 7vw;
 }
-.tre {
-    margin-right: -7vw;
-}
+
 
 
 footer {
@@ -329,34 +340,33 @@ footer {
     margin: 0;
 }
 
-/* Endrer farge på linken (telefonnummeret blir om til en link på mobil.) */
-a:link { 
-    color: rgb(248,225,192);
-}
+
 
 /* CSS for telefon */
-@media(max-width: 768px){
+@media(max-width: 850px){
 
-/*  Endrer skriftstørrelse og plassering tilegnet mobil */
+    /*  Endrer skriftstørrelse og plassering tilegnet mobil, samt legger til litt luft rundt teksten. */
     .midt-tekst {
-        font-size: 10vmin;
+        font-size: 9vmin;
         padding: 20px;
     }
     .undertekst {
         font-size: 15px;
         padding-top: 15px;
     }
-
+    /* Dersom noe skulle flyte utenfor skjermen unngår vi side-scroll */
     .hovedbilde {
-        overflow: hidden;
+        overflow: hidden; 
     }
 
-/*  Gjør pilen mer proporsjonell i forhold til mobile enheter. */
+    /*  Fjerner pilen fra mobil. */
     .pil {
         display: none;
     }
 
-/*  Sentrerer tekst og skalerer størrelsen. */
+
+    /*  Del 1 av nettsiden på mobil. */
+    /*  Sentrerer tekst og skalerer størrelsen til mobil. */
     .del-1-tekst, 
     .del-2-tekst, 
     .del-3-tekst {
@@ -364,63 +374,60 @@ a:link {
         padding: 30px;
         text-align: center;
     }
-
+    /* Endrer størrelse på overskriftene til mobil. */
     .del-1-overskrift,
     .del-2-overskrift,
     .del-3-overskrift {
         font-size: 30px;
     }
-
-
-/*  Endrer retning på flex for å gjøre det mer mobilvennlig. */
+    /*  Endrer retning på flex for å gjøre det mer mobilvennlig. Fjerner litt tomrom. */
     .del-1 {
         flex-direction: column;
         height: 730px;
         justify-content: center;
         padding: 0;
     }
-    
-/*  Bruker flex til å plassere elementer sentrert og over hverandre. */
+    /*  Bruker flex til å plassere elementer sentrert og over hverandre. 
+    Padding 30px topp og bunn, 0 på sidene. */
     .del-1-tekstboks {
         align-items: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-bottom: 30px;
-        padding-top: 30px;
+        padding: 30px 0;
     }
+    /*  Padding 0 på toppen, 30px på resten. */
     .del-1-tekst {
         margin: 25px 0 0 0;
-        padding-top: 0px;
-        padding: 30px;
+        padding: 0 30px 30px 30px;
         width: 65%;
     }
+    /* Nullstiller margin fra desktop for å tilpasse mobil. */
     .del-1-overskrift {
         margin: 0;
     }
-/*  Tilbakestillermargin og padding */
+    /*  Tilbakestiller margin og padding. Fjerner avrundede kanter. Bildet tar nå 100% av bredden på mobilen. */
     .del-1-høyre img { 
         height: 380px;     
-        margin-right: 0;
         margin: 0;
-        padding-right: 0;
         padding: 0;
         width: 100%;
         border-radius: 0;
     }
+    /* Fjerner margin og padding fra desktop for å tilpasse for mobil. 
     .del-1-høyre {
         margin: 0;
         padding: 0;
     }
-    /* Skjuler strek */
+    /* Skjuler strek 1 */
     .strek-1 {
         display: none;
     }
 
 
 
-/*  Del 2 av nettsiden
-    Resetter padding, setter høyde og bredde på teksten.  */
+    /*  Del 2 av nettsiden på mobil
+    Resetter padding og margin, setter høyde og bredde på teksten.  */
     .del-2 {
         height: 300px;
     }
@@ -431,79 +438,79 @@ a:link {
     }
     .del-2-tekstboks {
         width: 80%;
-        margin: 0;
     }
 
 
 
-/*  Del 3 av nettsiden 
-    Bruker flex til å plassere det over hverandre og motsatt vei med column-reverse.  */
-     .del-3 {
+    /*  Del 3 av nettsiden på mobil
+    Bruker flex til å plassere det over hverandre og motsatt vei med column-reverse. Nullstiller padding fra desktop. */
+        .del-3 {
         align-items: center;
         flex-direction: column-reverse;
         height: 730px;
         justify-content: center;
         padding: 0;
     }
+    /* Margin 30px på toppen, 0 på resten. 30px padding på alle sider.  */
     .del-3-tekst {
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 30px;
+        margin: 30px 0 0 0;
         padding: 30px;
     }
+    /* Fjerner avrundede kanter på bildet. Nullstiller margin og padding. */
     .del-3-venstre img {
-        height: 350px;     
+        height: 100%;     
         margin: 0;
         padding: 0;
         width: 100%;
         border-radius: 0;
     }
-/*  Plasserer elementene sentrert med flex */
+    /*  Plasserer elementene sentrert med flex. Nullstiller margin og padding. */
     .del-3-tekstboks {
         align-items: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin: 0;
+        padding: 0;
+
     }
-/*  Sentrerer alt i boksen vertikalt. */
+    /*  Sentrerer alt i boksen vertikalt. Nullstiller margin og padding. */
     .del-3-høyre {
         align-items: center;
         display: flex;
         height: 500px;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
+        margin: 0;
+        padding: 0;
     }
-  
-/*  Padding alle sider utenom oppe. */
+
+    /*  Padding alle sider utenom oppe. Nullstiller margin. Sentrerer teksten.*/
     .del-3-tekst {
         margin:0;
         padding: 0 30px 30px 30px;
         text-align: center;
     }
-/*  Skjuler streken fra web. */
+    /*  Skjuler streken fra web. */
     .strek-3 {
         display: none;
     }
 
 
 
-/*  Gjør knapper proporsjonelle i forhold til mobil. */
+    /*  Gjør knapper proporsjonelle i forhold til mobil. */
     .til-booking-knapp, 
     .til-meny-knapp {    
         border-width: 1px;
         font-size: 12px;
         padding: 10px 25px;
     }
+    /* Skyver knappen oppover */
     .til-meny-knapp {
         margin-bottom: 50px;
     }
 
 
- 
+
     /* Tilbakestiller margin på bildekreditering */
-   
     .to {
         margin: 0;
     }
